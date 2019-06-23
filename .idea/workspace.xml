@@ -45,8 +45,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/StatusAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="103" column="46" selection-start-line="103" selection-start-column="46" selection-end-line="103" selection-end-column="46" />
+            <state relative-caret-position="29">
+              <caret line="106" column="32" lean-forward="true" selection-start-line="106" selection-start-column="32" selection-end-line="106" selection-end-column="32" />
               <folding>
                 <element signature="method#loadStatusMedia#0;class#StatusAdapter#0" />
               </folding>
@@ -456,7 +456,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2708018" />
       <window_info id="Resources Explorer" order="1" />
@@ -471,10 +470,10 @@
       <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.49848714" weight="0.32569557" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.3289689" />
       <window_info anchor="bottom" id="Debug" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.7737705" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.7725041" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5015129" side_tool="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Build" order="7" sideWeight="0.49848714" visible="true" weight="0.29787233" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49848714" weight="0.29787233" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.3295082" />
       <window_info anchor="bottom" id="Thumbnails" order="10" weight="0.3295082" />
@@ -842,8 +841,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/StatusAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="103" column="46" selection-start-line="103" selection-start-column="46" selection-end-line="103" selection-end-column="46" />
+        <state relative-caret-position="29">
+          <caret line="106" column="32" lean-forward="true" selection-start-line="106" selection-start-column="32" selection-end-line="106" selection-end-column="32" />
           <folding>
             <element signature="method#loadStatusMedia#0;class#StatusAdapter#0" />
           </folding>
