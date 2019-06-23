@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:clickable="true"
+    style="@android:style/Widget.ActionButton">
+
+    <ImageView
+        android:id="@+id/swap_hotlist_bell"
+        android:src="@drawable/swapicon"
+        android:layout_width="35dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:layout_margin="0dp"
+        android:contentDescription="Swap Requests"
+        />
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swap_hotlist_hot"
+        android:layout_width="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/colorWhite"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:gravity="center"
+        android:padding="2dp"
+        android:layout_marginLeft="18dp"
+        android:background="@drawable/pyaziroundbtn"
+        android:layout_alignTop="@id/swap_hotlist_bell"/>
+</RelativeLayout>

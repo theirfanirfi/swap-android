@@ -1,0 +1,40 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="swap.irfanullah.com.swap.HomeActivity">
+
+
+    <item android:id="@+id/profile" android:title="Profile"
+        app:showAsAction="never"
+        />
+    <item android:id="@+id/settings" android:title="Settings"
+        app:showAsAction="never"
+        />
+
+    <item android:id="@+id/invite" android:title="Invite"
+        app:showAsAction="never"
+        />
+    <item android:id="@+id/logout" android:title="Logout"
+        app:showAsAction="never"
+        />
+
+    <item android:id="@+id/search"
+        android:icon="@drawable/searchicon"
+        android:title="People"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/swap_requests_icon"
+        app:actionLayout="@layout/swap_requests_count"
+        android:icon="@drawable/swapicon"
+        android:title="Swap Requests"
+        app:showAsAction="always" />
+
+
+    <item android:id="@+id/notification_icon"
+        app:actionLayout="@layout/feed_update_count"
+        android:icon="@drawable/bell"
+        android:title="Notifications"
+        app:showAsAction="always" />
+
+
+</menu>

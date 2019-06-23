@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/white</color>
+    <color name="colorPrimaryDark">@color/bluish</color>
+    <color name="colorAccent">#5202FF</color>
+    <!--<color name="colorAccent">#008577</color>-->
+    <color name="colorBlack">#000</color>
+    <color name="colorWhite">#fff</color>
+    <color name="pageBackground">#FF121111</color>
+    <color name="colorIcon">#B0BEC5</color>
+
+    <color name="bluish">#5202FF</color>
+    <color name="pyazi">#B401FF</color>
+    <color name="swapRequestsUsernameColor">#5202FF</color>
+    <color name="swapRequestActivityBg">#F1F1F1</color>
+    <color name="grayish">#E8E8E8</color>
+    <color name="grayishTextColor">#959595</color>
+
+    <color name="primaryLightColor">#d05ce3</color>
+    <color name="primaryDarkColor">#6a0080</color>
+    <color name="solidYellowColor">#FFBB00</color>
+    <color name="favColor">#FF0199</color>
+</resources>

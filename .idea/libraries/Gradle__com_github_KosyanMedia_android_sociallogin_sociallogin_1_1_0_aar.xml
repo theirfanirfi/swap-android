@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.KosyanMedia.android-sociallogin:sociallogin:1.1.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sociallogin-1.1.0.aar/061a331a23f80de6cbcb276df5a703ec/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sociallogin-1.1.0.aar/061a331a23f80de6cbcb276df5a703ec/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.KosyanMedia.android-sociallogin/sociallogin/1.1.0/aa3c7541f08c975ddf3d3bbc6a36f9791f6aecf9/sociallogin-1.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

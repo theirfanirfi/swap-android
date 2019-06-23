@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.jaychang:simpleauth-twitter:2.1.4@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/simpleauth-twitter-2.1.4.aar/290648dc11b51faf1cf399d30814887f/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/simpleauth-twitter-2.1.4.aar/290648dc11b51faf1cf399d30814887f/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jaychang/simpleauth-twitter/2.1.4/7eb6386ba41d795b0e02d91631d2db9d37040fc6/simpleauth-twitter-2.1.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

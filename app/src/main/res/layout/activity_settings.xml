@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.beardedhen.androidbootstrap.BootstrapWell
+                    android:id="@+id/bootstrapWell"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    app:bootstrapSize="xl"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="Change Password"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="16sp" />
+
+                        <com.beardedhen.androidbootstrap.BootstrapEditText
+                            android:id="@+id/currentPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:hint="Current Password"
+                            android:inputType="textPassword"
+                            app:bootstrapBrand="info"
+                            app:bootstrapSize="md" />
+
+                        <com.beardedhen.androidbootstrap.BootstrapEditText
+                            android:id="@+id/newPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:hint="New Password"
+                            android:inputType="textPassword"
+                            app:bootstrapBrand="info"
+                            app:bootstrapSize="md" />
+
+                        <com.beardedhen.androidbootstrap.BootstrapEditText
+                            android:id="@+id/confirmpassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:hint="Confirm New Password"
+                            android:inputType="textPassword"
+                            app:bootstrapBrand="info"
+                            app:bootstrapSize="md" />
+
+                        <com.beardedhen.androidbootstrap.BootstrapButton
+                            android:id="@+id/changePassBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical"
+                            android:text="Change Password"
+                            app:bootstrapBrand="primary"
+                            app:bootstrapSize="md"
+                            app:roundedCorners="true" />
+
+                    </LinearLayout>
+
+                </com.beardedhen.androidbootstrap.BootstrapWell>
+
+
+                <com.beardedhen.androidbootstrap.BootstrapWell
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    app:bootstrapSize="xl"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/bootstrapWell">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="Change Profile Details"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text="Username and Email must be unique.
+System will check the availibality of both."
+                            android:textSize="12sp"
+                            android:textColor="@color/colorBlack" />
+
+                        <com.beardedhen.androidbootstrap.BootstrapEditText
+                            android:id="@+id/fullName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:hint="Full Name"
+                            app:bootstrapBrand="info"
+                            app:bootstrapSize="md" />
+
+                        <com.beardedhen.androidbootstrap.BootstrapEditText
+                            android:id="@+id/username"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:hint="Username (unique)"
+                            app:bootstrapBrand="info"
+                            app:bootstrapSize="md" />
+
+                        <com.beardedhen.androidbootstrap.BootstrapEditText
+                            android:id="@+id/email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:hint="Email"
+                            app:bootstrapBrand="info"
+                            app:bootstrapSize="md" />
+
+                        <com.beardedhen.androidbootstrap.BootstrapButton
+                            android:id="@+id/updateProfileBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical"
+                            android:text="Update"
+                            app:bootstrapBrand="primary"
+                            app:bootstrapSize="md"
+                            app:roundedCorners="true" />
+
+                    </LinearLayout>
+
+                </com.beardedhen.androidbootstrap.BootstrapWell>
+
+
+
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<item android:icon="@drawable/ic_choose_image" android:id="@+id/camera"
+    app:showAsAction="always" android:title="Add Picture"
+    />
+    <item android:icon="@drawable/ic_choose_video" android:id="@+id/video"
+        app:showAsAction="always" android:title="Add Video"
+        />
+    <item android:icon="@drawable/ic_send_white" android:id="@+id/postStatus"
+        app:showAsAction="always" android:title="Post Status"
+        />
+
+</menu>

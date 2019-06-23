@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.KosyanMedia.android-sociallogin:odnoklassniki:1.1.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/odnoklassniki-1.1.0.aar/9fdf77f8cb34b70577ec0144493b68aa/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/odnoklassniki-1.1.0.aar/9fdf77f8cb34b70577ec0144493b68aa/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.KosyanMedia.android-sociallogin/odnoklassniki/1.1.0/90f267b7703c0c198f3ebbca9f13c72f9d79c9e3/odnoklassniki-1.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

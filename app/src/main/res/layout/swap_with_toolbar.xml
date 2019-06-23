@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:minHeight="?attr/actionBarSize"
+    android:background="@color/colorPrimary"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    android:elevation="4dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:id="@+id/swapWithToolbar"
+    app:navigationIcon="@drawable/arrow_back"
+    >
+
+    <!--<TextView-->
+        <!--android:textColor="@color/colorBlack"-->
+        <!--android:text=""-->
+        <!--android:drawableLeft="@drawable/arrow_back"-->
+        <!--android:textAllCaps="true"-->
+        <!--android:layout_gravity="left"-->
+        <!--android:layout_marginRight="11dp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/toolbarNavBack" />-->
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search "
+        android:textColorHint="@color/colorBlack"
+        android:textSize="24sp"
+        android:textColor="@color/colorBlack"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:drawableLeft="@drawable/ic_search"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/colorWhite"
+        android:id="@+id/searchSwapedWithField"
+        />
+
+
+    </android.support.v7.widget.Toolbar>

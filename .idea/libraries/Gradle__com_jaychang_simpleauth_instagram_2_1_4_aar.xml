@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.jaychang:simpleauth-instagram:2.1.4@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/simpleauth-instagram-2.1.4.aar/809a3c1ac97188fa7977544cb4a811da/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/simpleauth-instagram-2.1.4.aar/809a3c1ac97188fa7977544cb4a811da/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jaychang/simpleauth-instagram/2.1.4/c48e05bccfb1f39c30091edd42354c27017ad319/simpleauth-instagram-2.1.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

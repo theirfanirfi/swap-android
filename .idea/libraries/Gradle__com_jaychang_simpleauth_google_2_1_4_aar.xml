@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.jaychang:simpleauth-google:2.1.4@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/simpleauth-google-2.1.4.aar/5b55c9afbb2ca28707f312bcf46e4043/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/simpleauth-google-2.1.4.aar/5b55c9afbb2ca28707f312bcf46e4043/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jaychang/simpleauth-google/2.1.4/bda735b7a6ec71f04e1dcb9ac74d59226c67f9ae/simpleauth-google-2.1.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

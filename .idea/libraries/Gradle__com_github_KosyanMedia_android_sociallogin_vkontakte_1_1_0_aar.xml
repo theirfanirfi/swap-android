@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.KosyanMedia.android-sociallogin:vkontakte:1.1.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/vkontakte-1.1.0.aar/662fa794eaae195bf850e027f5b392a4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/vkontakte-1.1.0.aar/662fa794eaae195bf850e027f5b392a4/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.KosyanMedia.android-sociallogin/vkontakte/1.1.0/29744b171036a07d3996939eaba503120e66ad12/vkontakte-1.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

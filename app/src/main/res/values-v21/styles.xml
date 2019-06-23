@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:background">#fff</item>
+        <item name="android:titleTextStyle">@style/MyActionBarTitleText</item>
+        <item name="android:navigationBarColor">@color/bluish</item>
+        <item name="android:actionOverflowButtonStyle">@color/bluish</item>
+        <item name="android:tint">@color/bluish</item>
+        <item name="android:colorControlNormal">@color/bluish</item>
+        <item name="android:colorAccent">@color/bluish</item>
+
+    </style>
+
+</resources>

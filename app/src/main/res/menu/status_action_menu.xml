@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@+id/action_group">
+    <item android:id="@+id/accept" android:title="Accept Swap" app:showAsAction="always" />
+    <item android:id="@+id/decline" android:title="Decline Swap" app:showAsAction="always" />
+    </group>
+</menu>

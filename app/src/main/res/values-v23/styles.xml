@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/bluish</item>
+        <item name="android:textColorHighlight">@color/bluish</item>
+        <item name="android:textColorPrimary">@color/bluish</item>
+        <item name="android:titleTextColor">@color/bluish</item>
+        <item name="android:subtitleTextColor">@color/bluish</item>
+        <item name="android:actionBarStyle">@color/bluish</item>
+        <item name="actionBarTheme">@style/MyActionBar</item>
+    </style>
+    <style name="MyActionBarr" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <!--<item name="android:background">#fff</item>-->
+        <item name="android:titleTextStyle">@style/MyActionBarTitleText</item>
+        <!--<item name="android:actionOverflowButtonStyle">@color/bluish</item>-->
+        <!--<item name="android:tint">@color/bluish</item>-->
+        <item name="android:colorControlNormal">@color/bluish</item>
+        <!--<item name="android:navigationIcon">@drawable/swapicon</item>-->
+    </style>
+<style name="MactionBar" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+    <item name="android:textColor">@color/bluish</item>
+</style>
+</resources>

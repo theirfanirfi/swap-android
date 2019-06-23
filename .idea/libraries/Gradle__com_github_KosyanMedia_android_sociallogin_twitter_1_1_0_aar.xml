@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.KosyanMedia.android-sociallogin:twitter:1.1.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/twitter-1.1.0.aar/82f9701213badf35ab97c550a1a68b50/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/twitter-1.1.0.aar/82f9701213badf35ab97c550a1a68b50/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.KosyanMedia.android-sociallogin/twitter/1.1.0/cc4e906069f3dd02733eb88e8a5d134c9d64ca37/twitter-1.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
