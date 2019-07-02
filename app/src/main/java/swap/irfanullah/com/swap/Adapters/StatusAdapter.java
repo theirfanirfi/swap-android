@@ -430,9 +430,9 @@ public class StatusAdapter extends RecyclerView.Adapter<StatusAdapter.StatusView
 
             //indicator.setViewPager(viewPager);
             //pager.notifyAdapter(arrayList);
-
-            RMsg.logHere("working");
-            RMsg.logHere("multiple: "+Integer.toString(pager.getCount()));
+//
+//            RMsg.logHere("working");
+//            RMsg.logHere("multiple: "+Integer.toString(pager.getCount()));
 
         }
     }

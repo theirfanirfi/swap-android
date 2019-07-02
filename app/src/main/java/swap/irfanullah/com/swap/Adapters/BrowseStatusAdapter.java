@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -13,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RatingBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
+import me.relex.circleindicator.CircleIndicator;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -51,6 +54,8 @@ public class BrowseStatusAdapter extends RecyclerView.Adapter<BrowseStatusAdapte
     private ArrayList<String> attachmentsArrayList;
     private User user;
     int STATUS_ID;
+    MediaPager pager;
+    private ArrayList<Attachments> mediaAttachments;
     public BrowseStatusAdapter(Context context, ArrayList<Status> st) {
         this.context = context;
         this.statuses = st;
@@ -82,7 +87,8 @@ public class BrowseStatusAdapter extends RecyclerView.Adapter<BrowseStatusAdapte
         }
         statusViewHolder.sharesCount.setText(e.getSHARESCOUNT().toString());
         statusViewHolder.commentsCount.setText(e.getCOMMENTSCOUONT().toString());
-
+        ArrayList<Attachments> attachments = new ArrayList<>();
+        pager = new MediaPager(context,attachments);
     if(e.getPROFILE_IMAGE() == null) {
         statusViewHolder.profile_image.setImageResource(R.drawable.ic_person);
     }
@@ -93,7 +99,9 @@ public class BrowseStatusAdapter extends RecyclerView.Adapter<BrowseStatusAdapte
     //RMsg.logHere(Integer.toString(e.getHAS_ATTACHMENTS()));
 
     if(e.getHAS_ATTACHMENTS() == 1) {
-        loadStatusMedia(statusViewHolder,e.getATTACHMENTS(),e.getSTATUS_ID());
+        //loadStatusMedia(statusViewHolder,e.getATTACHMENTS(),e.getSTATUS_ID());
+        updatePager(e.getATTACHMENTS(),Integer.toString(e.getSTATUS_ID()),statusViewHolder.indicator,statusViewHolder.mediaView);
+
     }else {
         statusViewHolder.mediaView.setVisibility(View.GONE);
     }
@@ -115,9 +123,12 @@ public class BrowseStatusAdapter extends RecyclerView.Adapter<BrowseStatusAdapte
         ConstraintLayout layout;
         RatingBar ratingBar;
         TextView statusTime;
-        RecyclerView mediaView;
+        ViewPager mediaView;
         ProgressBar mediaProgressBar;
         Context context;
+        RelativeLayout rl;
+        CircleIndicator indicator;
+
 
 
         public StatusViewHolder(@NonNull final View itemView, final Context context, final ArrayList<Status> st) {
@@ -133,6 +144,8 @@ public class BrowseStatusAdapter extends RecyclerView.Adapter<BrowseStatusAdapte
             statusTime = itemView.findViewById(R.id.statusTimeTextView);
             mediaView = itemView.findViewById(R.id.gridViewStatus);
          //   mediaProgressBar = itemView.findViewById(R.id.mediaProgressBar);
+            rl = itemView.findViewById(R.id.rl);
+            indicator = itemView.findViewById(R.id.indicator);
 
             likeBtn = itemView.findViewById(R.id.likeBtn);
             commentBtn = itemView.findViewById(R.id.commentBtn);
@@ -346,10 +359,10 @@ public class BrowseStatusAdapter extends RecyclerView.Adapter<BrowseStatusAdapte
         ArrayList<Attachments> mediaAttachments = new ArrayList<>();
         StatusFragGridAdapter statusFragGridAdapter = new StatusFragGridAdapter(context,mediaAttachments,status_id);
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(context,4);
-        viewHolder.mediaView.setHasFixedSize(true);
-        viewHolder.mediaView.setLayoutManager(layoutManager);
-        viewHolder.mediaView.setAdapter(statusFragGridAdapter);
-        viewHolder.mediaView.setVisibility(View.VISIBLE);
+//        viewHolder.mediaView.setHasFixedSize(true);
+//        viewHolder.mediaView.setLayoutManager(layoutManager);
+//        viewHolder.mediaView.setAdapter(statusFragGridAdapter);
+//        viewHolder.mediaView.setVisibility(View.VISIBLE);
 
         Gson gson = new Gson();
         JsonElement json = gson.fromJson(attachments,JsonElement.class);
@@ -370,6 +383,47 @@ public class BrowseStatusAdapter extends RecyclerView.Adapter<BrowseStatusAdapte
             RMsg.logHere("working");
         }
 
+    }
+
+    private void updatePager(String attachments, String st_id, CircleIndicator indicator , ViewPager mediaPager){
+
+        mediaPager.setVisibility(View.VISIBLE);
+        ArrayList<Attachments> mediaAttachments = new ArrayList<>();
+        pager = new MediaPager(context,mediaAttachments);
+        Gson gson = new Gson();
+        JsonElement json = gson.fromJson(attachments,JsonElement.class);
+
+        if(json.isJsonObject()) {
+            JsonObject object = json.getAsJsonObject();
+            Attachments att = gson.fromJson(object, Attachments.class);
+            mediaAttachments.add(att);
+            mediaPager.setAdapter(pager);
+            indicator.setViewPager(mediaPager);
+            pager.notifyAdapter(mediaAttachments);
+            //pager.setIndicator(mediaPager);
+
+            // GLib.downloadImage(context, att.getATTACHMENT_URL()).into(statusMedia);
+
+            RMsg.logHere("Single: "+att.getATTACHMENT_URL());
+        }else if(json.isJsonArray()){
+            JsonArray jsonArray = json.getAsJsonArray();
+            //Attachments att = gson.fromJson(object, Attachments.class);
+            Type type = new TypeToken<ArrayList<Attachments>>(){}.getType();
+            ArrayList<Attachments> arrayList = gson.fromJson(jsonArray,type);
+            pager = new MediaPager(context,arrayList);
+            mediaPager.setAdapter(pager);
+            indicator.setViewPager(mediaPager);
+            // pager.setIndicator(mediaPager);
+            //   indicator.setViewPager(mediaPager);
+
+
+            //indicator.setViewPager(viewPager);
+            //pager.notifyAdapter(arrayList);
+//
+//            RMsg.logHere("working");
+//            RMsg.logHere("multiple: "+Integer.toString(pager.getCount()));
+
+        }
     }
 
 

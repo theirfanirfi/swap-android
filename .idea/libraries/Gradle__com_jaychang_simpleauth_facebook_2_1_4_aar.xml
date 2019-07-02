@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.jaychang:simpleauth-facebook:2.1.4@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/simpleauth-facebook-2.1.4.aar/e1084bb2f1bf42e1cee961e70680868a/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/simpleauth-facebook-2.1.4.aar/e1084bb2f1bf42e1cee961e70680868a/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/simpleauth-facebook-2.1.4.aar/8705835380366b3805950c42b2c2cc8d/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/simpleauth-facebook-2.1.4.aar/8705835380366b3805950c42b2c2cc8d/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

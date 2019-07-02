@@ -10,6 +10,7 @@ import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
 import retrofit2.http.Query;
+import swap.irfanullah.com.swap.Libraries.RetroLib;
 import swap.irfanullah.com.swap.Models.Attachments;
 import swap.irfanullah.com.swap.Models.Comment;
 import swap.irfanullah.com.swap.Models.Followers;
@@ -27,7 +28,7 @@ import swap.irfanullah.com.swap.Models.SwapsTab;
 import swap.irfanullah.com.swap.Models.User;
 
 public interface ApiService {
-    String AFTER_BASE_URL = "http://192.168.56.1/swap/public/api/";
+    String AFTER_BASE_URL = "http://"+ RetroLib.IP +"/swap/public/api/";
     //String AFTER_BASE_URL = "http://irfitech.com/public/api/";
     @POST(AFTER_BASE_URL+"status/compose")
     @FormUrlEncoded
