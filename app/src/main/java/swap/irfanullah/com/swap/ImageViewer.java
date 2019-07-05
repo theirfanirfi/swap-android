@@ -30,7 +30,7 @@ public class ImageViewer extends AppCompatActivity {
 
     private ViewPager viewPager;
     private MediaPager pager;
-    private int STATUS_ID = 0;
+    private String STATUS_ID = null;
     private Context context;
     private ArrayList<Attachments> mediaAttachments;
     private User user;
@@ -48,22 +48,22 @@ public class ImageViewer extends AppCompatActivity {
         context = this;
         viewPager = findViewById(R.id.imageViewer);
         indicator = findViewById(R.id.indicator);
-        this.STATUS_ID = getIntent().getExtras().getInt("status_id");
+        this.STATUS_ID = getIntent().getExtras().getString("status_id");
         mediaAttachments = new ArrayList<>();
-        pager = new MediaPager(this,mediaAttachments);
+        pager = new MediaPager(this,mediaAttachments,this.STATUS_ID);
         viewPager.setAdapter(pager);
         indicator.setViewPager(viewPager);
         user = PrefStorage.getUser(context);
     }
 
     private void makeRequest(){
-        RetroLib.geApiService().getStatus(user.getTOKEN(),this.STATUS_ID).enqueue(new Callback<Status>() {
+        RetroLib.geApiService().getStatus(user.getTOKEN(),Integer.parseInt(this.STATUS_ID)).enqueue(new Callback<Status>() {
             @Override
             public void onResponse(Call<Status> call, Response<Status> response) {
                 if(response.isSuccessful()){
                     Status status = response.body();
                     if(status.getIS_ERROR()){
-                        RMsg.toastHere(context,RMsg.REQ_ERROR_MESSAGE);
+                        RMsg.toastHere(context,RMsg.REQ_ERROR_MESSAGE+"err if "+status.getMESSAGE()+" : "+STATUS_ID);
                     }else {
                         if(status.getAuthenticated()){
                             if(status.getFound()){
@@ -74,14 +74,14 @@ public class ImageViewer extends AppCompatActivity {
                                     finish();
                                 }
                             }else {
-                                RMsg.toastHere(context,RMsg.REQ_ERROR_MESSAGE);
+                                RMsg.toastHere(context,RMsg.REQ_ERROR_MESSAGE+"found else");
                             }
                         }else {
-                            RMsg.toastHere(context,RMsg.REQ_ERROR_MESSAGE);
+                            RMsg.toastHere(context,RMsg.REQ_ERROR_MESSAGE+"auth else");
                         }
                     }
                 }else {
-                    RMsg.toastHere(context,RMsg.REQ_ERROR_MESSAGE);
+                    RMsg.toastHere(context,RMsg.REQ_ERROR_MESSAGE+"is successfull");
                 }
             }
 

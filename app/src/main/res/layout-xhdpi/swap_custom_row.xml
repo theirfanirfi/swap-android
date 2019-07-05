@@ -56,20 +56,53 @@
             app:layout_constraintStart_toEndOf="@+id/profile_image"
             app:layout_constraintTop_toBottomOf="@+id/usernameTextView" />
 
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/gridViewStatus"
+        <RelativeLayout
+            android:id="@+id/rl"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_height="300dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:visibility="invisible"
             app:layout_constraintBottom_toTopOf="@+id/ratingBar"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/statusTextView"
-            app:layout_constraintTop_toBottomOf="@+id/statusTextView"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/statusTextView">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/gridViewStatus"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp" />
+        </RelativeLayout>
+
+
+
+        <!--<android.support.v7.widget.RecyclerView-->
+            <!--android:id="@+id/gridViewStatus"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:layout_marginEnd="8dp"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:visibility="invisible"-->
+            <!--app:layout_constraintBottom_toTopOf="@+id/ratingBar"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="@+id/statusTextView"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/statusTextView"-->
+            <!--app:layout_constraintVertical_bias="1.0" />-->
 
 
         <TextView
@@ -146,10 +179,8 @@
             style="?android:attr/ratingBarStyleIndicator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:theme="@style/RatingBar"
-
             android:layout_marginStart="80dp"
-            android:layout_marginTop="9dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="8dp"
             android:isIndicator="false"
             android:numStars="5"
@@ -157,10 +188,11 @@
             android:scaleX=".8"
             android:scaleY=".6"
             android:stepSize="0"
+            android:theme="@style/RatingBar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.05"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/gridViewStatus" />
+            app:layout_constraintTop_toBottomOf="@+id/rl" />
 
 
         <!--past here-->

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RatingBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +26,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
+import me.relex.circleindicator.CircleIndicator;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -48,6 +51,7 @@ public class SwapsAdapter extends RecyclerView.Adapter<SwapsAdapter.StatusViewHo
     private ArrayList<SwapsTab> swapsTabArrayList;
     private final static String REPRESENTING_LOGGED_USER_IN_TAB = "You";
     private int STATUS_ID = 0;
+    MediaPager pager;
 
     public SwapsAdapter(Context context, ArrayList<SwapsTab> swapsTabArrayList) {
         this.context = context;
@@ -78,6 +82,8 @@ public class SwapsAdapter extends RecyclerView.Adapter<SwapsAdapter.StatusViewHo
 
         statusViewHolder.sharesCount.setText(swap.getSHARESCOUNT().toString());
         statusViewHolder.commentsCount.setText(swap.getCOMMENTSCOUONT().toString());
+        ArrayList<Attachments> attachments = new ArrayList<>();
+        pager = new MediaPager(context,attachments, Integer.toString(STATUS_ID));
 
         if (swap.getIS_ME()) {
             statusViewHolder.username.setText(REPRESENTING_LOGGED_USER_IN_TAB);
@@ -107,7 +113,8 @@ public class SwapsAdapter extends RecyclerView.Adapter<SwapsAdapter.StatusViewHo
 
 
         if(swap.getHAS_ATTACHMENTS() == 1) {
-            loadStatusMedia(statusViewHolder,swap.getATTACHMENTS(), swap.getSTATUS_ID());
+//            loadStatusMedia(statusViewHolder,swap.getATTACHMENTS(), swap.getSTATUS_ID());
+            updatePager(swap.getATTACHMENTS(),Integer.toString(STATUS_ID),statusViewHolder.indicator,statusViewHolder.mediaView,STATUS_ID);
         }else {
             statusViewHolder.mediaView.setVisibility(View.GONE);
         }
@@ -125,8 +132,10 @@ public class SwapsAdapter extends RecyclerView.Adapter<SwapsAdapter.StatusViewHo
         TextView username, statusDescription, withTextV, swapTime, likesCount, sharesCount, commentsCount;
         ConstraintLayout layout;
         RatingBar ratingBar;
-        RecyclerView mediaView;
+        ViewPager mediaView;
         Context context;
+        RelativeLayout rl;
+        CircleIndicator indicator;
 
         public StatusViewHolder(@NonNull View itemView, final Context context, final ArrayList<SwapsTab> swapsTabs, int status_id) {
             super(itemView);
@@ -150,6 +159,9 @@ public class SwapsAdapter extends RecyclerView.Adapter<SwapsAdapter.StatusViewHo
             likesCount = itemView.findViewById(R.id.likeCountTextView);
             sharesCount = itemView.findViewById(R.id.shareCountTextView);
             commentsCount = itemView.findViewById(R.id.CommentCountTextView);
+
+            rl = itemView.findViewById(R.id.rl);
+            indicator = itemView.findViewById(R.id.indicator);
 
             //unswap = itemView.findViewById(R.id.cancelViewImgBtn);
 
@@ -347,11 +359,11 @@ public class SwapsAdapter extends RecyclerView.Adapter<SwapsAdapter.StatusViewHo
         RMsg.logHere("SWAPS: "+attachments);
 
         ArrayList<Attachments> mediaAttachments = new ArrayList<>();
-        StatusFragGridAdapter statusFragGridAdapter = new StatusFragGridAdapter(context,mediaAttachments, status_id);
-        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(context,4);
-        viewHolder.mediaView.setHasFixedSize(true);
-        viewHolder.mediaView.setLayoutManager(layoutManager);
-        viewHolder.mediaView.setAdapter(statusFragGridAdapter);
+//        StatusFragGridAdapter statusFragGridAdapter = new StatusFragGridAdapter(context,mediaAttachments, status_id);
+//        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(context,4);
+//        viewHolder.mediaView.setHasFixedSize(true);
+//        viewHolder.mediaView.setLayoutManager(layoutManager);
+//        viewHolder.mediaView.setAdapter(statusFragGridAdapter);
         viewHolder.mediaView.setVisibility(View.VISIBLE);
 
         Gson gson = new Gson();
@@ -360,7 +372,7 @@ public class SwapsAdapter extends RecyclerView.Adapter<SwapsAdapter.StatusViewHo
             JsonObject object = json.getAsJsonObject();
             Attachments att = gson.fromJson(object, Attachments.class);
             mediaAttachments.add(att);
-            statusFragGridAdapter.notifyAdapter(mediaAttachments);
+         //   statusFragGridAdapter.notifyAdapter(mediaAttachments);
             // GLib.downloadImage(context, att.getATTACHMENT_URL()).into(statusMedia);
 
             RMsg.logHere("Single: "+att.getATTACHMENT_URL());
@@ -369,8 +381,50 @@ public class SwapsAdapter extends RecyclerView.Adapter<SwapsAdapter.StatusViewHo
             //Attachments att = gson.fromJson(object, Attachments.class);
             Type type = new TypeToken<ArrayList<Attachments>>(){}.getType();
             ArrayList<Attachments> arrayList = gson.fromJson(jsonArray,type);
-            statusFragGridAdapter.notifyAdapter(arrayList);
+           // statusFragGridAdapter.notifyAdapter(arrayList);
             RMsg.logHere("working");
+        }
+    }
+
+    private void updatePager(String attachments, String st_id, CircleIndicator indicator , ViewPager mediaPager, int status_id) {
+
+        mediaPager.setVisibility(View.VISIBLE);
+        ArrayList<Attachments> mediaAttachments = new ArrayList<>();
+        pager = new MediaPager(context, mediaAttachments, Integer.toString(status_id));
+        Gson gson = new Gson();
+        JsonElement json = gson.fromJson(attachments, JsonElement.class);
+
+        if (json.isJsonObject()) {
+            JsonObject object = json.getAsJsonObject();
+            Attachments att = gson.fromJson(object, Attachments.class);
+            mediaAttachments.add(att);
+            mediaPager.setAdapter(pager);
+            indicator.setViewPager(mediaPager);
+            pager.notifyAdapter(mediaAttachments);
+            //pager.setIndicator(mediaPager);
+
+            // GLib.downloadImage(context, att.getATTACHMENT_URL()).into(statusMedia);
+
+            RMsg.logHere("Single: " + att.getATTACHMENT_URL());
+        } else if (json.isJsonArray()) {
+            JsonArray jsonArray = json.getAsJsonArray();
+            //Attachments att = gson.fromJson(object, Attachments.class);
+            Type type = new TypeToken<ArrayList<Attachments>>() {
+            }.getType();
+            ArrayList<Attachments> arrayList = gson.fromJson(jsonArray, type);
+            pager = new MediaPager(context, arrayList, Integer.toString(status_id));
+            mediaPager.setAdapter(pager);
+            indicator.setViewPager(mediaPager);
+            // pager.setIndicator(mediaPager);
+            //   indicator.setViewPager(mediaPager);
+
+
+            //indicator.setViewPager(viewPager);
+            //pager.notifyAdapter(arrayList);
+//
+//            RMsg.logHere("working");
+//            RMsg.logHere("multiple: "+Integer.toString(pager.getCount()));
+
         }
     }
 

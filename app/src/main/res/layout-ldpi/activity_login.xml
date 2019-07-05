@@ -43,7 +43,6 @@
                 android:text="or"
                 android:textColor="@color/colorWhite"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.501"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
 
@@ -57,7 +56,6 @@
                 android:text="Do it with"
                 android:textColor="@color/colorWhite"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/t5" />
 

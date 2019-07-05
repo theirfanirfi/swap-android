@@ -35,7 +35,7 @@ android:paddingBottom="20dp"
             android:maxLines="3"
             android:text="This is my status. You can not ignore it \nbuddy. Ooo, it is really nice app."
             android:textColor="@color/colorBlack"
-            android:textSize="12dp"
+            android:textSize="14sp"
             app:layout_constraintEnd_toStartOf="@+id/statusTimeTextView"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/profile_image"
@@ -55,16 +55,41 @@ android:paddingBottom="20dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/gridViewStatus"
+        <RelativeLayout
+            android:id="@+id/rl"
             android:layout_width="0dp"
-            android:layout_height="172dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="12dp"
-            android:visibility="gone"
+            android:layout_height="300dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/statusTextView"
-            app:layout_constraintTop_toBottomOf="@+id/statusTextView" />
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/statusTextView"
+            >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/gridViewStatus"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                />
+        </RelativeLayout>
+
 
 
         <ImageView
@@ -93,9 +118,9 @@ android:paddingBottom="20dp"
             android:stepSize=".5"
             android:theme="@style/RatingBar"
             app:layout_constraintEnd_toStartOf="@+id/swapPlusIvBtn"
-            app:layout_constraintHorizontal_bias="0.701"
+            app:layout_constraintHorizontal_bias="0.47"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/gridViewStatus" />
+            app:layout_constraintTop_toBottomOf="@+id/rl" />
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"

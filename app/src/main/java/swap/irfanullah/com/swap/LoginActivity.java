@@ -132,6 +132,7 @@ context = this;
         dataArray.put(0,emailF);
         dataArray.put(1,passwordF);
         str = VolleyLib.encode(dataArray.toString());
+        Log.i("MY_SWAP_APP: ",str);
 
         VolleyLib.getRequest(this, LOGIN_URL+"/"+str, new VolleyLib.VolleyListener() {
             @Override

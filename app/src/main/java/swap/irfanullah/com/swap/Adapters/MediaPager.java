@@ -1,6 +1,7 @@
 package swap.irfanullah.com.swap.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.annotation.NonNull;
@@ -19,8 +20,11 @@ import android.widget.VideoView;
 import java.util.ArrayList;
 
 import me.relex.circleindicator.CircleIndicator;
+import swap.irfanullah.com.swap.ImageViewer;
 import swap.irfanullah.com.swap.Libraries.GLib;
 import swap.irfanullah.com.swap.Models.Attachments;
+import swap.irfanullah.com.swap.Models.RMsg;
+import swap.irfanullah.com.swap.Models.Status;
 import swap.irfanullah.com.swap.R;
 
 public class MediaPager extends PagerAdapter {
@@ -31,10 +35,12 @@ public class MediaPager extends PagerAdapter {
     private MediaController mediaController;
      CircleIndicator indicator;
      View view;
+     private String STATUS_ID = null;
     private static final String TAG = "MediaPager";
-    public MediaPager(Context context,ArrayList<Attachments> attachments) {
+    public MediaPager(Context context,ArrayList<Attachments> attachments, String st_id) {
         this.context = context;
         this.attachments = attachments;
+        this.STATUS_ID = st_id;
 
         Log.i(TAG, "MediaPager: constructor "+this.attachments.size());
     }
@@ -52,7 +58,7 @@ public class MediaPager extends PagerAdapter {
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
-        Attachments media = this.attachments.get(position);
+        final Attachments media = this.attachments.get(position);
         if(media.getATTACHMENT_TYPE() == 1) {
             if(mediaController != null)
                 mediaController.invalidate();
@@ -63,6 +69,20 @@ public class MediaPager extends PagerAdapter {
             ImageView iv = view.findViewById(R.id.imageView);
             indicator = view.findViewById(R.id.indicator);
 
+            iv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent pager = new Intent(context, ImageViewer.class);
+//                    int position = getAdapterPosition();
+//                    Status status = st.get(position);
+                    if(STATUS_ID != null) {
+                        pager.putExtra("status_id", STATUS_ID);
+                        context.startActivity(pager);
+                    }
+                    //RMsg.toastHere(context,STATUS_ID);
+
+                }
+            });
 
             ProgressBar progressBar = view.findViewById(R.id.pagerProgressBar);
             GLib.downloadImage(context,media.getATTACHMENT_URL()).into(iv);

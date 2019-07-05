@@ -18,10 +18,9 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="onClick" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="MY_S" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="MY_SWAP_APP" />
-    <option name="TOOL_WINDOW_REGEXP_FILTER" value="false" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="846de7c6-7c74-45fa-afff-b6884a0f850a" name="Default Changelist" comment="">
@@ -30,425 +29,28 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_common_1_1_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_common_1_1_1_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_common_1_1_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_common_1_1_1_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_asynclayoutinflater_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_asynclayoutinflater_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cardview_v7_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cardview_v7_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_collections_28_0_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_collections_28_0_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_1_3_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_1_3_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_solver_1_1_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_solver_1_1_3_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_coordinatorlayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_coordinatorlayout_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cursoradapter_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cursoradapter_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_customtabs_25_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_customtabs_25_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_customview_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_customview_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_documentfile_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_documentfile_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_drawerlayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_drawerlayout_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_gridlayout_v7_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_gridlayout_v7_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_interpolator_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_interpolator_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_loader_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_loader_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_localbroadcastmanager_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_localbroadcastmanager_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_print_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_print_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_slidingpanelayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_slidingpanelayout_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_annotations_28_0_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_annotations_28_0_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_swiperefreshlayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_swiperefreshlayout_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_monitor_1_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_monitor_1_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_versionedparcelable_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_versionedparcelable_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_viewpager_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_viewpager_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_volley_volley_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_volley_volley_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_beardedhen_androidbootstrap_2_3_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_beardedhen_androidbootstrap_2_3_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_android_sdk_4_21_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_android_sdk_4_21_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_android_sdk_4_7_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_android_sdk_4_7_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_KosyanMedia_android_sociallogin_facebook_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_KosyanMedia_android_sociallogin_facebook_1_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_KosyanMedia_android_sociallogin_google_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_KosyanMedia_android_sociallogin_google_1_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_KosyanMedia_android_sociallogin_odnoklassniki_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_KosyanMedia_android_sociallogin_odnoklassniki_1_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_KosyanMedia_android_sociallogin_rx_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_KosyanMedia_android_sociallogin_rx_1_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_KosyanMedia_android_sociallogin_sociallogin_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_KosyanMedia_android_sociallogin_sociallogin_1_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_KosyanMedia_android_sociallogin_twitter_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_KosyanMedia_android_sociallogin_twitter_1_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_KosyanMedia_android_sociallogin_vkontakte_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_KosyanMedia_android_sociallogin_vkontakte_1_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_annotations_4_8_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_annotations_4_8_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_disklrucache_4_8_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_disklrucache_4_8_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_gifdecoder_4_8_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_gifdecoder_4_8_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_glide_4_8_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_glide_4_8_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_robertsimoes_Shareable_0_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_robertsimoes_Shareable_0_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_siyamed_android_shape_imageview_0_9_3_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_siyamed_android_shape_imageview_0_9_3_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_stfalcon_chatkit_0_3_3_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_stfalcon_chatkit_0_3_3_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_yalantis_ucrop_2_2_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_yalantis_ucrop_2_2_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_flexbox_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_flexbox_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_10_2_6_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_10_2_6_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_11_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_11_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_base_10_2_6_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_base_10_2_6_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_base_11_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_base_11_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_10_2_6_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_10_2_6_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_11_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_11_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_10_2_6_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_10_2_6_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_11_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_11_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_10_2_6_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_10_2_6_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_11_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_11_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_2_0_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_2_0_1_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_8_5_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_8_5_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_iceteck_silicompressorr_silicompressor_2_2_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_iceteck_silicompressorr_silicompressor_2_2_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jaychang_simpleauth_2_1_4_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jaychang_simpleauth_2_1_4_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jaychang_simpleauth_facebook_2_1_4_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jaychang_simpleauth_facebook_2_1_4_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jaychang_simpleauth_google_2_1_4_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jaychang_simpleauth_google_2_1_4_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jaychang_simpleauth_instagram_2_1_4_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jaychang_simpleauth_instagram_2_1_4_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jaychang_simpleauth_twitter_2_1_4_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jaychang_simpleauth_twitter_2_1_4_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_parse_bolts_bolts_android_1_2_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_parse_bolts_bolts_android_1_2_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_parse_bolts_bolts_android_1_4_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_parse_bolts_bolts_android_1_4_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_parse_bolts_bolts_applinks_1_4_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_parse_bolts_bolts_applinks_1_4_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_parse_bolts_bolts_tasks_1_4_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_parse_bolts_bolts_tasks_1_4_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_shaishavgandhi_login_buttons_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_shaishavgandhi_login_buttons_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_soundcloud_android_android_crop_1_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_soundcloud_android_android_crop_1_0_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_12_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_12_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_1_15_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_1_15_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_converter_gson_2_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_converter_gson_2_1_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_retrofit_2_5_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_retrofit_2_5_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_twitter_sdk_android_twitter_core_3_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_twitter_sdk_android_twitter_core_3_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_vk_androidsdk_1_6_7_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_vk_androidsdk_1_6_7_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__de_hdodenhof_circleimageview_2_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__de_hdodenhof_circleimageview_2_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_reactivex_rxjava2_rxjava_2_0_8_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_reactivex_rxjava2_rxjava_2_0_8_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_inject_javax_inject_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_inject_javax_inject_1_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__me_relex_circleindicator_1_2_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__me_relex_circleindicator_1_2_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_sf_kxml_kxml2_2_3_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_sf_kxml_kxml2_2_3_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_annotations_13_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_annotations_13_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_annotations_java5_15_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_annotations_java5_15_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_1_2_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_1_2_3_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_1_60_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_1_60_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_reactivestreams_reactive_streams_1_0_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_reactivestreams_reactive_streams_1_0_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__ru_ok_odnoklassniki_android_sdk_2_0_3_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__ru_ok_odnoklassniki_android_sdk_2_0_3_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/render.experimental.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/render.experimental.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Swaps.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Swaps.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/app/proguard-rules.pro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/swap/irfanullah/com/swap/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/swap/irfanullah/com/swap/ExampleInstrumentedTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/APIs/ApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/APIs/ApiService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/BrowseStatusAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/BrowseStatusAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/ChatAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/ChatAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/FollowUsersNacentAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/FollowUsersNacentAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/FollowersAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/FollowersAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/GridImageAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/GridImageAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/GridMediaStatusAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/GridMediaStatusAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/InvitePhoneContactAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/InvitePhoneContactAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/MediaPager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/MediaPager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/NotificationAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/NotificationAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/ParticipantsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/ParticipantsAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/Profile/StatusAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/Profile/StatusAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/Profile/SwapsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/Profile/SwapsAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/ProfilePagerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/ProfilePagerAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/SearchFragmentUsersAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/SearchFragmentUsersAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/SingleStatusAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/SingleStatusAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/StatusAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/StatusAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/StatusFragGridAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/StatusFragGridAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/StatusMediaPagerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/StatusMediaPagerAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/SwapRequestAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/SwapRequestAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/SwapWithAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/SwapWithAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/SwapsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/SwapsAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/UserProfileFollowersAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/UserProfileFollowersAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/AppClasses/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/AppClasses/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/ChatActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/ChatActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/ComposeStatusActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/ComposeStatusActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/CustomComponents/CommentDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/CustomComponents/CommentDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/CustomComponents/ComposeStatusDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/CustomComponents/ComposeStatusDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/CustomComponents/PDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/CustomComponents/PDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/CustomComponents/SwapsSquareImageView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/CustomComponents/SwapsSquareImageView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/CustomComponents/SwapsSquareImageViewForComposing.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/CustomComponents/SwapsSquareImageViewForComposing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/CustomComponents/SwapsSquareVideoViewForComposing.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/CustomComponents/SwapsSquareVideoViewForComposing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/FollowUsersActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/FollowUsersActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Fragments/ChatFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Fragments/ChatFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Fragments/DiscoverStatusesFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Fragments/DiscoverStatusesFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Fragments/Profile/StatusesFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Fragments/Profile/StatusesFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Fragments/Profile/SwapsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Fragments/Profile/SwapsFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Fragments/StatusesFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Fragments/StatusesFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Fragments/SwapsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Fragments/SwapsFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/HomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/HomeActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/ImageViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/ImageViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/InvitePhoneContactsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/InvitePhoneContactsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/ATask.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/ATask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/CReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/CReq.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/Compressor.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/Compressor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/GLib.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/GLib.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/RealPathUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/RealPathUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/RetroLib.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/RetroLib.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/TimeDiff.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/TimeDiff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/VolleyLib.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/VolleyLib.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/LoginActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/Attachments.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/Attachments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/Followers.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/Followers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/Like.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/Like.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/Media.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/Messenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/Messenger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/Notification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/Participants.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/Participants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/PhoneContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/PhoneContact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/ProfileModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/ProfileModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/RMsg.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/RMsg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/Share.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/Share.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/SingleStatusModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/SingleStatusModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/Statistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/Statistics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/Status.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/Swap.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/Swap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/SwapsTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/SwapsTab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/NLUserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/NLUserProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/NotificationActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/NotificationActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/PlaceHolders/StatusMediaPlaceHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/PlaceHolders/StatusMediaPlaceHolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/RegisterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/RegisterActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/SearchActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/SearchActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/SearchFragments/SearchFragPagerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/SearchFragments/SearchFragPagerAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/SearchFragments/StatusesFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/SearchFragments/StatusesFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/SearchFragments/UsersFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/SearchFragments/UsersFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Services/StatusMediaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Services/StatusMediaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Settings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/ShareApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/ShareApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/StatusActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/StatusActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/StatusActivityFrags/CommentsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/StatusActivityFrags/CommentsAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/StatusActivityFrags/CommentsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/StatusActivityFrags/CommentsFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/StatusActivityFrags/CommentsRatersPager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/StatusActivityFrags/CommentsRatersPager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/StatusActivityFrags/RatersAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/StatusActivityFrags/RatersAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/StatusActivityFrags/RatersFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/StatusActivityFrags/RatersFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Storage/PrefStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Storage/PrefStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/SwapRequestActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/SwapRequestActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/SwapWithActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/SwapWithActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/ToBeDeletedActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/ToBeDeletedActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/UpdateUserProfileActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/UpdateUserProfileActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/UserFollowersActivityToBeBeleted.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/UserFollowersActivityToBeBeleted.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/UserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/UserProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/UserProfileFollowersActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/UserProfileFollowersActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/UsersActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/UsersActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/UsersToFollow.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/UsersToFollow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/bluishroundbtn.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/bluishroundbtn.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/field_bg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/field_bg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/grayishroundbtn.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/grayishroundbtn.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/white_btn.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/white_btn.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/btn.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/btn.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/button.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/button.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/chat_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/chat_background.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/chat_background_sender.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/chat_background_sender.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/cons_top_border.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/cons_top_border.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/edit_field_white.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/edit_field_white.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/field_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/field_background.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/field_bg_bluish.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/field_bg_bluish.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/line.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/line.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/login_bg_gradient.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/login_bg_gradient.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/magnify.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/magnify.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/pyaziroundbtn.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/pyaziroundbtn.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/round_btn.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/round_btn.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/shape_notification.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shape_notification.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/swap_horizontal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/swap_horizontal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/tab_bg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/tab_bg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/activity_chat.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/activity_chat.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/activity_home.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/activity_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/activity_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/activity_status.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/activity_swap_with.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/activity_swap_with.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/activity_user_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/activity_user_profile.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/comments_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/comments_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/compose_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/compose_status.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/fragment_statuses.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/fragment_statuses.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/fragment_swap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/fragment_swap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/status_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/status_custom_row.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/swap_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/swap_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/swap_request_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/swap_request_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/swap_with_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/swap_with_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_chat.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_chat.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_status.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_swap_with.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_swap_with.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_user_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_user_profile.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/comments_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/comments_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/compose_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/compose_status.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/fragment_statuses.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/fragment_statuses.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/fragment_swap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/fragment_swap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/status_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/status_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/swap_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/swap_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/swap_with_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/swap_with_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/activity_chat.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/activity_chat.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/activity_home.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/activity_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/activity_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/activity_status.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/activity_swap_with.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/activity_swap_with.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/activity_user_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/activity_user_profile.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/comments_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/comments_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/compose_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/compose_status.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/fragment_chat.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/fragment_chat.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/fragment_statuses.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/fragment_statuses.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/fragment_swap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/fragment_swap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/image_viewer_layout_white.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/image_viewer_layout_white.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/participants_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/participants_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/status_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/status_custom_row.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/swap_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/swap_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/swap_request_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/swap_request_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/swap_with_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/swap_with_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/video_viewer_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/video_viewer_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/activity_chat.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/activity_chat.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/activity_home.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/activity_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/activity_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/activity_status.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/activity_swap_with.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/activity_swap_with.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/activity_user_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/activity_user_profile.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/comments_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/comments_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/compose_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/compose_status.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/fragment_statuses.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/fragment_statuses.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/fragment_swap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/fragment_swap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/status_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/status_custom_row.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/swap_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/swap_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/swap_request_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/swap_request_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/swap_with_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/swap_with_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/update_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/update_profile.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/activity_chat.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/activity_chat.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/activity_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/activity_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/activity_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/activity_status.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/activity_swap_with.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/activity_swap_with.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/activity_user_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/activity_user_profile.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/comments_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/comments_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/compose_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/compose_status.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/fragment_statuses.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/fragment_statuses.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/fragment_swap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/fragment_swap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/status_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/status_custom_row.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/swap_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/swap_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/swap_request_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/swap_request_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/swap_with_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/swap_with_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_chat.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_chat.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_status.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_swap_with.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_swap_with.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_user_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_user_profile.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/comments_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/comments_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/compose_profile_description.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/compose_profile_description.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/compose_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/compose_status.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/fragment_statuses.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/fragment_statuses.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/fragment_swap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/fragment_swap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/status_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/status_custom_row.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/swap_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/swap_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/swap_request_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/swap_request_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/swap_with_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/swap_with_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/users_f_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/users_f_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/activity_chat.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/activity_chat.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/activity_home.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/activity_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/activity_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/activity_status.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/activity_swap_with.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/activity_swap_with.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/activity_user_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/activity_user_profile.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/comments_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/comments_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/compose_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/compose_status.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/fragment_statuses.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/fragment_statuses.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/fragment_swap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/fragment_swap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/status_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/status_custom_row.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/swap_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/swap_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/swap_request_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/swap_request_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/swap_with_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/swap_with_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_chat.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_chat.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_compose_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_compose_status.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_image_viewer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_image_viewer.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_invite_phone_contacts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_invite_phone_contacts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_notification.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_notification.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_search.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_search.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_share_app.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_share_app.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_status.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_swap_request.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_swap_request.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_swap_with.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_swap_with.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_to_be_deleted.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_to_be_deleted.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_user_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_user_profile.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_users.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/chat_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/chat_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/compose_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/compose_status.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/compose_status_media_image.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/compose_status_media_image.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/feed_update_count.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/feed_update_count.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/follow_nacent_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/follow_nacent_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_statuses.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_statuses.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_swap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_swap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/image_viewer_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/image_viewer_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/invite_phone_contacts_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/invite_phone_contacts_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/notification_follow_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/notification_follow_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/notification_status_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/notification_status_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/search_act_menu_item_actionlayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/search_act_menu_item_actionlayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/search_fragment_statuses.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/search_fragment_statuses.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/search_users_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/search_users_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/search_users_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/search_users_fragment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/single_status_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/single_status_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/status_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/status_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/status_frag_grid_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/status_frag_grid_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/status_profile_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/status_profile_row.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/swap_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/swap_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/swap_request_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/swap_request_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/swap_requests_count.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/swap_requests_count.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/swap_with_toolbar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/swap_with_toolbar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/user_profile_followers_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/user_profile_followers_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/clear_notification_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/clear_notification_menu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/compose_status_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/compose_status_menu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu_swap_with.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_swap_with.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/next_menu_startup_activities.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/next_menu_startup_activities.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/nl_user_profile_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/nl_user_profile_menu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/profile_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/profile_menu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/search_act_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/search_act_menu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/status_action_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/status_action_menu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-v23/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-v23/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-w820dp/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-w820dp/dimens.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/file_paths.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/file_paths.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/swap/irfanullah/com/swap/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/swap/irfanullah/com/swap/ExampleUnitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -466,66 +68,25 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/StatusAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="124" selection-start-line="124" selection-end-line="125" />
-              <folding>
-                <element signature="method#loadStatusMedia#0;class#StatusAdapter#0" />
-                <element signature="method#updatePager#0;class#StatusAdapter#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/BrowseStatusAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="68" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="114">
+              <caret line="89" selection-start-line="89" selection-end-line="90" selection-end-column="88" />
               <folding>
                 <element signature="method#loadStatusMedia#0;class#BrowseStatusAdapter#0" />
-                <element signature="method#updatePager#0;class#BrowseStatusAdapter#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/RetroLib.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/VolleyLib.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
-              <caret line="25" column="77" selection-start-line="25" selection-start-column="71" selection-end-line="25" selection-end-column="77" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/LoginActivity.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/SwapsAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="46" column="26" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/APIs/ApiService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="170" column="15" selection-start-line="170" selection-start-column="15" selection-end-line="170" selection-end-column="15" />
+            <state relative-caret-position="1499">
+              <caret line="166" lean-forward="true" selection-start-line="166" selection-end-line="166" />
+              <folding>
+                <element signature="method#loadStatusMedia#0;class#SwapsAdapter#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -533,38 +94,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/chat_row.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
+            <state relative-caret-position="525">
               <caret line="35" column="45" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
             </state>
           </provider>
           <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/chat_background.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/chat_background_sender.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/MediaPager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="70" column="20" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
-            </state>
-          </provider>
         </entry>
       </file>
     </leaf>
@@ -614,18 +148,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-land/status_custom_row.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-mdpi/status_custom_row.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/status_custom_row.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/status_custom_row.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-hdpi/status_custom_row.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-ldpi/status_custom_row.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/swap_custom_row.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/swap_custom_row.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/swap_custom_row.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-mdpi/swap_custom_row.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/swap_custom_row.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-hdpi/swap_custom_row.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-land/swap_custom_row.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-ldpi/swap_custom_row.xml" />
@@ -657,65 +181,53 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/image_viewer_layout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-ldpi/image_viewer_layout_white.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/status_custom_row.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/MediaPager.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/StatusAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/BrowseStatusAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/chat_background_sender.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/chat_background.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/RetroLib.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/VolleyLib.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/APIs/ApiService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/BrowseStatusAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/StatusAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/ImageViewer.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/MediaPager.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout-hdpi/activity_login.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/activity_login.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout-ldpi/activity_login.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout-mdpi/activity_login.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/LoginActivity.java" />
+        <option value="$USER_HOME$/Documents/AndroidStudio/DeviceExplorer/emulator-5554/data/data/swap.irfanullah.com.swap/shared_prefs/users.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/swap_custom_row.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/SwapsAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/swap_custom_row.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1280" />
+    <option name="width" value="972" />
     <option name="height" value="777" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="PackagesPane" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Swaps" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="Swaps" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="Swaps" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="swap" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Swaps" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="swap" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="Libraries" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
             <path>
               <item name="Swaps" type="58d84e3e:PackageViewProjectNode" />
               <item name="app" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="Swaps" type="58d84e3e:PackageViewProjectNode" />
+              <item name="app" type="616d4139:PackageViewModuleNode" />
+              <item name="layout-xxxhdpi" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
@@ -766,7 +278,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -791,11 +302,11 @@
       <recent name="swap.irfanullah.com.swap" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Irfan Ullah\AndroidStudioProjects\Swaps\app\src\main\res\layout-ldpi" />
-      <recent name="C:\Users\Irfan Ullah\AndroidStudioProjects\Swaps\app\src\main\res\layout-xxxhdpi" />
-      <recent name="C:\Users\Irfan Ullah\AndroidStudioProjects\Swaps\app\src\main\res\layout-xxhdpi" />
-      <recent name="C:\Users\Irfan Ullah\AndroidStudioProjects\Swaps\app\src\main\res\layout-xhdpi" />
-      <recent name="C:\Users\Irfan Ullah\AndroidStudioProjects\Swaps\app\src\main\res\layout-mdpi" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/layout-xhdpi" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/layout-mdpi" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/layout-ldpi" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -895,10 +406,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="777" extended-state="0" />
+    <frame x="0" y="23" width="972" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27059773" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26989248" />
       <window_info id="Resources Explorer" order="1" />
       <window_info id="Captures" order="2" side_tool="true" weight="0.25" />
       <window_info id="Structure" order="3" side_tool="true" />
@@ -908,24 +419,53 @@
       <window_info id="Designer" order="7" />
       <window_info id="Capture Tool" order="8" />
       <window_info anchor="bottom" id="Run" order="0" weight="0.3289689" />
-      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.49848714" weight="0.32554746" />
+      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.49848714" weight="0.2642336" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.3289689" />
       <window_info anchor="bottom" id="Debug" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.7725041" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.1970803" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5015129" side_tool="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.3289689" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49848714" weight="0.29781023" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49848714" weight="0.28759125" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.3295082" />
       <window_info anchor="bottom" id="Thumbnails" order="10" weight="0.3295082" />
-      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
+      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" weight="0.32896176" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Preview" order="4" weight="0.546042" />
+      <window_info anchor="right" id="Preview" order="4" weight="0.39032257" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="Assistant" order="6" weight="0.3207262" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.26989248" />
+      <window_info id="Resources Explorer" order="1" />
+      <window_info id="Captures" order="2" side_tool="true" weight="0.25" />
+      <window_info id="Structure" order="3" side_tool="true" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Build Variants" order="5" side_tool="true" />
+      <window_info id="Image Layers" order="6" />
+      <window_info id="Designer" order="7" />
+      <window_info id="Capture Tool" order="8" />
+      <window_info anchor="bottom" id="Run" order="0" weight="0.3289689" />
+      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.49848714" weight="0.2642336" />
+      <window_info anchor="bottom" id="TODO" order="2" weight="0.3289689" />
+      <window_info anchor="bottom" id="Debug" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.1970803" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5015129" side_tool="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Version Control" order="6" weight="0.3289689" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49848714" weight="0.28759125" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" />
+      <window_info anchor="bottom" id="Find" order="9" weight="0.3295082" />
+      <window_info anchor="bottom" id="Thumbnails" order="10" weight="0.3295082" />
+      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" weight="0.32896176" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Gradle" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info active="true" anchor="right" id="Preview" order="4" visible="true" weight="0.39032257" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Assistant" order="6" weight="0.3207262" />
+    </layout-to-restore>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -942,101 +482,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/HomeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="59" column="99" selection-start-line="59" selection-start-column="99" selection-end-line="59" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/notification_status_custom_row.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/ParticipantsAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="109" column="5" lean-forward="true" selection-start-line="109" selection-start-column="5" selection-end-line="109" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-hdpi/activity_user_profile.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-mdpi/activity_user_profile.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-ldpi/activity_user_profile.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_user_profile.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-land/activity_user_profile.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1011">
-          <caret line="174" column="45" lean-forward="true" selection-start-line="174" selection-start-column="45" selection-end-line="174" selection-end-column="45" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xhdpi/activity_user_profile.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/NLUserProfile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="61" column="45" selection-start-line="61" selection-start-column="45" selection-end-line="61" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_user_profile.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="183" column="16" selection-start-line="183" selection-start-column="16" selection-end-line="183" selection-end-column="16" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/activity_user_profile.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/UserProfile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="66" column="33" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_status.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4709">
-          <caret line="277" column="34" selection-start-line="277" selection-start-column="34" selection-end-line="277" selection-end-column="34" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-hdpi/activity_status.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-land/activity_status.xml">
       <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="android-designer2" />
@@ -1065,17 +510,6 @@
       <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/status_custom_row.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="99" selection-start-line="99" selection-end-line="193" selection-end-column="54" />
-          <folding>
-            <element signature="e#4220#8842#0" />
-          </folding>
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/status_frag_grid_custom_row.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1088,14 +522,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="1887">
           <caret line="112" column="24" selection-start-line="112" selection-start-column="24" selection-end-line="112" selection-end-column="24" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/swap_custom_row.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="149" selection-start-line="149" selection-end-line="149" />
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2" />
@@ -1128,24 +554,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Fragments/StatusesFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="57" column="39" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/ComposeStatusActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="111" column="49" selection-start-line="111" selection-start-column="49" selection-end-line="111" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/ImageViewer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -1172,25 +584,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/MediaPager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="70" column="20" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/image_viewer_layout.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/status_custom_row.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="58" column="31" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="31" />
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
@@ -1221,36 +618,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/StatusAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="124" selection-start-line="124" selection-end-line="125" />
-          <folding>
-            <element signature="method#loadStatusMedia#0;class#StatusAdapter#0" />
-            <element signature="method#updatePager#0;class#StatusAdapter#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_chat.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/chat_background_sender.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/chat_row.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="35" column="45" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
@@ -1262,14 +633,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/BrowseStatusAdapter.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/chat_background_sender.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
-          <folding>
-            <element signature="method#loadStatusMedia#0;class#BrowseStatusAdapter#0" />
-            <element signature="method#updatePager#0;class#BrowseStatusAdapter#0" />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/VolleyLib.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="25" column="77" selection-start-line="25" selection-start-column="71" selection-end-line="25" selection-end-column="77" />
         </state>
       </provider>
     </entry>
@@ -1283,24 +657,211 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/APIs/ApiService.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-hdpi/activity_login.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="170" column="15" selection-start-line="170" selection-start-column="15" selection-end-line="170" selection-end-column="15" />
+        <state relative-caret-position="270">
+          <caret line="45" column="49" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/activity_login.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="45" column="49" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-mdpi/activity_login.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="58" column="57" selection-start-line="58" selection-start-column="57" selection-end-line="58" selection-end-column="57" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-ldpi/activity_login.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="57" column="57" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/StatusAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1215">
+          <caret line="136" selection-start-line="136" selection-end-line="136" />
+          <folding>
+            <element signature="method#loadStatusMedia#0;class#StatusAdapter#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/VolleyLib.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Fragments/StatusesFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="25" column="77" selection-start-line="25" selection-start-column="71" selection-end-line="25" selection-end-column="77" />
+        <state relative-caret-position="390">
+          <caret line="48" column="34" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/chat_row.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="45" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/APIs/ApiService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1935">
+          <caret line="154" column="17" selection-start-line="154" selection-start-column="17" selection-end-line="154" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/MediaPager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="63" column="45" selection-start-line="63" selection-start-column="45" selection-end-line="63" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/ImageViewer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="80" column="25" selection-start-line="80" selection-start-column="25" selection-end-line="80" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/AndroidStudio/DeviceExplorer/emulator-5554/data/data/swap.irfanullah.com.swap/shared_prefs/users.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="491" selection-start-line="2" selection-start-column="491" selection-end-line="2" selection-end-column="491" />
+          <folding>
+            <element signature="e#573#579#0" expanded="true" />
+            <element signature="e#580#586#0" expanded="true" />
+            <element signature="e#599#605#0" expanded="true" />
+            <element signature="e#606#612#0" expanded="true" />
+            <element signature="e#685#691#0" expanded="true" />
+            <element signature="e#692#698#0" expanded="true" />
+            <element signature="e#708#714#0" expanded="true" />
+            <element signature="e#715#721#0" expanded="true" />
+            <element signature="e#740#746#0" expanded="true" />
+            <element signature="e#747#753#0" expanded="true" />
+            <element signature="e#763#769#0" expanded="true" />
+            <element signature="e#770#776#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="46" column="26" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="26" />
+        <state relative-caret-position="296">
+          <caret line="166" column="99" selection-start-line="166" selection-start-column="99" selection-end-line="166" selection-end-column="99" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-hdpi/status_custom_row.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="147" column="74" selection-start-line="147" selection-start-column="74" selection-end-line="147" selection-end-column="74" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xhdpi/status_custom_row.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2420" />
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/status_custom_row.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2767">
+          <caret line="187" column="34" selection-start-line="187" selection-start-column="34" selection-end-line="187" selection-end-column="34" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/status_custom_row.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="57" selection-start-line="57" selection-end-line="92" />
+          <folding>
+            <element signature="e#2513#3953#0" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/BrowseStatusAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="89" selection-start-line="89" selection-end-line="90" selection-end-column="88" />
+          <folding>
+            <element signature="method#loadStatusMedia#0;class#BrowseStatusAdapter#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi-v24/swap_custom_row.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/swap_custom_row.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/swap_custom_row.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="149" selection-start-line="149" selection-end-line="149" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/swap_custom_row.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="42" lean-forward="true" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/swap_custom_row.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xhdpi/swap_custom_row.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-mdpi/swap_custom_row.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-ldpi/swap_custom_row.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-hdpi/swap_custom_row.xml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/SwapsAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1499">
+          <caret line="166" lean-forward="true" selection-start-line="166" selection-end-line="166" />
+          <folding>
+            <element signature="method#loadStatusMedia#0;class#SwapsAdapter#0" />
+          </folding>
         </state>
       </provider>
     </entry>

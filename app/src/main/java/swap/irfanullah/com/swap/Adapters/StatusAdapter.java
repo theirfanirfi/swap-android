@@ -101,7 +101,7 @@ public class StatusAdapter extends RecyclerView.Adapter<StatusAdapter.StatusView
         statusViewHolder.sharesCount.setText(e.getSHARESCOUNT().toString());
         statusViewHolder.commentsCount.setText(e.getCOMMENTSCOUONT().toString());
     ArrayList<Attachments> attachments = new ArrayList<>();
-    pager = new MediaPager(context,attachments);
+    pager = new MediaPager(context,attachments,Integer.toString(e.getSTATUS_ID()));
 
     if(user.getPROFILE_IMAGE() == null) {
         statusViewHolder.profile_image.setImageResource(R.drawable.ic_person);
@@ -122,7 +122,7 @@ public class StatusAdapter extends RecyclerView.Adapter<StatusAdapter.StatusView
 
 
        // loadStatusMedia(statusViewHolder,e.getATTACHMENTS(),e.getSTATUS_ID());
-        updatePager(e.getATTACHMENTS(),Integer.toString(e.getSTATUS_ID()),statusViewHolder.indicator,statusViewHolder.mediaView);
+        updatePager(e.getATTACHMENTS(),Integer.toString(e.getSTATUS_ID()),statusViewHolder.indicator,statusViewHolder.mediaView,e.getSTATUS_ID());
         //statusViewHolder.mediaViewPager.setAdapter(pager);
 //        updatePager(e.getATTACHMENTS(), statusViewHolder.mediaViewPager);
 //        statusViewHolder.mediaViewPager.setVisibility(View.VISIBLE);
@@ -396,11 +396,11 @@ public class StatusAdapter extends RecyclerView.Adapter<StatusAdapter.StatusView
     }
 
 
-    private void updatePager(String attachments,String st_id,CircleIndicator indicator , ViewPager mediaPager){
+    private void updatePager(String attachments,String st_id,CircleIndicator indicator , ViewPager mediaPager,int status_id){
 
         mediaPager.setVisibility(View.VISIBLE);
         ArrayList<Attachments> mediaAttachments = new ArrayList<>();
-         pager = new MediaPager(context,mediaAttachments);
+         pager = new MediaPager(context,mediaAttachments,Integer.toString(status_id));
         Gson gson = new Gson();
         JsonElement json = gson.fromJson(attachments,JsonElement.class);
 
@@ -421,7 +421,7 @@ public class StatusAdapter extends RecyclerView.Adapter<StatusAdapter.StatusView
             //Attachments att = gson.fromJson(object, Attachments.class);
             Type type = new TypeToken<ArrayList<Attachments>>(){}.getType();
             ArrayList<Attachments> arrayList = gson.fromJson(jsonArray,type);
-             pager = new MediaPager(context,arrayList);
+             pager = new MediaPager(context,arrayList,Integer.toString(status_id));
             mediaPager.setAdapter(pager);
             indicator.setViewPager(mediaPager);
             // pager.setIndicator(mediaPager);
