@@ -9,7 +9,7 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/chatRV"
         android:layout_width="match_parent"
-        android:layout_height="540dp"
+        android:layout_height="450dp"
         android:padding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -17,7 +17,7 @@
 
     <EditText
         android:id="@+id/messageField"
-        android:layout_width="317dp"
+        android:layout_width="247dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"

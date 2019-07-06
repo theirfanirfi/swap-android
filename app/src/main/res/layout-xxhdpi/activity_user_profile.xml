@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -63,7 +64,7 @@
                 android:id="@+id/statusesProfileTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="56dp"
+                android:layout_marginStart="26dp"
                 android:layout_marginTop="12dp"
                 android:text="739"
                 android:textAlignment="center"
@@ -76,8 +77,8 @@
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
                 android:text="Statuses"
+                android:textAlignment="center"
                 app:layout_constraintEnd_toEndOf="@+id/statusesProfileTextView"
                 app:layout_constraintHorizontal_bias="0.476"
                 app:layout_constraintStart_toStartOf="@+id/statusesProfileTextView"
@@ -87,13 +88,13 @@
                 android:id="@+id/swapsNoProfileTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="110dp"
                 android:layout_marginTop="12dp"
-                android:text="9"
+                android:text="977"
                 android:textAlignment="center"
                 android:textColor="@color/bluish"
                 android:textSize="16sp"
-                app:layout_constraintStart_toEndOf="@+id/statusesProfileTextView"
+                app:layout_constraintEnd_toEndOf="@+id/username"
+                app:layout_constraintStart_toStartOf="@+id/username"
                 app:layout_constraintTop_toBottomOf="@+id/username" />
 
             <TextView
@@ -114,9 +115,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="64dp"
                 android:layout_marginTop="12dp"
-                android:textAlignment="center"
                 android:layout_marginEnd="26dp"
                 android:text="2739"
+                android:textAlignment="center"
                 android:textColor="@color/bluish"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -148,7 +149,7 @@
                 android:textColor="#B401FF"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/textView6"
-                app:layout_constraintHorizontal_bias="0.367"
+                app:layout_constraintHorizontal_bias="0.458"
                 app:layout_constraintStart_toStartOf="@+id/textView4"
                 app:layout_constraintTop_toBottomOf="@+id/textView5"
                 app:layout_constraintVertical_bias="0.003" />
@@ -191,37 +192,37 @@
 
         </android.support.constraint.ConstraintLayout>
 
-            <!--<android.support.constraint.ConstraintLayout-->
-                <!--android:id="@+id/constraintLayout3"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginStart="8dp"-->
-                <!--android:layout_marginLeft="8dp"-->
-                <!--android:layout_marginEnd="8dp"-->
-                <!--android:layout_marginRight="8dp"-->
-                <!--android:padding="4dp"-->
-                <!--app:layout_constraintEnd_toEndOf="parent"-->
-                <!--app:layout_constraintStart_toStartOf="parent"-->
-                <!--app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">-->
+        <!--<android.support.constraint.ConstraintLayout-->
+        <!--android:id="@+id/constraintLayout3"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginLeft="8dp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginRight="8dp"-->
+        <!--android:padding="4dp"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">-->
 
-                <!--<TextView-->
-                    <!--android:id="@+id/userProfileDescription"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_marginStart="8dp"-->
-                    <!--android:layout_marginLeft="8dp"-->
-                    <!--android:layout_marginTop="8dp"-->
-                    <!--android:layout_marginEnd="8dp"-->
-                    <!--android:layout_marginRight="8dp"-->
-                    <!--android:layout_marginBottom="8dp"-->
-                    <!--android:padding="2dp"-->
-                    <!--android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took."-->
-                    <!--android:textColor="@color/colorBlack"-->
-                    <!--app:layout_constraintBottom_toBottomOf="parent"-->
-                    <!--app:layout_constraintEnd_toEndOf="parent"-->
-                    <!--app:layout_constraintStart_toStartOf="parent"-->
-                    <!--app:layout_constraintTop_toTopOf="parent" />-->
-            <!--</android.support.constraint.ConstraintLayout>-->
+        <!--<TextView-->
+        <!--android:id="@+id/userProfileDescription"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginLeft="8dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginRight="8dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:padding="2dp"-->
+        <!--android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took."-->
+        <!--android:textColor="@color/colorBlack"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+        <!--</android.support.constraint.ConstraintLayout>-->
 
 
     </ScrollView>
