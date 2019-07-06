@@ -106,6 +106,8 @@ public class ComposeStatusActivity extends AppCompatActivity {
     public static final int VIDEO_CAMERA_PERMISSIONS_REQUEST_CODE = 872;
     public static final int CAMERA_PERMISSIONS_REQUEST_CODE = 39;
 
+    public static final int WRITE_CAMERA_PERMISSIONS_REQUEST_CODE = 98;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -553,12 +555,31 @@ public class ComposeStatusActivity extends AppCompatActivity {
         }else if(requestCode == VIDEO_CAMERA_PERMISSIONS_REQUEST_CODE && grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
          startVideoCameraForRecording();
         }else if(requestCode == CAMERA_PERMISSIONS_REQUEST_CODE && grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            cameraWriteExStoragePermission();
+
+        }else if(requestCode == WRITE_CAMERA_PERMISSIONS_REQUEST_CODE && grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
             startCameraForImageCapture();
+
         } else {
             RMsg.toastHere(context,"Permission denied.");
             RMsg.logHere("Permission denied");
         }
 
+    }
+
+    private void cameraWriteExStoragePermission(){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (ContextCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(ComposeStatusActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, WRITE_CAMERA_PERMISSIONS_REQUEST_CODE);
+            } else {
+                //already granted:
+                startCameraForImageCapture();
+
+            }
+        } else {
+            startCameraForImageCapture();
+
+        }
     }
 
     private void startVideoCameraForRecording(){
