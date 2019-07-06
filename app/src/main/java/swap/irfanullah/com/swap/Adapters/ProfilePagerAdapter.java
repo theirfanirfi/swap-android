@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 
-import swap.irfanullah.com.swap.Fragments.Profile.StatusesFragment;
+import swap.irfanullah.com.swap.Fragments.StatusesFragment;
 import swap.irfanullah.com.swap.Fragments.Profile.SwapsFragment;
 
 public class ProfilePagerAdapter extends FragmentPagerAdapter {

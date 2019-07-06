@@ -52,7 +52,7 @@ public class UserProfile extends AppCompatActivity {
     private ImageView profile_image;
     private TabLayout tabLayout;
     private Context context;
-    private TextView profileDescription, statuses, swaps, followers;
+    private TextView profileDescription, statuses, swaps, followers,username;
     private User user;
     private Button followBtn;
 
@@ -173,8 +173,10 @@ public class UserProfile extends AppCompatActivity {
         swaps = findViewById(R.id.swapsNoProfileTextView);
         followers = findViewById(R.id.followerNoProfileTextView);
         followBtn = findViewById(R.id.followBtn);
+        username = findViewById(R.id.username);
         followBtn.setVisibility(View.GONE);
 
+        username.setText(user.getFULL_NAME());
         profile_image = findViewById(R.id.profile_image);
         if (user.getPROFILE_IMAGE() != null) {
             GLib.downloadImage(context, user.getPROFILE_IMAGE()).into(profile_image);

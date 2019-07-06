@@ -394,7 +394,7 @@ public class StatusActivity extends AppCompatActivity {
                         } else if(singleStatusModel.getIS_FOUND()){
 
                             ratingBar.setRating(singleStatusModel.getAVERAGE_RATING());
-                            avg_rating.setText("AVG Rating: "+Float.toString(singleStatusModel.getAVERAGE_RATING()));
+                            avg_rating.setText(Float.toString(singleStatusModel.getAVERAGE_RATING()));
                             swaps_count.setText("Swaps: "+Integer.toString(singleStatusModel.getSWAPS_COUNT()));
 
                             raters = singleStatusModel.getRATERS();
