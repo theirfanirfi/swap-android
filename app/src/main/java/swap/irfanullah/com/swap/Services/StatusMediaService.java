@@ -76,6 +76,9 @@ public class StatusMediaService extends Service {
         //uris of the selected medias, sent by @ComposeStatusActivity
         ArrayList<Media> media = intent.getParcelableArrayListExtra("uris");
         this.media= media;
+
+        RMsg.logHere(media.get(0).getUri().toString());
+        RMsg.logHere(Integer.toString(media.get(0).getType()));
         // @STATUS_ID recently posted
         // to which the attachments will be associated
         this.POST_ID = intent.getExtras().getInt(_SERVICE_INTENT_STATUS_ID);
@@ -310,7 +313,7 @@ public class StatusMediaService extends Service {
                         }
                     }
                 }else {
-                    statusRollBack();
+                    //statusRollBack();
                     mAsynRequests.cancel(true);
 
                     RMsg.toastHere(context,RMsg.REQ_ERROR_MESSAGE);
@@ -345,7 +348,7 @@ public class StatusMediaService extends Service {
                     .setStyle(new NotificationCompat.BigTextStyle()
                             .bigText(NOTIFICATION__ATTACHMENT_PROGRESS))
                     .setAutoCancel(false)
-                    .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+                    .setPriority(NotificationCompat.PRIORITY_HIGH);
             notificationManager = NotificationManagerCompat.from(this);
             notificationManager.notify(NOTIFICATION_ID, mBuilder.build());
     }

@@ -57,6 +57,14 @@ dependencies {
 //   // implementation 'com.github.KosyanMedia.android-sociallogin:twitter:1.1.0'
 //    implementation 'com.github.KosyanMedia.android-sociallogin:vkontakte:1.1.0'
 
+
+    implementation 'com.google.android.exoplayer:exoplayer:r2.4.0'
+    implementation 'com.google.android.exoplayer:exoplayer-core:r2.4.0'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:r2.4.0'
+    implementation 'com.google.android.exoplayer:exoplayer-hls:r2.4.0'
+    implementation 'com.google.android.exoplayer:exoplayer-smoothstreaming:r2.4.0'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:r2.4.0'
+
     implementation 'com.jaychang:simpleauth:2.1.4'
     // if you want to use facebook auth
     implementation 'com.jaychang:simpleauth-facebook:2.1.4'

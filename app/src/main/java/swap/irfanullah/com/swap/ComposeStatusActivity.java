@@ -519,9 +519,10 @@ public class ComposeStatusActivity extends AppCompatActivity {
         protected String doInBackground(String... uris) {
             String file_path = null;
             try {
-                file_path = SiliCompressor.with(context).compressVideo(uris[0],Compressor.getVideoCacheDir(context).getAbsolutePath());
+                //file_path = SiliCompressor.with(context).compressVideo(uris[0],Compressor.getVideoCacheDir(context).getAbsolutePath());
+
                 RMsg.logHere("compressed: "+file_path);
-            } catch (URISyntaxException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
                 RMsg.logHere(e.toString());
             }
@@ -583,6 +584,7 @@ public class ComposeStatusActivity extends AppCompatActivity {
     }
 
     private void startVideoCameraForRecording(){
+
         Intent takeVideoIntent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
         if (takeVideoIntent.resolveActivity(getPackageManager()) != null) {
             //takeVideoIntent.putExtra("android.intent.extra.durationLimit", 30000);
