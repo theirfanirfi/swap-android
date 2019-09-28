@@ -29,7 +29,7 @@ import swap.irfanullah.com.swap.Models.User;
 
 public interface ApiService {
     String AFTER_BASE_URL = "http://"+ RetroLib.IP +"/swap/public/api/";
-    //String AFTER_BASE_URL = "http://irfitech.com/public/api/";
+    //String AFTER_BASE_URL = "http://www.thelekkihub.com/swap/public/api/";
     @POST(AFTER_BASE_URL+"status/compose")
     @FormUrlEncoded
     Call<Status> composeStatus(@Field("token") String token,@Field("status") String status);

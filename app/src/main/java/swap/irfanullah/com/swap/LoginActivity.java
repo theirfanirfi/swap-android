@@ -53,6 +53,7 @@ public class LoginActivity extends AppCompatActivity {
     private final String ENCODE_TAG = "ENCODING_ERROR";
     private final String JSON_TAG = "JSON_ERROR";
     private static final String TAG = "LoginActivity";
+    private boolean IS_LOGIN_SUCCESSFULL = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,20 +84,22 @@ context = this;
     @Override
     protected void onPause() {
         super.onPause();
-     //   finish();
+        if(IS_LOGIN_SUCCESSFULL){
+               finish();
+        }
     }
 
     private void RegisterationLink()
     {
-//        signup = findViewById(R.id.signupActLink);
-//
-//        signup.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(getApplicationContext(),RegisterActivity.class);
-//                startActivity(i);
-//            }
-//        });
+        signup = findViewById(R.id.signupActLink);
+
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),RegisterActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
     private void LoginButton()
@@ -127,7 +130,7 @@ context = this;
     }
 
     private void loginRequest(String emailF, String passwordF) throws JSONException, UnsupportedEncodingException {
-        //progressBar.setVisibility(View.VISIBLE);
+        progressBar.setVisibility(View.VISIBLE);
         JSONArray dataArray = new JSONArray();
         dataArray.put(0,emailF);
         dataArray.put(1,passwordF);
@@ -162,6 +165,7 @@ context = this;
                             }
 
                             Intent followUsersAct = new Intent(context, FollowUsersActivity.class);
+                            IS_LOGIN_SUCCESSFULL = true;
                             startActivity(followUsersAct);
                         }
                         else if((userObject.getInt("is_invited") == 0 || userObject.getInt("is_invited") == 1) && userObject.getInt("invites") < 5){
@@ -175,16 +179,19 @@ context = this;
                             RMsg.logHere("invite activity started.");
 
                             Intent inviteAct = new Intent(context, InvitePhoneContactsActivity.class);
+                            IS_LOGIN_SUCCESSFULL = true;
                             startActivity(inviteAct);
                             finish();
 
                         }else if(userObject.getInt("is_invited") == 1 && userObject.getInt("followed") >= 5 && userObject.getInt("is_soc") == 0){
                             Intent shareApp = new Intent(context, ShareApp.class);
+                            IS_LOGIN_SUCCESSFULL = true;
                             startActivity(shareApp);
                             finish();
                         }
                         else {
                              Intent homeAct = new Intent(context, HomeActivity.class);
+                            IS_LOGIN_SUCCESSFULL = true;
                             startActivity(homeAct);
                             finish();
                         }
@@ -206,7 +213,7 @@ context = this;
             }
         });
 
-       // progressBar.setVisibility(View.GONE);
+        progressBar.setVisibility(View.GONE);
 
     }
 
@@ -215,7 +222,7 @@ context = this;
         email = findViewById(R.id.emailTextField);
         password = findViewById(R.id.passwordTextField);
         context = this;
-      //  progressBar = findViewById(R.id.progressBarLogin);
+        progressBar = findViewById(R.id.progressBarLogin);
         fb = findViewById(R.id.facebookButton);
         twitter = findViewById(R.id.twitterButton);
         insta = findViewById(R.id.instBtn);
@@ -386,6 +393,8 @@ context = this;
             }
 
             Intent followUsersAct = new Intent(context, FollowUsersActivity.class);
+            IS_LOGIN_SUCCESSFULL = true;
+
             startActivity(followUsersAct);
             finish();
 
@@ -401,15 +410,21 @@ context = this;
             RMsg.logHere("invite activity started.");
 
             Intent inviteAct = new Intent(context, InvitePhoneContactsActivity.class);
+            IS_LOGIN_SUCCESSFULL = true;
+
             startActivity(inviteAct);
         }else if(user.getIS_INVITED() == 1 && user.getFOLLOWED() >= 5 && user.getIsSocialMedia() == 0){
             Intent shareApp = new Intent(context, ShareApp.class);
+            IS_LOGIN_SUCCESSFULL = true;
+
             startActivity(shareApp);
             finish();
 
         }
         else {
             Intent homeAct = new Intent(context, HomeActivity.class);
+            IS_LOGIN_SUCCESSFULL = true;
+
             startActivity(homeAct);
             finish();
 
