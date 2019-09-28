@@ -26,6 +26,9 @@ public class Comment {
     @SerializedName("isEmpty")
     private boolean isEmpty;
 
+    @SerializedName("isDeleted")
+    private boolean isDeleted;
+
     @SerializedName("created_at")
     private String TIME;
 
@@ -44,6 +47,10 @@ public class Comment {
 
     @SerializedName("comments")
     private ArrayList<Comment> COMMENTS;
+
+    public boolean isDeleted() {
+        return isDeleted;
+    }
 
     public String getPROFILE_IMAGE() {
         return PROFILE_IMAGE;

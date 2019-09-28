@@ -31,6 +31,8 @@ public class CommentDialog extends AppCompatDialogFragment {
     ProgressBar progressBar;
     int STATUS_ID;
     Bundle bundle;
+    CommentCallBack commentCallBack;
+
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -44,7 +46,7 @@ public class CommentDialog extends AppCompatDialogFragment {
         bundle = getArguments();
 
         STATUS_ID = Integer.parseInt(bundle.getString("status_id"));
-       // composeTextArea.setText(Integer.toString(STATUS_ID));
+//        composeTextArea.setText(Integer.toString(STATUS_ID));
         post.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,6 +81,7 @@ public class CommentDialog extends AppCompatDialogFragment {
                     }else if(comment.isAlreadyCommented()){
                         RMsg.toastHere(context,comment.getMESSAGE());
                     }else if(comment.isCommented()){
+                     commentCallBack.onCommented();
                         RMsg.toastHere(context,comment.getMESSAGE());
                         getDialog().dismiss();
                     }
@@ -94,6 +97,15 @@ public class CommentDialog extends AppCompatDialogFragment {
             }
         });
 
+    }
+
+    public interface CommentCallBack {
+        void onCommented();
+        void onCommentFail();
+    }
+
+    public void setOnCommentClickListener(CommentCallBack commentCallBack){
+        this.commentCallBack = commentCallBack;
     }
 
 

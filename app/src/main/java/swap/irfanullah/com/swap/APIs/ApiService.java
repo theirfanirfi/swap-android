@@ -179,6 +179,7 @@ public interface ApiService {
     @POST(AFTER_BASE_URL+"share")
     Call<Share> shareStatus(@Field("token") String token, @Field("status_id") String status_id);
 
+    //comments
     @FormUrlEncoded
     @POST(AFTER_BASE_URL+"comment")
     Call<Comment> commentOnStatus(@Field("token") String token, @Field("status_id") String status_id, @Field("comment") String comment);
@@ -186,4 +187,7 @@ public interface ApiService {
     @FormUrlEncoded
     @POST(AFTER_BASE_URL+"comments")
     Call<Comment> getStatusComments(@Field("token") String token, @Field("status_id") String status_id);
+
+    @GET(AFTER_BASE_URL+"deletecomments")
+    Call<Comment> deleteComment(@Query("token") String token,@Query("id") int comment_id);
 }

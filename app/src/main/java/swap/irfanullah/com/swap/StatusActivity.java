@@ -76,10 +76,11 @@ public class StatusActivity extends AppCompatActivity {
     private StatusFragGridAdapter statusFragGridAdapter;
     private boolean INTENT_RECIEVED_FROM_BROWSE_TAB = false;
     private boolean INTENT_RECIEVED_FROM_SWAP_REQUEST_ACTIVITY = false;
-    private FloatingActionButton commentFloatingActionButton;
+//    private FloatingActionButton commentFloatingActionButton;
     Menu menu;
     private CommentsRatersPager commentsRatersPager;
     private TabLayout tabLayout;
+    CommentDialog commentDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -315,7 +316,7 @@ public class StatusActivity extends AppCompatActivity {
         trash = findViewById(R.id.deleteStatusIcon);
         ratingBar = findViewById(R.id.ratingBar);
         statusMedia = findViewById(R.id.gridViewStatus);
-        commentFloatingActionButton = findViewById(R.id.floatingActionButton);
+//        commentFloatingActionButton = findViewById(R.id.floatingActionButton);
         tabLayout = findViewById(R.id.commentsAndRatersTabLayout);
 
         likeBtn = findViewById(R.id.likeBtn);
@@ -648,19 +649,22 @@ public class StatusActivity extends AppCompatActivity {
 
 
     private void floatingCommentBtnClickListenerAndStartCommentDialog(){
-        commentFloatingActionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                AlertDialog.Builder dialog = new AlertDialog.Builder(context);
-//                dialog.setTitle("Post a comment");
-
-                CommentDialog commentDialog = new CommentDialog();
-                Bundle bundle = new Bundle();
-                bundle.putString("status_id",Integer.toString(STATUS_ID));
-                commentDialog.setArguments(bundle);
-                commentDialog.setCancelable(false);
-                commentDialog.show(getSupportFragmentManager(),"comment_on_post");
-            }
-        });
+//        commentDialog = new CommentDialog();
+//        commentDialog.setOnCommentClickListener(this);
+//        commentFloatingActionButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+////                AlertDialog.Builder dialog = new AlertDialog.Builder(context);
+////                dialog.setTitle("Post a comment");
+//
+//                Bundle bundle = new Bundle();
+//                bundle.putString("status_id",Integer.toString(STATUS_ID));
+//                commentDialog.setArguments(bundle);
+//                commentDialog.setCancelable(false);
+//                commentDialog.show(getSupportFragmentManager(),"comment_on_post");
+//            }
+//        });
     }
+
+
 }

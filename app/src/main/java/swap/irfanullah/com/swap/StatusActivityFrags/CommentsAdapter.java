@@ -1,6 +1,8 @@
 package swap.irfanullah.com.swap.StatusActivityFrags;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
@@ -13,9 +15,14 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import swap.irfanullah.com.swap.Libraries.GLib;
+import swap.irfanullah.com.swap.Libraries.RetroLib;
 import swap.irfanullah.com.swap.Libraries.TimeDiff;
 import swap.irfanullah.com.swap.Models.Comment;
+import swap.irfanullah.com.swap.Models.RMsg;
 import swap.irfanullah.com.swap.NLUserProfile;
 import swap.irfanullah.com.swap.R;
 import swap.irfanullah.com.swap.Storage.PrefStorage;
@@ -24,6 +31,7 @@ import swap.irfanullah.com.swap.UserProfile;
 public class CommentsAdapter extends RecyclerView.Adapter<CommentsAdapter.StatusViewHolder> {
     private Context context;
     private ArrayList<Comment> comments;
+    public static CommentDelete commentDelete;
     public CommentsAdapter(Context context, ArrayList<Comment> comments) {
         this.context = context;
         this.comments = comments;
@@ -72,6 +80,7 @@ public class CommentsAdapter extends RecyclerView.Adapter<CommentsAdapter.Status
         TextView username, statusDescription, commentTime;
         ConstraintLayout layout;
         ArrayList<Comment> comments;
+        Context context;
 
         public StatusViewHolder(@NonNull final View itemView, final Context context, final ArrayList<Comment> comments) {
             super(itemView);
@@ -81,6 +90,7 @@ public class CommentsAdapter extends RecyclerView.Adapter<CommentsAdapter.Status
             username = itemView.findViewById(R.id.usernameTextView);
             statusDescription = itemView.findViewById(R.id.statusTextView);
             commentTime = itemView.findViewById(R.id.statusTimeTextView);
+            this.context = context;
 
             profile_image.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -100,9 +110,60 @@ public class CommentsAdapter extends RecyclerView.Adapter<CommentsAdapter.Status
                 }
             });
 
+            layout.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                    builder.setTitle("Choose Action")
+                            .setMessage("Do you want to delete your comment")
+                            .setNegativeButton("Delete", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    int position = getAdapterPosition();
+                                    int comment_id = comments.get(position).getCOMMENTID();
+
+                                }
+                            })
+                            .setPositiveButton("Cancel", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            });
+
+                    builder.show();
+
+                    return false;
+                }
+            });
 
 
 
+
+        }
+
+        public void deleteComment(int comment_id){
+            RetroLib.geApiService().deleteComment(PrefStorage.getUser(context).getTOKEN(),comment_id).enqueue(new Callback<Comment>() {
+                @Override
+                public void onResponse(Call<Comment> call, Response<Comment> response) {
+                    if(response.isSuccessful()){
+                        Comment comment = response.body();
+                        if(comment.isError()){
+                            RMsg.toastHere(context,comment.getMESSAGE());
+                        }else if(comment.isDeleted()){
+                            RMsg.toastHere(context,comment.getMESSAGE());
+                            commentDelete.callBack();
+                        }
+                    }else {
+                        RMsg.toastHere(context,response.message());
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<Comment> call, Throwable t) {
+
+                }
+            });
         }
 
 
@@ -111,6 +172,14 @@ public class CommentsAdapter extends RecyclerView.Adapter<CommentsAdapter.Status
     public void notifyAdapter(ArrayList<Comment> comments){
         this.comments = comments;
         notifyDataSetChanged();
+    }
+
+    public interface CommentDelete {
+        void callBack();
+    }
+
+    public void setCommentDeleteCallback(CommentDelete com){
+        commentDelete = com;
     }
 
 
