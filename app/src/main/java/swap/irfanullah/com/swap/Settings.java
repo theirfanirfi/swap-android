@@ -5,6 +5,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.beardedhen.androidbootstrap.BootstrapButton;
@@ -153,5 +154,22 @@ public class Settings extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId() == android.R.id.home){
+            finish();
+            return true;
+        }
+
+
+        return super.onOptionsItemSelected(item);
     }
 }

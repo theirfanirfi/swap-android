@@ -177,6 +177,9 @@ public class ComposeStatusActivity extends AppCompatActivity {
                     postStatus(nStatus);
                 }
                 break;
+            case android.R.id.home:
+                finish();
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -600,5 +603,13 @@ public class ComposeStatusActivity extends AppCompatActivity {
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
         }
+    }
+
+
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }

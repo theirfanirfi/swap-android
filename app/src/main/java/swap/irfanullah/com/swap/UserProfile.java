@@ -11,6 +11,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,6 +21,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
@@ -184,6 +187,7 @@ public class UserProfile extends AppCompatActivity {
             profile_image.setImageResource(R.drawable.ic_person);
         }
 
+
     }
 
     @Override
@@ -271,6 +275,10 @@ public class UserProfile extends AppCompatActivity {
             case R.id.settings:
                 startUpdateProfileActivity();
                 break;
+            case android.R.id.home:
+               // this.onBackPressed();
+                finish();
+                return true;
         }
 
         return super.onOptionsItemSelected(item);
@@ -300,4 +308,12 @@ public class UserProfile extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+
+
 }

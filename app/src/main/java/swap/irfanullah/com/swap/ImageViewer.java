@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
@@ -118,6 +119,22 @@ public class ImageViewer extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
+        finish();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId() == android.R.id.home){
+            finish();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
         finish();
     }
 }

@@ -154,4 +154,20 @@ public class UserProfileFollowersActivity extends AppCompatActivity {
     private void getUserIDFromIntent(){
         PROFILE_ID = getIntent().getExtras().getInt("profile_id",0);
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if(id == android.R.id.home){
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }

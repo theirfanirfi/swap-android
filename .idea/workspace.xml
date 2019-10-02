@@ -30,27 +30,19 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/APIs/ApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/APIs/ApiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/CustomComponents/CommentDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/CustomComponents/CommentDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Models/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/BrowseStatusAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/BrowseStatusAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/ImageViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/ImageViewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/RetroLib.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/RetroLib.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/NLUserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/NLUserProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/NotificationActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/NotificationActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/SearchActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/SearchActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Settings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/StatusActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/StatusActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/StatusActivityFrags/CommentsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/StatusActivityFrags/CommentsAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/StatusActivityFrags/CommentsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/StatusActivityFrags/CommentsFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/activity_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/activity_status.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/comments_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/comments_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_status.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/comments_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/comments_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/activity_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/activity_status.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/comments_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/comments_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/activity_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/activity_status.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/comments_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/comments_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/activity_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/activity_status.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/comments_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/comments_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_status.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/comments_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/comments_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/activity_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/activity_status.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/comments_custom_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/comments_custom_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_status.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/UserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/UserProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/UserProfileFollowersActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/UserProfileFollowersActivity.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,51 +88,30 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/StatusActivityFrags/CommentsFragment.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/NLUserProfile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="144" lean-forward="true" selection-start-line="144" selection-end-line="144" />
-              <folding>
-                <element signature="e#5385#5386#0" expanded="true" />
-                <element signature="e#5414#5415#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="599">
+              <caret line="279" column="5" selection-start-line="279" selection-start-column="5" selection-end-line="279" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/StatusActivityFrags/CommentsAdapter.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/NotificationActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="42" column="82" selection-start-line="42" selection-start-column="82" selection-end-line="42" selection-end-column="82" />
-              <folding>
-                <element signature="e#4075#4273#0" expanded="true" />
-                <element signature="e#4520#4791#0" expanded="true" />
-                <element signature="e#4790#4791#0" expanded="true" />
-                <element signature="e#4850#5121#0" expanded="true" />
-                <element signature="e#5120#5121#0" expanded="true" />
-                <element signature="e#4272#4273#0" expanded="true" />
-                <element signature="e#6972#6973#0" expanded="true" />
-                <element signature="e#7007#7008#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="515">
+              <caret line="177" column="5" selection-start-line="177" selection-start-column="5" selection-end-line="177" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-land/comments_custom_row.xml">
-          <provider editor-type-id="text-editor" />
-          <provider selected="true" editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/fragment_status_comments.xml">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/ImageViewer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="45" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="45" />
+            <state relative-caret-position="605">
+              <caret line="138" column="5" selection-start-line="138" selection-start-column="5" selection-end-line="138" selection-end-column="5" />
             </state>
           </provider>
-          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
     </leaf>
@@ -192,14 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-mdpi/activity_chat.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_chat.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_user_profile.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_user_profile.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-ldpi/activity_user_profile.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-hdpi/activity_user_profile.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-mdpi/activity_user_profile.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/activity_user_profile.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/activity_user_profile.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-land/activity_user_profile.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
@@ -208,7 +171,6 @@
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-ldpi/video_viewer_layout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/MediaPager.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/RetroLib.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/VolleyLib.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/activity_login.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" />
@@ -222,7 +184,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/activity_login.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_login.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/fragment_status_comments.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/StatusActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-hdpi/activity_status.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-ldpi/activity_status.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-mdpi/activity_status.xml" />
@@ -243,6 +204,16 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout-land/comments_custom_row.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-hdpi/comments_custom_row.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-ldpi/comments_custom_row.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/RetroLib.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/BrowseStatusAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/NLUserProfile.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/UserProfile.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/UserProfileFollowersActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/StatusActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Settings.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/SearchActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/NotificationActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/ImageViewer.java" />
       </list>
     </option>
   </component>
@@ -260,35 +231,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Swaps" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="Swaps" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="Swaps" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="Swaps" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
-              <item name="comments_custom_row" type="c431d0b8:AndroidResGroupNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -305,7 +247,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -351,6 +292,29 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Swaps" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="Swaps" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="Swaps" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="swap" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -483,6 +447,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
       <window_info id="Resources Explorer" order="1" />
@@ -557,95 +522,33 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/button.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/TimeDiff.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/RetroLib.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="38" column="61" lean-forward="true" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/VolleyLib.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/platforms/android-28/data/res/values/attrs.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="3331" column="20" selection-start-line="3331" selection-start-column="20" selection-end-line="3331" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/activity_login.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="179" column="46" selection-start-line="179" selection-start-column="46" selection-end-line="179" selection-end-column="46" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/StatusAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="76" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="33" lean-forward="true" selection-end-line="177" selection-end-column="46" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-hdpi/activity_register.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="144" column="4" selection-start-line="144" selection-start-column="4" selection-end-line="144" selection-end-column="4" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-ldpi/activity_register.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="430">
           <caret line="173" column="33" selection-end-line="179" selection-end-column="46" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-mdpi/activity_register.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/activity_register.xml">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_register.xml">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xhdpi/activity_register.xml">
-      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values-v23/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -691,52 +594,52 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-mdpi/activity_login.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="1575">
           <caret line="105" column="41" lean-forward="true" selection-start-line="105" selection-start-column="41" selection-end-line="105" selection-end-column="41" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_login.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="580">
           <caret line="179" column="46" selection-start-line="179" selection-start-column="46" selection-end-line="179" selection-end-column="46" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xhdpi/activity_login.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="2685">
           <caret line="179" column="46" selection-start-line="179" selection-start-column="46" selection-end-line="179" selection-end-column="46" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-ldpi/activity_login.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="1380">
           <caret line="92" column="48" lean-forward="true" selection-end-line="179" selection-end-column="46" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-hdpi/activity_login.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="2310">
           <caret line="154" column="32" lean-forward="true" selection-end-line="179" selection-end-column="46" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="2355">
           <caret line="157" selection-start-line="157" selection-end-line="157" selection-end-column="48" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/SingleStatusAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -746,15 +649,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_statuses.xml">
-      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/StatusActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2265">
-          <caret line="57" column="53" selection-start-line="57" selection-start-column="53" selection-end-line="57" selection-end-column="53" />
-        </state>
-      </provider>
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/StatusActivityFrags/CommentsRatersPager.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -764,80 +660,73 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-hdpi/activity_status.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="505">
           <caret line="329" column="4" selection-start-line="329" selection-start-column="4" selection-end-line="329" selection-end-column="4" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-land/activity_status.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
           <caret line="315" column="42" lean-forward="true" selection-start-line="315" selection-start-column="42" selection-end-line="315" selection-end-column="42" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/activity_status.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="505">
           <caret line="330" selection-start-line="330" selection-end-line="330" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_status.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="505">
           <caret line="329" selection-start-line="329" selection-end-line="329" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xhdpi/activity_status.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="505">
           <caret line="332" selection-start-line="332" selection-end-line="332" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-mdpi/activity_status.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="505">
           <caret line="331" selection-start-line="331" selection-end-line="331" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-ldpi/activity_status.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="505">
           <caret line="332" selection-start-line="332" selection-end-line="332" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_status.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
           <caret line="319" column="54" lean-forward="true" selection-start-line="319" selection-start-column="54" selection-end-line="319" selection-end-column="54" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/CustomComponents/CommentDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-92">
           <caret line="65" column="38" lean-forward="true" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/APIs/ApiService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="190" column="39" selection-start-line="190" selection-start-column="39" selection-end-line="190" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -851,10 +740,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-ldpi/comments_custom_row.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="-83" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-hdpi/comments_custom_row.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-mdpi/comments_custom_row.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/comments_custom_row.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/comments_custom_row.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xhdpi/comments_custom_row.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-land/comments_custom_row.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/fragment_status_comments.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="45" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Adapters/BrowseStatusAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="92" column="38" lean-forward="true" selection-start-line="92" selection-start-column="38" selection-end-line="92" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Libraries/RetroLib.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="13" column="49" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/APIs/ApiService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="30" column="46" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/StatusActivityFrags/CommentsAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/StatusActivityFrags/CommentsFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
-          <caret line="144" lean-forward="true" selection-start-line="144" selection-end-line="144" />
+          <caret line="144" selection-start-line="144" selection-end-line="144" />
           <folding>
             <element signature="e#5385#5386#0" expanded="true" />
             <element signature="e#5414#5415#0" expanded="true" />
@@ -862,58 +817,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/fragment_status_comments.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/SearchActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="45" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="45" />
+        <state relative-caret-position="305">
+          <caret line="107" selection-start-line="107" selection-end-line="121" selection-end-column="5" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-land/comments_custom_row.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-ldpi/comments_custom_row.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="-83" />
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-hdpi/comments_custom_row.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-mdpi/comments_custom_row.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/comments_custom_row.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/comments_custom_row.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xhdpi/comments_custom_row.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/StatusActivityFrags/CommentsAdapter.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/Settings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="42" column="82" selection-start-line="42" selection-start-column="82" selection-end-line="42" selection-end-column="82" />
+        <state relative-caret-position="410">
+          <caret line="166" selection-start-line="166" selection-end-line="169" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/StatusActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="674" column="17" selection-start-line="674" selection-start-column="17" selection-end-line="674" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/UserProfileFollowersActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="605">
+          <caret line="170" column="17" selection-start-line="170" selection-start-column="17" selection-end-line="170" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/UserProfile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5">
+          <caret line="280" column="28" selection-start-line="280" selection-start-column="28" selection-end-line="280" selection-end-column="28" />
           <folding>
-            <element signature="e#4075#4273#0" expanded="true" />
-            <element signature="e#4520#4791#0" expanded="true" />
-            <element signature="e#4790#4791#0" expanded="true" />
-            <element signature="e#4850#5121#0" expanded="true" />
-            <element signature="e#5120#5121#0" expanded="true" />
-            <element signature="e#4272#4273#0" expanded="true" />
-            <element signature="e#6972#6973#0" expanded="true" />
-            <element signature="e#7007#7008#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/NLUserProfile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="279" column="5" selection-start-line="279" selection-start-column="5" selection-end-line="279" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/NotificationActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="177" column="5" selection-start-line="177" selection-start-column="5" selection-end-line="177" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/swap/irfanullah/com/swap/ImageViewer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="605">
+          <caret line="138" column="5" selection-start-line="138" selection-start-column="5" selection-end-line="138" selection-end-column="5" />
         </state>
       </provider>
     </entry>

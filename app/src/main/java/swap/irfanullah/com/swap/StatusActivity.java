@@ -455,6 +455,9 @@ public class StatusActivity extends AppCompatActivity {
                 //menu.setGroupVisible(R.id.action_group,false);
                 declineSwap();
                 break;
+            case android.R.id.home:
+                finish();
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -666,5 +669,9 @@ public class StatusActivity extends AppCompatActivity {
 //        });
     }
 
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }

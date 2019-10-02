@@ -78,15 +78,16 @@ public class BrowseStatusAdapter extends RecyclerView.Adapter<BrowseStatusAdapte
     statusViewHolder.ratingBar.setRating(e.getRATTING());
     statusViewHolder.statusTime.setText(TimeDiff.getTimeDifference(e.getTIME()));
 
-        statusViewHolder.likesCount.setText(e.getLIKESCOUNT().toString());
+//        statusViewHolder.likesCount.setText(e.getLIKESCOUNT().toString());
+        statusViewHolder.likesCount.setText(e.getLIKESCOUNT());
 
         if(e.isLiked()){
             statusViewHolder.likeBtn.setImageResource(R.drawable.heartred);
         }else {
             statusViewHolder.likeBtn.setImageResource(R.drawable.likehear);
         }
-        statusViewHolder.sharesCount.setText(e.getSHARESCOUNT().toString());
-        statusViewHolder.commentsCount.setText(e.getCOMMENTSCOUONT().toString());
+        statusViewHolder.sharesCount.setText(e.getSHARESCOUNT());
+        statusViewHolder.commentsCount.setText(e.getCOMMENTSCOUONT());
         ArrayList<Attachments> attachments = new ArrayList<>();
         pager = new MediaPager(context,attachments, Integer.toString(e.getSTATUS_ID()));
     if(e.getPROFILE_IMAGE() == null) {
