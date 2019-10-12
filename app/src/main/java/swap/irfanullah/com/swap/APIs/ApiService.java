@@ -14,6 +14,7 @@ import swap.irfanullah.com.swap.Libraries.RetroLib;
 import swap.irfanullah.com.swap.Models.Attachments;
 import swap.irfanullah.com.swap.Models.Comment;
 import swap.irfanullah.com.swap.Models.Followers;
+import swap.irfanullah.com.swap.Models.GroupMessages;
 import swap.irfanullah.com.swap.Models.Like;
 import swap.irfanullah.com.swap.Models.Messenger;
 import swap.irfanullah.com.swap.Models.Notification;
@@ -190,4 +191,7 @@ public interface ApiService {
 
     @GET(AFTER_BASE_URL+"deletecomments")
     Call<Comment> deleteComment(@Query("token") String token,@Query("id") int comment_id);
+
+    @GET(AFTER_BASE_URL+"msg/gc")
+    Call<GroupMessages> getGroupChat(@Query("token") String token, @Query("id") String group_id);
 }

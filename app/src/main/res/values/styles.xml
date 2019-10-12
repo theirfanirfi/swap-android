@@ -34,8 +34,8 @@
     </style>
 
     <style name="inviteButton" parent="Widget.AppCompat.Button.Colored">
-        <item name="backgroundTint">@color/colorPrimary</item>
-        <item name="android:textColor">@color/colorWhite</item>
+        <item name="backgroundTint">@color/bluish</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
     <style name="overfolowText">

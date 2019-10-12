@@ -108,10 +108,10 @@ public class NLUserProfile extends AppCompatActivity {
                             user = stat.getUSER();
                             PROFILE_IMAGE = user.getPROFILE_IMAGE();
                             DESCRIPTION = user.getPROFILE_DESCRIPTION();
-                            profileDescription.setText(DESCRIPTION);
+                            //profileDescription.setText(DESCRIPTION);
                             loadProfilePicture();
                         }else {
-finish();
+                            finish();
                         }
 
                 }else {

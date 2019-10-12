@@ -19,6 +19,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import swap.irfanullah.com.swap.ChatActivity;
+import swap.irfanullah.com.swap.GroupChatActivity.GroupChatActivity;
 import swap.irfanullah.com.swap.Libraries.GLib;
 import swap.irfanullah.com.swap.Libraries.RetroLib;
 import swap.irfanullah.com.swap.Models.Messenger;
@@ -49,23 +50,28 @@ public class ParticipantsAdapter extends RecyclerView.Adapter<ParticipantsAdapte
     @Override
     public void onBindViewHolder(@NonNull ParticipantsViewHolder participantsViewHolder, int i) {
         Participants participants = participantsArrayList.get(i);
-        if(participants.getAM_I_USER_ONE() == 1){
-            participantsViewHolder.chatWithUsername.setText(participants.getUSER_TWO_NAME());
-            if(participants.getUSER_TWO_PROFILE_IMAGE() == null){
-                participantsViewHolder.profile_image.setImageResource(R.drawable.ic_person);
-            }else {
-                GLib.downloadImage(context,participants.getUSER_TWO_PROFILE_IMAGE()).into(participantsViewHolder.profile_image);
+        if(participants.getIS_GROUP() == 0) {
+            if (participants.getAM_I_USER_ONE() == 1) {
+                participantsViewHolder.chatWithUsername.setText(participants.getUSER_TWO_NAME());
+                if (participants.getUSER_TWO_PROFILE_IMAGE() == null) {
+                    participantsViewHolder.profile_image.setImageResource(R.drawable.ic_person);
+                } else {
+                    GLib.downloadImage(context, participants.getUSER_TWO_PROFILE_IMAGE()).into(participantsViewHolder.profile_image);
+                }
+            } else {
+                participantsViewHolder.chatWithUsername.setText(participants.getUSER_ONE_NAME());
+                if (participants.getUSER_ONE_PROFILE_IMAGE() == null) {
+                    participantsViewHolder.profile_image.setImageResource(R.drawable.ic_person);
+                } else {
+                    GLib.downloadImage(context, participants.getUSER_ONE_PROFILE_IMAGE()).into(participantsViewHolder.profile_image);
+                }
             }
         }else {
-            participantsViewHolder.chatWithUsername.setText(participants.getUSER_ONE_NAME());
-            if(participants.getUSER_ONE_PROFILE_IMAGE() == null){
-                participantsViewHolder.profile_image.setImageResource(R.drawable.ic_person);
-            }else {
-                GLib.downloadImage(context,participants.getUSER_ONE_PROFILE_IMAGE()).into(participantsViewHolder.profile_image);
-            }
+            participantsViewHolder.chatWithUsername.setText(participants.getGROUP_NAME());
+            participantsViewHolder.profile_image.setImageResource(R.drawable.ic_person);
         }
 
-        loadLastMessageAndUnReadMessagesCount(participants, participantsViewHolder);
+       // loadLastMessageAndUnReadMessagesCount(participants, participantsViewHolder);
 
     }
 
@@ -129,22 +135,35 @@ public class ParticipantsAdapter extends RecyclerView.Adapter<ParticipantsAdapte
                     User user = PrefStorage.getUser(context);
                     Participants participants = participantsArrayList.get(position);
                     int CHAT_ID = participants.getCHAT_ID();
-                    Intent chatAct = new Intent(context,ChatActivity.class);
 
-                    if(user.getUSER_ID() == participants.getUSER_TWO()) {
-                        int TO_CHAT_WITH_ID = participants.getUSER_ONE();
-                        int LOGGEDIN_USER_ID = participants.getUSER_TWO();
-                        chatAct.putExtra(LOGGEDIN_USER_INTENT_KEY,LOGGEDIN_USER_ID);
-                        chatAct.putExtra(TO_CHAT_WITH_USER_INTENT_KEY,TO_CHAT_WITH_ID);
-                        chatAct.putExtra(CHAT_ID_INTENT_KEY,CHAT_ID);
-                        context.startActivity(chatAct);
-                    }else {
-                        int TO_CHAT_WITH_ID = participants.getUSER_TWO();
-                        int LOGGEDIN_USER_ID = participants.getUSER_ONE();
-                        chatAct.putExtra(LOGGEDIN_USER_INTENT_KEY,LOGGEDIN_USER_ID);
-                        chatAct.putExtra(TO_CHAT_WITH_USER_INTENT_KEY,TO_CHAT_WITH_ID);
-                        chatAct.putExtra(CHAT_ID_INTENT_KEY,CHAT_ID);
-                        context.startActivity(chatAct);
+                    if (participants.getIS_GROUP() == 0) {
+                        Intent chatAct = new Intent(context, ChatActivity.class);
+                        RMsg.toastHere(context,"chat");
+
+                        if (user.getUSER_ID() == participants.getUSER_TWO()) {
+                            int TO_CHAT_WITH_ID = participants.getUSER_ONE();
+                            int LOGGEDIN_USER_ID = participants.getUSER_TWO();
+                            chatAct.putExtra(LOGGEDIN_USER_INTENT_KEY, LOGGEDIN_USER_ID);
+                            chatAct.putExtra(TO_CHAT_WITH_USER_INTENT_KEY, TO_CHAT_WITH_ID);
+                            chatAct.putExtra(CHAT_ID_INTENT_KEY, CHAT_ID);
+                            context.startActivity(chatAct);
+                        } else {
+                            int TO_CHAT_WITH_ID = participants.getUSER_TWO();
+                            int LOGGEDIN_USER_ID = participants.getUSER_ONE();
+                            chatAct.putExtra(LOGGEDIN_USER_INTENT_KEY, LOGGEDIN_USER_ID);
+                            chatAct.putExtra(TO_CHAT_WITH_USER_INTENT_KEY, TO_CHAT_WITH_ID);
+                            chatAct.putExtra(CHAT_ID_INTENT_KEY, CHAT_ID);
+                            context.startActivity(chatAct);
+                        }
+                    } else {
+                        //group
+
+                        Intent groupAct = new Intent(context, GroupChatActivity.class);
+                        groupAct.putExtra("group_id", Integer.toString(participants.getGROUP_ID()));
+                        context.startActivity(groupAct);
+
+
+                        //RMsg.toastHere(context,participants.getGROUP_NAME());
                     }
                 }
             });

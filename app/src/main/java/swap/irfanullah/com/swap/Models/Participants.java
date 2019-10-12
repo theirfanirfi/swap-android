@@ -33,8 +33,44 @@ public class Participants {
     private String MESSAGE;
     @SerializedName("participants")
     private ArrayList<Participants> PARTICIPANTS;
+
     @SerializedName("chat_id")
     private int CHAT_ID;
+
+    @SerializedName("is_group")
+    private int IS_GROUP;
+
+    @SerializedName("group_id")
+    private int GROUP_ID;
+
+    @SerializedName("invited_by_user_id")
+    private int INVITED_TO_GROUP_BY_ID;
+
+    @SerializedName("group_name")
+    private String GROUP_NAME;
+
+    @SerializedName("group_profile_image")
+    private String GROUP_PROFILE_IMAGE;
+
+    public String getGROUP_NAME() {
+        return GROUP_NAME;
+    }
+
+    public String getGROUP_PROFILE_IMAGE() {
+        return GROUP_PROFILE_IMAGE;
+    }
+
+    public int getIS_GROUP() {
+        return IS_GROUP;
+    }
+
+    public int getGROUP_ID() {
+        return GROUP_ID;
+    }
+
+    public int getINVITED_TO_GROUP_BY_ID() {
+        return INVITED_TO_GROUP_BY_ID;
+    }
 
     public int getCHAT_ID() {
         return CHAT_ID;

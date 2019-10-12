@@ -9,36 +9,62 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/chatRV"
         android:layout_width="match_parent"
-        android:layout_height="530dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
         android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/messageField"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/messageField"
-        android:layout_width="282dp"
-        android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
         android:layout_marginBottom="4dp"
         android:ems="10"
         android:hint="Type your message"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sendBtn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chatRV"
-        app:layout_constraintVertical_bias="1.0" />
+        android:background="@android:color/transparent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:padding="10dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:maxLines="6"
 
-    <ImageView
+
+        />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/sendBtn"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.431"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/messageField"-->
+<!--        app:srcCompat="@drawable/chatsendbtn" />-->
+
+
+    <Button
         android:id="@+id/sendBtn"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="64dp"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="SEND"
+        android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.431"
-        app:layout_constraintStart_toEndOf="@+id/messageField"
-        app:srcCompat="@drawable/chatsendbtn" />
+        app:layout_constraintEnd_toEndOf="parent" />
 </android.support.constraint.ConstraintLayout>

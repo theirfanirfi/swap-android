@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="12dp"
+    android:id="@+id/messengerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/reciever_profile_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/person"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/reciever_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="7dp"
+        android:layout_toEndOf="@+id/reciever_profile_image"
+        android:text="Username"
+        app:layout_constraintStart_toEndOf="@+id/reciever_profile_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/reciever"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reciever_username"
+
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="79dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="12dp"
+        android:layout_toEndOf="@+id/reciever_profile_image"
+        android:autoLink="all|web|phone|map|email"
+        android:background="@drawable/chat_background_sender"
+        android:clickable="true"
+        android:elevation="2dp"
+        android:linksClickable="true"
+        android:padding="10dp"
+        android:text="Hi"
+        android:textColor="@color/colorBlack"
+        android:textSize="18dp" />
+
+
+    <TextView
+        android:id="@+id/recieverTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reciever"
+
+        android:layout_alignEnd="@+id/reciever"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="3dp"
+        android:text="2h" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/sender_profile_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/person"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/sender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="61dp"
+        android:layout_toStartOf="@+id/sender_profile_image"
+        android:background="@drawable/chat_background"
+        android:padding="8dp"
+        android:text=""
+        android:textColor="@color/colorWhite" />
+
+    <TextView
+        android:id="@+id/senderTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sender"
+
+        android:layout_alignStart="@+id/sender"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="1dp"
+        android:text="2h" />
+
+
+</RelativeLayout>

@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
@@ -37,7 +38,7 @@ public class ChatActivity extends AppCompatActivity {
     private User user;
     private ArrayList<Messenger> messengerArrayList;
     private EditText messageField;
-    private ImageView sendBtn;
+    private Button sendBtn;
     private Runnable runnable;
     private Handler handler;
     @Override
