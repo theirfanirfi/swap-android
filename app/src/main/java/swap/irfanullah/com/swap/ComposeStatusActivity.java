@@ -1,12 +1,10 @@
 package swap.irfanullah.com.swap;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -17,11 +15,7 @@ import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.NotificationManagerCompat;
 import android.support.v4.content.ContextCompat;
-import android.support.v4.content.FileProvider;
-import android.support.v4.util.Consumer;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -32,21 +26,17 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.GridView;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.iceteck.silicompressorr.SiliCompressor;
 import com.soundcloud.android.crop.Crop;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
-import java.net.URISyntaxException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -61,8 +51,6 @@ import swap.irfanullah.com.swap.Models.Status;
 import swap.irfanullah.com.swap.Models.User;
 import swap.irfanullah.com.swap.Services.StatusMediaService;
 import swap.irfanullah.com.swap.Storage.PrefStorage;
-
-import static swap.irfanullah.com.swap.AppClasses.App.CHANNEL_ID;
 
 public class ComposeStatusActivity extends AppCompatActivity {
 
@@ -120,7 +108,7 @@ public class ComposeStatusActivity extends AppCompatActivity {
         context = this;
         user = PrefStorage.getUser(context);
         gv = findViewById(R.id.composeStatusGridView);
-        status = findViewById(R.id.composeProfileDescTextArea);
+        status = findViewById(R.id.group_description);
 
         GRID_WIDTH = getResources().getDisplayMetrics().widthPixels;
         int imgWidht = GRID_WIDTH/NUM_GRIDS;

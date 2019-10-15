@@ -67,4 +67,35 @@ public class GCPresenter implements GCLogic.Presenter {
             }
         });
     }
+
+    @Override
+    public void sendMessage(final Context context, String group_id, String msg) {
+        RetroLib.geApiService().sendMessageToGroup(PrefStorage.getUser(context).getTOKEN(),group_id,msg).enqueue(new Callback<GroupMessages>() {
+            @Override
+            public void onResponse(Call<GroupMessages> call, Response<GroupMessages> response) {
+                if(response.isSuccessful()){
+                    GroupMessages groupMessages = response.body();
+                    if(groupMessages.getIS_AUTHENTICATED()){
+                        if(groupMessages.getIS_ERROR()){
+                            RMsg.toastHere(context,groupMessages.getMESSAGE());
+                        }else if(groupMessages.getSent()){
+                            //groupChatAdapter.notifyAdapter(groupMessages.getMESSENGER());
+                            view.onMessageSent(groupMessages.getGroupMessage());
+                        }
+                    }else {
+                        RMsg.toastHere(context,"You are not loggedin.");
+
+                    }
+                }else {
+                    RMsg.toastHere(context,"Messages could not be loaded. Try again.");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<GroupMessages> call, Throwable t) {
+                RMsg.toastHere(context,t.getMessage());
+
+            }
+        });
+    }
 }

@@ -1,7 +1,9 @@
 package swap.irfanullah.com.swap.Fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -19,6 +21,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import swap.irfanullah.com.swap.Adapters.StatusAdapter;
+import swap.irfanullah.com.swap.ComposeStatusActivity;
+import swap.irfanullah.com.swap.HomeActivity;
 import swap.irfanullah.com.swap.Libraries.RetroLib;
 import swap.irfanullah.com.swap.Models.Status;
 import swap.irfanullah.com.swap.R;
@@ -44,6 +48,18 @@ public class StatusesFragment extends Fragment {
         sRV = rootView.findViewById(R.id.chatRV);
         progressBar = rootView.findViewById(R.id.statusLoadingProgressbar);
         context = getContext();
+
+        FloatingActionButton fab = (FloatingActionButton) rootView.findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent composeAct = new Intent(context, ComposeStatusActivity.class);
+                startActivity(composeAct);
+            }
+        });
+
+
         makeRequest();
         statusAdapter= new StatusAdapter(getActivity(),statuses,1);
         sRV.setHasFixedSize(true);

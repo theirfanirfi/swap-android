@@ -24,7 +24,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".GroupChatActivity.GroupChatActivity"></activity>
+        <activity android:name=".GroupChatActivity.GroupChatActivity" android:parentActivityName=".HomeActivity"></activity>
         <activity
             android:name=".SearchActivity"
             android:parentActivityName=".HomeActivity"></activity>

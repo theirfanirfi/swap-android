@@ -77,22 +77,6 @@ public class HomeActivity extends AppCompatActivity {
 
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//                ComposeStatusDialog composeStatusDialog = new ComposeStatusDialog();
-//                composeStatusDialog.setCancelable(false);
-//                composeStatusDialog.show(getSupportFragmentManager(),"compose_status");
-
-                Intent composeAct = new Intent(HomeActivity.this,ComposeStatusActivity.class);
-                startActivity(composeAct);
-            }
-        });
-
     }
 
 

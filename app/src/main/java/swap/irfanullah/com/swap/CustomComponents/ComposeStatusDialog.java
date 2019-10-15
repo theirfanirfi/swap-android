@@ -34,8 +34,8 @@ public class ComposeStatusDialog extends AppCompatDialogFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.compose_status,null);
-        composeTextArea = view.findViewById(R.id.composeProfileDescTextArea);
-        post = view.findViewById(R.id.updateDescription);
+        composeTextArea = view.findViewById(R.id.group_description);
+        post = view.findViewById(R.id.createGroupBtn);
         cancel = view.findViewById(R.id.btnCancel);
         progressBar = view.findViewById(R.id.postProgressBar);
         post.setOnClickListener(new View.OnClickListener() {

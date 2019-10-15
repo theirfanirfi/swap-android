@@ -21,7 +21,6 @@ import swap.irfanullah.com.swap.Models.RMsg;
 import swap.irfanullah.com.swap.Models.User;
 import swap.irfanullah.com.swap.R;
 import swap.irfanullah.com.swap.Storage.PrefStorage;
-import swap.irfanullah.com.swap.UserProfile;
 
 public class PDialog extends AppCompatDialogFragment {
     BootstrapEditText profile_description;
@@ -35,8 +34,8 @@ public class PDialog extends AppCompatDialogFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.compose_profile_description,null);
-        profile_description = view.findViewById(R.id.composeProfileDescTextArea);
-        updateBtn = view.findViewById(R.id.updateDescription);
+        profile_description = view.findViewById(R.id.group_description);
+        updateBtn = view.findViewById(R.id.createGroupBtn);
         progressBar = view.findViewById(R.id.updateProgressBar);
         updateBtn.setOnClickListener(new View.OnClickListener() {
             @Override

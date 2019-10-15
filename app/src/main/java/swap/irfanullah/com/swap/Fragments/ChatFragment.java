@@ -1,7 +1,11 @@
 package swap.irfanullah.com.swap.Fragments;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -17,14 +21,18 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import swap.irfanullah.com.swap.Adapters.ParticipantsAdapter;
+import swap.irfanullah.com.swap.ComposeStatusActivity;
+import swap.irfanullah.com.swap.CustomComponents.CreateGroupDialog;
+import swap.irfanullah.com.swap.GroupChatActivity.GroupChatActivity;
 import swap.irfanullah.com.swap.Libraries.RetroLib;
+import swap.irfanullah.com.swap.Models.Groups;
 import swap.irfanullah.com.swap.Models.Participants;
 import swap.irfanullah.com.swap.Models.RMsg;
 import swap.irfanullah.com.swap.Models.User;
 import swap.irfanullah.com.swap.R;
 import swap.irfanullah.com.swap.Storage.PrefStorage;
 
-public class ChatFragment extends Fragment implements SearchView.OnQueryTextListener {
+public class ChatFragment extends Fragment implements SearchView.OnQueryTextListener, CreateGroupDialog.CreateGroupCallBack {
 
     private ProgressBar progressBar;
     private RecyclerView rv;
@@ -32,6 +40,7 @@ public class ChatFragment extends Fragment implements SearchView.OnQueryTextList
     private Context context;
     private ArrayList<Participants> participantsArrayList;
     SearchView searchView;
+    CreateGroupDialog dialog;
     User user;
     public ChatFragment() {
     }
@@ -57,6 +66,21 @@ public class ChatFragment extends Fragment implements SearchView.OnQueryTextList
         participantsArrayList = new ArrayList<>();
         rv = rootView.findViewById(R.id.chatRV);
         progressBar = rootView.findViewById(R.id.participantLoadingProgressbar);
+        dialog = new CreateGroupDialog();
+        dialog.setOnGroupCreatedListener(this);
+        FloatingActionButton fab = (FloatingActionButton) rootView.findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+//                Intent composeAct = new Intent(context, ComposeStatusActivity.class);
+//                startActivity(composeAct);
+
+
+                dialog.show(getFragmentManager(),"create_group");
+            }
+        });
+
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(context);
         rv.setLayoutManager(layoutManager);
@@ -128,5 +152,19 @@ public class ChatFragment extends Fragment implements SearchView.OnQueryTextList
                 participantsAdapter.notifyAdapter(filteredArrayList);
             }
         }
+    }
+
+    @Override
+    public void onGroupCreated(Groups group) {
+       // RMsg.toastHere(context,group.getGROUP_NAME());
+        getParticipants();
+        Intent groupIntent = new Intent(context, GroupChatActivity.class);
+        groupIntent.putExtra("group_id",Integer.toString(group.getGROUP_ID()));
+        context.startActivity(groupIntent);
+    }
+
+    @Override
+    public void onGroupNotCreated() {
+
     }
 }

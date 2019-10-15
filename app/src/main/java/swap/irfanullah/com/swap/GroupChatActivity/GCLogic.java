@@ -11,11 +11,12 @@ public interface GCLogic {
 
     interface View {
         void onChatLoaded(ArrayList<GroupMessages> messenger);
-
+        void onMessageSent(GroupMessages groupMessage);
     }
 
     interface Presenter {
         GroupChatAdapter setUpRv(RecyclerView rv);
         void fetchGroupMessages(Context context,String group_id);
+        void sendMessage(Context context, String group_id, String msg);
     }
 }

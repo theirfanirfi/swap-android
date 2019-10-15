@@ -30,6 +30,12 @@ public class GroupMessages {
     @SerializedName("username")
     private String USERNAME;
 
+    @SerializedName("msg")
+    private GroupMessages GroupMessage;
+
+
+
+
     @SerializedName("messages")
     private ArrayList<GroupMessages> MESSENGER;
 
@@ -105,5 +111,13 @@ public class GroupMessages {
 
     public String getUSERNAME() {
         return USERNAME;
+    }
+
+    public GroupMessages getGroupMessage() {
+        return GroupMessage;
+    }
+
+    public Boolean getSent() {
+        return IS_SENT;
     }
 }

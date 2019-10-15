@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -19,7 +18,6 @@ import retrofit2.Response;
 import swap.irfanullah.com.swap.Libraries.RetroLib;
 import swap.irfanullah.com.swap.Models.Comment;
 import swap.irfanullah.com.swap.Models.RMsg;
-import swap.irfanullah.com.swap.Models.Status;
 import swap.irfanullah.com.swap.R;
 import swap.irfanullah.com.swap.Storage.PrefStorage;
 
@@ -39,8 +37,8 @@ public class CommentDialog extends AppCompatDialogFragment {
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.compose_status,null);
         context = getActivity();
-        composeTextArea = view.findViewById(R.id.composeProfileDescTextArea);
-        post = view.findViewById(R.id.updateDescription);
+        composeTextArea = view.findViewById(R.id.group_description);
+        post = view.findViewById(R.id.createGroupBtn);
         cancel = view.findViewById(R.id.btnCancel);
         progressBar = view.findViewById(R.id.postProgressBar);
         bundle = getArguments();
