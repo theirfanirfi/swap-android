@@ -39,6 +39,9 @@ public class Messenger {
     @SerializedName("last_message_count")
     private int LAST_MESSAGE_COUNT;
 
+    @SerializedName("is_forwarded")
+    private boolean isForwareded;
+
     public int getLAST_MESSAGE_COUNT() {
         return LAST_MESSAGE_COUNT;
     }
@@ -101,5 +104,9 @@ public class Messenger {
 
     public ArrayList<Messenger> getMESSENGER() {
         return MESSENGER;
+    }
+
+    public boolean isForwareded() {
+        return isForwareded;
     }
 }

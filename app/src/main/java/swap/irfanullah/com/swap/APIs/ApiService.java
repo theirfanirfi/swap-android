@@ -199,6 +199,10 @@ public interface ApiService {
     @GET(AFTER_BASE_URL+"msg/gs")
     Call<GroupMessages> sendMessageToGroup(@Query("token") String token, @Query("id") String group_id, @Query("msg") String msg);
 
+
+    @GET(AFTER_BASE_URL+"msg/fr")
+    Call<GroupMessages> forwardMessageFromGroup(@Query("token") String token, @Query("id") int user_id, @Query("mid") int m_id);
+
     @GET(AFTER_BASE_URL+"group/create")
     Call<Groups> createGroup(@Query("token") String token, @Query("gpn") String group_name, @Query("gpd") String group_description);
 }

@@ -138,8 +138,6 @@ public class ParticipantsAdapter extends RecyclerView.Adapter<ParticipantsAdapte
 
                     if (participants.getIS_GROUP() == 0) {
                         Intent chatAct = new Intent(context, ChatActivity.class);
-                        RMsg.toastHere(context,"chat");
-
                         if (user.getUSER_ID() == participants.getUSER_TWO()) {
                             int TO_CHAT_WITH_ID = participants.getUSER_ONE();
                             int LOGGEDIN_USER_ID = participants.getUSER_TWO();

@@ -22,6 +22,7 @@ public class GroupChatAdapter extends RecyclerView.Adapter<GroupChatAdapter.Chat
     private Context context;
     private ArrayList<GroupMessages> messengerArrayList;
     private User loggedUser;
+    public static MessageClickListener messageClickListener;
 
     public GroupChatAdapter(Context context, ArrayList<GroupMessages> messengerArrayList) {
         this.context = context;
@@ -33,7 +34,7 @@ public class GroupChatAdapter extends RecyclerView.Adapter<GroupChatAdapter.Chat
     @Override
     public ChatViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(context).inflate(R.layout.group_chat_row,viewGroup,false);
-        return new ChatViewHolder(view);
+        return new ChatViewHolder(view, this.messengerArrayList);
     }
 
     @Override
@@ -59,6 +60,13 @@ public class GroupChatAdapter extends RecyclerView.Adapter<GroupChatAdapter.Chat
             chatViewHolder.sender.setVisibility(View.GONE);
             chatViewHolder.sender_time.setVisibility(View.GONE);
             chatViewHolder.sender_profile_image.setVisibility(View.GONE);
+
+            if(messenger.isForwareded() == 1){
+                chatViewHolder.forwardedRecieverView.setVisibility(View.VISIBLE);
+            }else{
+                chatViewHolder.forwardedRecieverView.setVisibility(View.GONE);
+
+            }
             //chatViewHolder.sender_username.setVisibility(View.GONE);
         }
     }
@@ -69,9 +77,10 @@ public class GroupChatAdapter extends RecyclerView.Adapter<GroupChatAdapter.Chat
     }
 
     public static class ChatViewHolder extends RecyclerView.ViewHolder {
-        private TextView sender,reciever,sender_time, reciever_time,sender_username,reciever_username;
+        private TextView sender,reciever,sender_time, reciever_time,
+                sender_username,reciever_username,forwardedRecieverView;
         private ImageView sender_profile_image,reciever_profile_image;
-        public ChatViewHolder(@NonNull View itemView) {
+        public ChatViewHolder(@NonNull View itemView, final ArrayList<GroupMessages> messengerArrayList) {
             super(itemView);
             sender = itemView.findViewById(R.id.sender);
             reciever = itemView.findViewById(R.id.reciever);
@@ -81,11 +90,27 @@ public class GroupChatAdapter extends RecyclerView.Adapter<GroupChatAdapter.Chat
             reciever_profile_image = itemView.findViewById(R.id.reciever_profile_image);
             //sender_username = itemView.findViewById(R.id.sender_username);
             reciever_username = itemView.findViewById(R.id.reciever_username);
+            forwardedRecieverView = itemView.findViewById(R.id.recieverforwardedView);
+            reciever.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    messageClickListener.onMessageClicked(messengerArrayList.get(getAdapterPosition()));
+                    return true;
+                }
+            });
         }
     }
 
     public void notifyAdapter(ArrayList<GroupMessages> messengerArrayList){
         this.messengerArrayList = messengerArrayList;
         notifyDataSetChanged();
+    }
+
+    public interface MessageClickListener {
+        void onMessageClicked(GroupMessages groupMessage);
+    }
+
+    public void setOnMessageClickListener (MessageClickListener messageListener){
+        messageClickListener = messageListener;
     }
 }

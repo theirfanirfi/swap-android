@@ -33,6 +33,12 @@ public class GroupMessages {
     @SerializedName("msg")
     private GroupMessages GroupMessage;
 
+    @SerializedName("is_forwarded")
+    private int isForwareded;
+
+    @SerializedName("m_id")
+    private int MESSAGE_ID;
+
 
 
 
@@ -119,5 +125,17 @@ public class GroupMessages {
 
     public Boolean getSent() {
         return IS_SENT;
+    }
+
+    public int isForwareded() {
+        return isForwareded;
+    }
+
+    public int getIsForwareded() {
+        return isForwareded;
+    }
+
+    public int getMESSAGE_ID() {
+        return MESSAGE_ID;
     }
 }

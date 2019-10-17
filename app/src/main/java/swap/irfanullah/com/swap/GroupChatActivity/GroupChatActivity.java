@@ -1,7 +1,10 @@
 package swap.irfanullah.com.swap.GroupChatActivity;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Handler;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
@@ -13,12 +16,18 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.google.gson.Gson;
+
 import java.util.ArrayList;
 
+import swap.irfanullah.com.swap.ForwardMessageActivity;
 import swap.irfanullah.com.swap.Models.GroupMessages;
+import swap.irfanullah.com.swap.Models.RMsg;
 import swap.irfanullah.com.swap.R;
+import swap.irfanullah.com.swap.Storage.PrefStorage;
+import swap.irfanullah.com.swap.SwapWithActivity;
 
-public class GroupChatActivity extends AppCompatActivity implements GCLogic.View {
+public class GroupChatActivity extends AppCompatActivity implements GCLogic.View, GroupChatAdapter.MessageClickListener {
     private RecyclerView rv;
     private GroupChatAdapter groupChatAdapter;
     private GCPresenter presenter;
@@ -49,6 +58,7 @@ public class GroupChatActivity extends AppCompatActivity implements GCLogic.View
         //initialize presenter
         presenter = new GCPresenter(this,context);
         groupChatAdapter = presenter.setUpRv(rv);
+        groupChatAdapter.setOnMessageClickListener(this);
 
         presenter.fetchGroupMessages(context,GROUP_ID);
 
@@ -60,9 +70,7 @@ public class GroupChatActivity extends AppCompatActivity implements GCLogic.View
             }
         });
 
-        refereshMessages();
-
-
+        //refereshMessages();
     }
 
 
@@ -80,6 +88,10 @@ public class GroupChatActivity extends AppCompatActivity implements GCLogic.View
     @Override
     public void onChatLoaded(ArrayList<GroupMessages> messenger) {
         this.messenger = messenger;
+        Gson gson = new Gson();
+        RMsg.logHere(gson.toJson(this.messenger.get(0)).toString());
+        RMsg.logHere(gson.toJson(this.messenger.get(1)).toString());
+        RMsg.logHere(gson.toJson(this.messenger.get(2)).toString());
         groupChatAdapter.notifyAdapter(messenger);
     }
 
@@ -127,5 +139,38 @@ public class GroupChatActivity extends AppCompatActivity implements GCLogic.View
 
     private void initiateGroupSettings(){
 
+    }
+
+    @Override
+    public void onMessageClicked(final GroupMessages groupMessage) {
+        //RMsg.toastHere(context,groupMessage.getMESSAGE());
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        String[] choices = {"Forward","Cancel"};
+//        builder.setSingleChoiceItems(choices, -1, new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                if(which == 0){
+//                    RMsg.toastHere(context,"foward");
+//                }else{
+//                    dialog.dismiss();
+//                }
+//            }
+//        });
+
+        builder.setItems(choices, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                if(which == 0){
+                   // RMsg.toastHere(context,Integer.toString(groupMessage.getMESSAGE_ID()));
+                    Intent forwardToAct = new Intent(context, ForwardMessageActivity.class);
+                    forwardToAct.putExtra("message_id",groupMessage.getMESSAGE_ID());
+                    startActivity(forwardToAct);
+                }else{
+                    dialog.dismiss();
+                }
+            }
+        });
+        builder.show();
+        //builder.setMultiChoiceItems(choices,)
     }
 }
