@@ -1,7 +1,10 @@
 package swap.irfanullah.com.swap;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Handler;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -24,7 +27,7 @@ import swap.irfanullah.com.swap.Models.RMsg;
 import swap.irfanullah.com.swap.Models.User;
 import swap.irfanullah.com.swap.Storage.PrefStorage;
 
-public class ChatActivity extends AppCompatActivity {
+public class ChatActivity extends AppCompatActivity  implements ChatAdapter.MessageClickListener {
 
     private RecyclerView rv;
     private ChatAdapter chatAdapter;
@@ -125,6 +128,7 @@ public class ChatActivity extends AppCompatActivity {
         messengerArrayList = new ArrayList<>();
         rv = findViewById(R.id.chatRV);
         chatAdapter = new ChatAdapter(context, messengerArrayList);
+        chatAdapter.setOnMessageClickListener(this);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(context);
         rv.setLayoutManager(layoutManager);
         rv.setHasFixedSize(true);
@@ -156,6 +160,9 @@ public class ChatActivity extends AppCompatActivity {
                                     //messengerArrayList = messenger.getMESSENGER();
                                         //messengerArrayList.addAll(messenger.getMESSENGER());
                                     //recyclerViewSetup(messenger.getMESSENGER());
+
+                                    RMsg.ilogHere(messenger.getRESPONSE_MESSAGE().length());
+
                                     notifyAdapter(messenger.getMESSENGER());
                                     //if(START == 0) {
                                         //START++;
@@ -196,5 +203,29 @@ public class ChatActivity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         finish();
+    }
+
+    @Override
+    public void onMessageClicked(final Messenger msg) {
+
+        //RMsg.toastHere(context,msg.getMESSAGE()+" : "+Integer.toString(msg.getMESSAGE_ID()));
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        String[] choices = {"Forward","Cancel"};
+
+        builder.setItems(choices, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                if(which == 0){
+                    // RMsg.toastHere(context,Integer.toString(groupMessage.getMESSAGE_ID()));
+                    Intent forwardToAct = new Intent(context, ForwardMessageActivity.class);
+                    forwardToAct.putExtra("message_id",msg.getMESSAGE_ID());
+                    startActivity(forwardToAct);
+                }else{
+                    dialog.dismiss();
+                }
+            }
+        });
+        builder.show();
+
     }
 }

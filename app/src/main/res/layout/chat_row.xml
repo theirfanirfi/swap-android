@@ -43,9 +43,11 @@
         android:id="@+id/recieverTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/reciever"
+        android:layout_marginStart="-9dp"
         android:layout_marginLeft="16dp"
-        android:layout_alignTop="@id/recieverforwardedView"
+        android:layout_marginTop="1dp"
+        android:layout_toEndOf="@+id/reciever"
         android:text="2h" />
 
     <TextView
@@ -62,30 +64,30 @@
         android:text="2h"
         android:layout_alignRight="@+id/sender" />
 
-    <TextView
-        android:id="@+id/recieverforwardedView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/reciever"
-        android:layout_alignStart="@+id/reciever"
-        android:layout_marginStart="-5dp"
-        android:layout_marginTop="1dp"
-        android:text="Forwarded"
-        android:textColor="@color/bootstrap_gray"
-        android:textSize="8sp" />
+<!--    <TextView-->
+<!--        android:id="@+id/recieverforwardedView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/reciever"-->
+<!--        android:layout_alignStart="@+id/reciever"-->
+<!--        android:layout_marginStart="-5dp"-->
+<!--        android:layout_marginTop="1dp"-->
+<!--        android:text="Forwarded"-->
+<!--        android:textColor="@color/bootstrap_gray"-->
+<!--        android:textSize="8sp" />-->
 
-    <TextView
-        android:id="@+id/senderforwardedView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+<!--    <TextView-->
+<!--        android:id="@+id/senderforwardedView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
 
-        android:layout_above="@+id/sender"
-        android:layout_alignStart="@+id/sender"
-        android:layout_marginStart="-12dp"
-        android:layout_marginEnd="-26dp"
-        android:layout_marginBottom="0dp"
-        android:layout_toStartOf="@+id/sender"
-        android:text="Forwarded"
-        android:textColor="@color/bootstrap_gray"
-        android:textSize="8sp" />
+<!--        android:layout_above="@+id/sender"-->
+<!--        android:layout_alignStart="@+id/sender"-->
+<!--        android:layout_marginStart="-12dp"-->
+<!--        android:layout_marginEnd="-26dp"-->
+<!--        android:layout_marginBottom="0dp"-->
+<!--        android:layout_toStartOf="@+id/sender"-->
+<!--        android:text="Forwarded"-->
+<!--        android:textColor="@color/bootstrap_gray"-->
+<!--        android:textSize="8sp" />-->
 </RelativeLayout>

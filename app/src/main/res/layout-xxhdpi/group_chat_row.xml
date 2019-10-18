@@ -101,17 +101,4 @@
         android:layout_marginTop="1dp"
         android:text="2h" />
 
-    <TextView
-        android:id="@+id/recieverforwardedView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/reciever_profile_image"
-        android:layout_alignEnd="@+id/reciever_profile_image"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="0dp"
-        android:text="Forwarded"
-        android:textColor="@color/bootstrap_gray"
-        android:textSize="8sp" />
 </RelativeLayout>

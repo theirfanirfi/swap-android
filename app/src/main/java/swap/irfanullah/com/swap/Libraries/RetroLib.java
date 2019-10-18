@@ -11,7 +11,7 @@ import swap.irfanullah.com.swap.APIs.ApiService;
 
 
 public class RetroLib {
-    public static final String IP = "192.168.10.2";
+    public static final String IP = "192.168.10.4";
     public static final String BASE_URL = "http://"+IP+"/";
     private static Retrofit retrofit;
 

@@ -1,8 +1,12 @@
 package swap.irfanullah.com.swap.GroupChatActivity;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,8 +45,20 @@ public class GroupChatAdapter extends RecyclerView.Adapter<GroupChatAdapter.Chat
     public void onBindViewHolder(@NonNull ChatViewHolder chatViewHolder, int i) {
         GroupMessages messenger = messengerArrayList.get(i);
         if(loggedUser.getUSER_ID() == messenger.getSENDER_ID()){
-            chatViewHolder.sender.setText(messenger.getMESSAGE());
+            //chatViewHolder.sender.setText(messenger.getMESSAGE());
            // chatViewHolder.sender_username.setText(messenger.getUSERNAME());
+
+
+            if(messenger.isForwareded() == 1){
+                String msg = "Forwarded: \n"+messenger.getMESSAGE();
+                Spannable spannable = new SpannableString(msg);
+                spannable.setSpan(new ForegroundColorSpan(Color.GRAY),0,10,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                chatViewHolder.sender.setText(spannable, TextView.BufferType.SPANNABLE);
+
+            }else {
+                chatViewHolder.sender.setText(messenger.getMESSAGE());
+            }
+
             chatViewHolder.sender.setVisibility(View.VISIBLE);
             chatViewHolder.sender_time.setText(TimeDiff.getTimeDifference(messenger.getCREATED_AT()));
             chatViewHolder.sender_time.setVisibility(View.VISIBLE);
@@ -52,7 +68,18 @@ public class GroupChatAdapter extends RecyclerView.Adapter<GroupChatAdapter.Chat
             chatViewHolder.reciever_username.setVisibility(View.GONE);
 
         }else {
-            chatViewHolder.reciever.setText(messenger.getMESSAGE());
+//            chatViewHolder.reciever.setText(messenger.getMESSAGE());
+
+            if(messenger.isForwareded() == 1){
+                String msg = "Forwarded: \n"+messenger.getMESSAGE();
+                Spannable spannable = new SpannableString(msg);
+                spannable.setSpan(new ForegroundColorSpan(Color.GRAY),0,10,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                chatViewHolder.reciever.setText(spannable, TextView.BufferType.SPANNABLE);
+
+            }else {
+                chatViewHolder.reciever.setText(messenger.getMESSAGE());
+            }
+
             chatViewHolder.reciever_username.setText(messenger.getUSERNAME());
             chatViewHolder.reciever.setVisibility(View.VISIBLE);
             chatViewHolder.reciever_time.setText(TimeDiff.getTimeDifference(messenger.getCREATED_AT()));
@@ -61,12 +88,6 @@ public class GroupChatAdapter extends RecyclerView.Adapter<GroupChatAdapter.Chat
             chatViewHolder.sender_time.setVisibility(View.GONE);
             chatViewHolder.sender_profile_image.setVisibility(View.GONE);
 
-            if(messenger.isForwareded() == 1){
-                chatViewHolder.forwardedRecieverView.setVisibility(View.VISIBLE);
-            }else{
-                chatViewHolder.forwardedRecieverView.setVisibility(View.GONE);
-
-            }
             //chatViewHolder.sender_username.setVisibility(View.GONE);
         }
     }
@@ -78,7 +99,7 @@ public class GroupChatAdapter extends RecyclerView.Adapter<GroupChatAdapter.Chat
 
     public static class ChatViewHolder extends RecyclerView.ViewHolder {
         private TextView sender,reciever,sender_time, reciever_time,
-                sender_username,reciever_username,forwardedRecieverView;
+                sender_username,reciever_username;
         private ImageView sender_profile_image,reciever_profile_image;
         public ChatViewHolder(@NonNull View itemView, final ArrayList<GroupMessages> messengerArrayList) {
             super(itemView);
@@ -90,7 +111,6 @@ public class GroupChatAdapter extends RecyclerView.Adapter<GroupChatAdapter.Chat
             reciever_profile_image = itemView.findViewById(R.id.reciever_profile_image);
             //sender_username = itemView.findViewById(R.id.sender_username);
             reciever_username = itemView.findViewById(R.id.reciever_username);
-            forwardedRecieverView = itemView.findViewById(R.id.recieverforwardedView);
             reciever.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {

@@ -88,10 +88,6 @@ public class GroupChatActivity extends AppCompatActivity implements GCLogic.View
     @Override
     public void onChatLoaded(ArrayList<GroupMessages> messenger) {
         this.messenger = messenger;
-        Gson gson = new Gson();
-        RMsg.logHere(gson.toJson(this.messenger.get(0)).toString());
-        RMsg.logHere(gson.toJson(this.messenger.get(1)).toString());
-        RMsg.logHere(gson.toJson(this.messenger.get(2)).toString());
         groupChatAdapter.notifyAdapter(messenger);
     }
 
