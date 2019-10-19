@@ -14,8 +14,8 @@
 
         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/profile_image"
-            android:layout_width="57dp"
-            android:layout_height="54dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:src="@drawable/person"
@@ -36,7 +36,7 @@
             android:maxLines="3"
             android:text="This is my status. You can not ignore it \nbuddy. Ooo, it is really nice app."
             android:textColor="@color/colorBlack"
-            android:textSize="10sp"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/profile_image"
@@ -52,7 +52,7 @@
             android:layout_marginRight="4dp"
             android:layout_marginBottom="8dp"
             android:text="2h"
-            app:layout_constraintBottom_toTopOf="@+id/statusTextView"
+            app:layout_constraintBottom_toTopOf="@+id/usernameTextView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
@@ -69,7 +69,7 @@
             android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/statusTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/usernameTextView" />
 
         <TextView
             android:id="@+id/usernameTextView"

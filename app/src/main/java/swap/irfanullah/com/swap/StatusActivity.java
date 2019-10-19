@@ -1,10 +1,8 @@
 package swap.irfanullah.com.swap;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
@@ -17,10 +15,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.RatingBar;
-import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,20 +28,17 @@ import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import swap.irfanullah.com.swap.Adapters.SingleStatusAdapter;
-import swap.irfanullah.com.swap.Adapters.StatusAdapter;
 import swap.irfanullah.com.swap.Adapters.StatusFragGridAdapter;
 import swap.irfanullah.com.swap.CustomComponents.CommentDialog;
 import swap.irfanullah.com.swap.Libraries.GLib;
 import swap.irfanullah.com.swap.Libraries.RetroLib;
 import swap.irfanullah.com.swap.Models.Attachments;
 import swap.irfanullah.com.swap.Models.Like;
-import swap.irfanullah.com.swap.Models.Notification;
 import swap.irfanullah.com.swap.Models.RMsg;
 import swap.irfanullah.com.swap.Models.Share;
 import swap.irfanullah.com.swap.Models.SingleStatusModel;
@@ -257,6 +250,17 @@ public class StatusActivity extends AppCompatActivity {
         this.STATUS_ID = bundle.getInt("status_id");
         this.ADAP_POSITION = bundle.getInt("position");
         this.IS_ACCEPTED = bundle.getInt("is_accepted");
+
+
+        mediaAttachments = new ArrayList<>();
+        statusFragGridAdapter = new StatusFragGridAdapter(context,mediaAttachments,this.STATUS_ID);
+        RMsg.logHere("status_id: "+Integer.toString(this.STATUS_ID));
+        layoutManager = new GridLayoutManager(context,4);
+        //statusMedia.setHasFixedSize(true);
+        statusMedia.setAdapter(statusFragGridAdapter);
+        statusMedia.setLayoutManager(layoutManager);
+
+
 //        this.NOTIFICATION_ID = bundle.getInt("notification_id");
 
 //        if(bundle.getString("is_browse_status","").equals("")){
@@ -335,12 +339,7 @@ public class StatusActivity extends AppCompatActivity {
 //        recyclerView.setLayoutManager(layoutManagerr);
 //        recyclerView.setAdapter(singleStatusAdapter);
 
-        mediaAttachments = new ArrayList<>();
-        statusFragGridAdapter = new StatusFragGridAdapter(context,mediaAttachments,this.STATUS_ID);
-        layoutManager = new GridLayoutManager(context,4);
-        //statusMedia.setHasFixedSize(true);
-        statusMedia.setAdapter(statusFragGridAdapter);
-        statusMedia.setLayoutManager(layoutManager);
+
 
     }
 

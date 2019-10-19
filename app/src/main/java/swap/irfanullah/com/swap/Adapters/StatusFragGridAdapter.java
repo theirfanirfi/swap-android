@@ -61,6 +61,7 @@ public class StatusFragGridAdapter extends RecyclerView.Adapter<StatusFragGridAd
             iv = itemView.findViewById(R.id.customSquareImage);
             iv.setMinimumWidth(250);
             iv.setMinimumHeight(250);
+
             iv.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

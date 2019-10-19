@@ -21,7 +21,6 @@ import swap.irfanullah.com.swap.NLUserProfile;
 import swap.irfanullah.com.swap.R;
 import swap.irfanullah.com.swap.StatusActivity;
 import swap.irfanullah.com.swap.Storage.PrefStorage;
-import swap.irfanullah.com.swap.SwapWithActivity;
 import swap.irfanullah.com.swap.UserProfile;
 
 public class StatusAdapter extends RecyclerView.Adapter<StatusAdapter.StatusViewHolder> {
@@ -79,7 +78,7 @@ public class StatusAdapter extends RecyclerView.Adapter<StatusAdapter.StatusView
             layout = itemView.findViewById(R.id.statusLayout);
             profile_image = itemView.findViewById(R.id.profile_image);
             username = itemView.findViewById(R.id.usernameTextView);
-            statusDescription = itemView.findViewById(R.id.statusTextView);
+            statusDescription = itemView.findViewById(R.id.usernameTextView);
             ratingBar = itemView.findViewById(R.id.ratingBar);
             statusTime = itemView.findViewById(R.id.statusTimeTextView);
 

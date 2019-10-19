@@ -2,28 +2,19 @@ package swap.irfanullah.com.swap.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 import swap.irfanullah.com.swap.Libraries.GLib;
-import swap.irfanullah.com.swap.Libraries.RetroLib;
 import swap.irfanullah.com.swap.Models.Followers;
-import swap.irfanullah.com.swap.Models.Swap;
 import swap.irfanullah.com.swap.NLUserProfile;
 import swap.irfanullah.com.swap.R;
 import swap.irfanullah.com.swap.Storage.PrefStorage;
@@ -82,8 +73,8 @@ public class ForwardChatMessageAdapter extends RecyclerView.Adapter<ForwardChatM
         ImageView profile_image;
         public StatusViewHolder(@NonNull View itemView, final Context context, final ArrayList<Followers> followers) {
             super(itemView);
-            sendBtn = itemView.findViewById(R.id.swapedWithcheckBox);
-            name = itemView.findViewById(R.id.statusTextView);
+            sendBtn = itemView.findViewById(R.id.inviteBtn);
+            name = itemView.findViewById(R.id.usernameTextView);
             profile_image = itemView.findViewById(R.id.profile_image);
 
             name.setOnClickListener(new View.OnClickListener() {

@@ -53,7 +53,7 @@
             android:layout_marginRight="4dp"
             android:layout_marginBottom="8dp"
             android:text="2h"
-            app:layout_constraintBottom_toTopOf="@+id/statusTextView"
+            app:layout_constraintBottom_toTopOf="@+id/usernameTextView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
@@ -70,7 +70,7 @@
             android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/statusTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/usernameTextView" />
 
         <TextView
             android:id="@+id/usernameTextView"

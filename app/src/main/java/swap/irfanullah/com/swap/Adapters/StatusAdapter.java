@@ -2,34 +2,24 @@ package swap.irfanullah.com.swap.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.view.ViewPager;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
-
-import org.json.JSONArray;
-import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -38,17 +28,14 @@ import me.relex.circleindicator.CircleIndicator;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import swap.irfanullah.com.swap.ImageViewer;
 import swap.irfanullah.com.swap.Libraries.GLib;
 import swap.irfanullah.com.swap.Libraries.RetroLib;
 import swap.irfanullah.com.swap.Libraries.TimeDiff;
 import swap.irfanullah.com.swap.Models.Attachments;
 import swap.irfanullah.com.swap.Models.Like;
-import swap.irfanullah.com.swap.Models.Media;
 import swap.irfanullah.com.swap.Models.RMsg;
 import swap.irfanullah.com.swap.Models.Share;
 import swap.irfanullah.com.swap.Models.Status;
-import swap.irfanullah.com.swap.Models.SwapsTab;
 import swap.irfanullah.com.swap.Models.User;
 import swap.irfanullah.com.swap.NLUserProfile;
 import swap.irfanullah.com.swap.R;
@@ -119,8 +106,9 @@ public class StatusAdapter extends RecyclerView.Adapter<StatusAdapter.StatusView
 //        statusViewHolder.mediaView.setLayoutParams(layoutParams);
 
 
-
-
+        statusViewHolder.rl.setVisibility(View.VISIBLE);
+        statusViewHolder.mediaView.setVisibility(View.VISIBLE);
+        RMsg.logHere("STATUS MEDIA no media: "+Integer.toString(e.getHAS_ATTACHMENTS()) + " : "+e.getSTATUS());
        // loadStatusMedia(statusViewHolder,e.getATTACHMENTS(),e.getSTATUS_ID());
         updatePager(e.getATTACHMENTS(),Integer.toString(e.getSTATUS_ID()),statusViewHolder.indicator,statusViewHolder.mediaView,e.getSTATUS_ID());
         //statusViewHolder.mediaViewPager.setAdapter(pager);
@@ -130,6 +118,8 @@ public class StatusAdapter extends RecyclerView.Adapter<StatusAdapter.StatusView
     }else {
         statusViewHolder.rl.setVisibility(View.GONE);
         statusViewHolder.mediaView.setVisibility(View.GONE);
+
+        RMsg.logHere("STATUS MEDIA no media: "+Integer.toString(e.getHAS_ATTACHMENTS()) + " : "+e.getSTATUS());
 //        ViewGroup.LayoutParams layoutParams = statusViewHolder.mediaView.getLayoutParams();
 //        layoutParams.height = 0; //this is in pixels
 //        statusViewHolder.mediaView.setLayoutParams(layoutParams);

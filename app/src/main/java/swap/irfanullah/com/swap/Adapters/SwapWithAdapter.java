@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,8 +23,6 @@ import retrofit2.Response;
 import swap.irfanullah.com.swap.Libraries.GLib;
 import swap.irfanullah.com.swap.Libraries.RetroLib;
 import swap.irfanullah.com.swap.Models.Followers;
-import swap.irfanullah.com.swap.Models.RMsg;
-import swap.irfanullah.com.swap.Models.Status;
 import swap.irfanullah.com.swap.Models.Swap;
 import swap.irfanullah.com.swap.NLUserProfile;
 import swap.irfanullah.com.swap.R;
@@ -88,8 +85,8 @@ public class SwapWithAdapter extends RecyclerView.Adapter<SwapWithAdapter.Status
         ImageView profile_image;
         public StatusViewHolder(@NonNull View itemView, final Context context, final ArrayList<Followers> followers, ArrayList<Swap> swaps, final int status_id) {
             super(itemView);
-            swapedWith = itemView.findViewById(R.id.swapedWithcheckBox);
-            name = itemView.findViewById(R.id.statusTextView);
+            swapedWith = itemView.findViewById(R.id.inviteBtn);
+            name = itemView.findViewById(R.id.usernameTextView);
             profile_image = itemView.findViewById(R.id.profile_image);
 
             name.setOnClickListener(new View.OnClickListener() {

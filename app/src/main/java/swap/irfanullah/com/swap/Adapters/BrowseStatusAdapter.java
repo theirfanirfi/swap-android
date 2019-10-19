@@ -45,7 +45,6 @@ import swap.irfanullah.com.swap.NLUserProfile;
 import swap.irfanullah.com.swap.R;
 import swap.irfanullah.com.swap.StatusActivity;
 import swap.irfanullah.com.swap.Storage.PrefStorage;
-import swap.irfanullah.com.swap.SwapWithActivity;
 import swap.irfanullah.com.swap.UserProfile;
 
 public class BrowseStatusAdapter extends RecyclerView.Adapter<BrowseStatusAdapter.StatusViewHolder> {

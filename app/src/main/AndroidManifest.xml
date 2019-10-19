@@ -29,6 +29,11 @@
             android:name=".SearchActivity"
             android:parentActivityName=".HomeActivity"></activity>
 
+
+        <activity
+            android:name=".InviteToGroupActivity"
+            android:parentActivityName=".GroupChatActivity.GroupChatActivity"></activity>
+
         <activity
             android:name=".ForwardMessageActivity"
             android:parentActivityName=".GroupChatActivity.GroupChatActivity"></activity>

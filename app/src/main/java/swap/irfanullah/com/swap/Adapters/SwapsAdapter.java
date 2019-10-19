@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.view.ViewPager;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -114,9 +113,14 @@ public class SwapsAdapter extends RecyclerView.Adapter<SwapsAdapter.StatusViewHo
 
         if(swap.getHAS_ATTACHMENTS() == 1) {
 //            loadStatusMedia(statusViewHolder,swap.getATTACHMENTS(), swap.getSTATUS_ID());
+            statusViewHolder.rl.setVisibility(View.VISIBLE);
+            statusViewHolder.mediaView.setVisibility(View.VISIBLE);
+//            RMsg.logHere("MEDIA has media: "+Integer.toString(swap.getHAS_ATTACHMENTS()) + " : "+swap.getSTATUS());
             updatePager(swap.getATTACHMENTS(),Integer.toString(STATUS_ID),statusViewHolder.indicator,statusViewHolder.mediaView,STATUS_ID);
         }else {
             statusViewHolder.mediaView.setVisibility(View.GONE);
+            statusViewHolder.rl.setVisibility(View.GONE);
+//            RMsg.logHere("MEDIA no media: "+Integer.toString(swap.getHAS_ATTACHMENTS()) + " : "+swap.getSTATUS());
         }
     }
 

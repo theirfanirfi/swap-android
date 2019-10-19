@@ -25,7 +25,6 @@ import swap.irfanullah.com.swap.Libraries.TimeDiff;
 import swap.irfanullah.com.swap.Models.RMsg;
 import swap.irfanullah.com.swap.Models.Status;
 import swap.irfanullah.com.swap.Models.SwapsTab;
-import swap.irfanullah.com.swap.Models.User;
 import swap.irfanullah.com.swap.NLUserProfile;
 import swap.irfanullah.com.swap.R;
 import swap.irfanullah.com.swap.StatusActivity;
@@ -89,7 +88,7 @@ public class SwapsAdapter extends RecyclerView.Adapter<SwapsAdapter.StatusViewHo
             profile_image = itemView.findViewById(R.id.profile_image);
             username = itemView.findViewById(R.id.usernameTextView);
             withTextV = itemView.findViewById(R.id.withTextView);
-            statusDescription = itemView.findViewById(R.id.statusTextView);
+            statusDescription = itemView.findViewById(R.id.usernameTextView);
             ratingBar = itemView.findViewById(R.id.ratingBar);
             swapTime = itemView.findViewById(R.id.statusTimeTextView);
             layout = itemView.findViewById(R.id.statusLayout);

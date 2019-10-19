@@ -37,7 +37,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
             android:text="2h"
-            app:layout_constraintBottom_toTopOf="@+id/statusTextView"
+            app:layout_constraintBottom_toTopOf="@+id/usernameTextView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -53,7 +53,7 @@
             android:layout_marginBottom="8dp"
             android:text="Irfan Irfi wants to swap a status with you."
             android:textColor="@color/colorBlack"
-            app:layout_constraintBottom_toTopOf="@+id/statusTextView"
+            app:layout_constraintBottom_toTopOf="@+id/usernameTextView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/profile_image"

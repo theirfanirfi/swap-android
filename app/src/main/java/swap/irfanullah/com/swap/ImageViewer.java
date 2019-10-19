@@ -49,7 +49,7 @@ public class ImageViewer extends AppCompatActivity {
         context = this;
         viewPager = findViewById(R.id.imageViewer);
         indicator = findViewById(R.id.indicator);
-        this.STATUS_ID = getIntent().getExtras().getString("status_id");
+        this.STATUS_ID = Integer.toString(getIntent().getExtras().getInt("status_id"));
         mediaAttachments = new ArrayList<>();
         pager = new MediaPager(this,mediaAttachments,this.STATUS_ID);
         viewPager.setAdapter(pager);

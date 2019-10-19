@@ -21,6 +21,7 @@ import com.google.gson.Gson;
 import java.util.ArrayList;
 
 import swap.irfanullah.com.swap.ForwardMessageActivity;
+import swap.irfanullah.com.swap.InviteToGroupActivity;
 import swap.irfanullah.com.swap.Models.GroupMessages;
 import swap.irfanullah.com.swap.Models.RMsg;
 import swap.irfanullah.com.swap.R;
@@ -130,7 +131,9 @@ public class GroupChatActivity extends AppCompatActivity implements GCLogic.View
     }
 
     private void inviteMembersToGroup(){
-
+        Intent inviteToGroupAct = new Intent(context, InviteToGroupActivity.class);
+        inviteToGroupAct.putExtra("group_id",GROUP_ID);
+        startActivity(inviteToGroupAct);
     }
 
     private void initiateGroupSettings(){
