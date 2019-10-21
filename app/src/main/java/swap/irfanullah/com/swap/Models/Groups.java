@@ -40,6 +40,9 @@ public class Groups {
     @SerializedName("username")
     private String USERNAME;
 
+    @SerializedName("isInvited")
+    private boolean isInvited;
+
     @SerializedName("messages")
     private ArrayList<Groups> MESSENGER;
 
@@ -127,6 +130,10 @@ public class Groups {
 
     public String getGROUP_NAME() {
         return GROUP_NAME;
+    }
+
+    public boolean isInvited() {
+        return isInvited;
     }
 }
 

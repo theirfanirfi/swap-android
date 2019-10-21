@@ -132,7 +132,7 @@ public class GroupChatActivity extends AppCompatActivity implements GCLogic.View
 
     private void inviteMembersToGroup(){
         Intent inviteToGroupAct = new Intent(context, InviteToGroupActivity.class);
-        inviteToGroupAct.putExtra("group_id",GROUP_ID);
+        inviteToGroupAct.putExtra("group_id",Integer.parseInt(GROUP_ID));
         startActivity(inviteToGroupAct);
     }
 

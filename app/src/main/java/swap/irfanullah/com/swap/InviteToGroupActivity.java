@@ -22,6 +22,7 @@ import swap.irfanullah.com.swap.Adapters.InviteToGroupAdapter;
 import swap.irfanullah.com.swap.Libraries.RetroLib;
 import swap.irfanullah.com.swap.Models.Followers;
 import swap.irfanullah.com.swap.Models.GroupMessages;
+import swap.irfanullah.com.swap.Models.Groups;
 import swap.irfanullah.com.swap.Models.RMsg;
 import swap.irfanullah.com.swap.Storage.PrefStorage;
 
@@ -33,7 +34,7 @@ public class InviteToGroupActivity extends AppCompatActivity implements InviteTo
     private InviteToGroupAdapter inviteToGroupAdapter;
     private ArrayList<Followers> followersList, filteredArrayList;
     private SearchView searchTextField;
-    private int INTENT_MESSAGE_ID = 0;
+    private int GROUP_ID = 0;
     private Context context;
 
     @Override
@@ -53,7 +54,7 @@ public class InviteToGroupActivity extends AppCompatActivity implements InviteTo
 //        });
         searchTextField = findViewById(R.id.searchView);
         context = this;
-        INTENT_MESSAGE_ID = getIntent().getExtras().getInt("message_id");
+        GROUP_ID = getIntent().getExtras().getInt("group_id");
         followersList = new ArrayList<>();
         inviteToGroupAdapter = new InviteToGroupAdapter(context,followersList);
         inviteToGroupAdapter.setOnInviteClickListener(this);
@@ -160,15 +161,15 @@ public class InviteToGroupActivity extends AppCompatActivity implements InviteTo
 
     @Override
     public void onInvite(int followed_user_id, final Button button) {
-        RetroLib.geApiService().forwardMessageFromGroup(PrefStorage.getUser(context).getTOKEN(), followed_user_id, INTENT_MESSAGE_ID).enqueue(new Callback<GroupMessages>() {
+        RetroLib.geApiService().inviteToGroup(PrefStorage.getUser(context).getTOKEN(),GROUP_ID,followed_user_id).enqueue(new Callback<Groups>() {
             @Override
-            public void onResponse(Call<GroupMessages> call, Response<GroupMessages> response) {
-                GroupMessages groupMessages = response.body();
+            public void onResponse(Call<Groups> call, Response<Groups> response) {
+                Groups groupMessages = response.body();
                 if (groupMessages.getIS_ERROR()) {
 
                     Toast.makeText(context, groupMessages.getRESPONSE_MESSAGE(), Toast.LENGTH_LONG).show();
                     // buttonView.setChecked(false);
-                } else if (groupMessages.getIS_SENT()) {
+                } else if (groupMessages.isInvited()) {
                     // Toast.makeText(context, groupMessages.getRESPONSE_MESSAGE(), Toast.LENGTH_LONG).show();
                     button.setText("Invited");
 
@@ -176,7 +177,7 @@ public class InviteToGroupActivity extends AppCompatActivity implements InviteTo
             }
 
             @Override
-            public void onFailure(Call<GroupMessages> call, Throwable t) {
+            public void onFailure(Call<Groups> call, Throwable t) {
                 Toast.makeText(context, t.toString(), Toast.LENGTH_LONG).show();
 
             }
