@@ -208,4 +208,7 @@ public interface ApiService {
 
     @GET(AFTER_BASE_URL+"group/create")
     Call<Groups> createGroup(@Query("token") String token, @Query("gpn") String group_name, @Query("gpd") String group_description);
+
+    @GET(AFTER_BASE_URL+"tag/getusertotag")
+    Call<User> getUserToTag(@Query("token") String token, @Query("td") int user_id);
 }

@@ -29,6 +29,10 @@
             android:name=".SearchActivity"
             android:parentActivityName=".HomeActivity"></activity>
 
+        <activity
+            android:name=".TagUsersInStatusActivity"
+            android:parentActivityName=".ComposeStatusActivity"></activity>
+
 
         <activity
             android:name=".InviteToGroupActivity"

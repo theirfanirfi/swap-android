@@ -99,10 +99,13 @@ public class BrowseStatusAdapter extends RecyclerView.Adapter<BrowseStatusAdapte
     //RMsg.logHere(Integer.toString(e.getHAS_ATTACHMENTS()));
 
     if(e.getHAS_ATTACHMENTS() == 1) {
+        statusViewHolder.rl.setVisibility(View.VISIBLE);
+        statusViewHolder.mediaView.setVisibility(View.VISIBLE);
         //loadStatusMedia(statusViewHolder,e.getATTACHMENTS(),e.getSTATUS_ID());
         updatePager(e.getATTACHMENTS(),Integer.toString(e.getSTATUS_ID()),statusViewHolder.indicator,statusViewHolder.mediaView,e.getSTATUS_ID());
 
     }else {
+        statusViewHolder.rl.setVisibility(View.GONE);
         statusViewHolder.mediaView.setVisibility(View.GONE);
     }
 

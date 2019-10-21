@@ -168,6 +168,9 @@ public class ComposeStatusActivity extends AppCompatActivity {
             case android.R.id.home:
                 finish();
                 return true;
+            case R.id.tagusers:
+                gotoTagUsersActivity();
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -599,5 +602,19 @@ public class ComposeStatusActivity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         finish();
+    }
+
+    private void gotoTagUsersActivity (){
+        Intent tagAct = new Intent(context,TagUsersInStatusActivity.class);
+        startActivityForResult(tagAct,666);
+
+
+
+        //in return activity
+
+//        Intent returnIntent = new Intent();
+//        returnIntent.putExtra("result",result);
+//        setResult(Activity.RESULT_OK,returnIntent);
+//        finish();
     }
 }
