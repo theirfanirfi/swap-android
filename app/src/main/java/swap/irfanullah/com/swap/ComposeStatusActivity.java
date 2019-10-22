@@ -27,6 +27,7 @@ import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.soundcloud.android.crop.Crop;
@@ -58,6 +59,7 @@ public class ComposeStatusActivity extends AppCompatActivity {
     private final int PICK_IMAGE_REQUEST_CODE = 1;
     private User user;
     private GridView gv;
+    private TextView tagDetailsTextView;
     private GridImageAdapter gridImageAdapter;
     private ArrayList<Media> uris;
     private ProgressBar progressBar;
@@ -112,6 +114,15 @@ public class ComposeStatusActivity extends AppCompatActivity {
         user = PrefStorage.getUser(context);
         gv = findViewById(R.id.composeStatusGridView);
         status = findViewById(R.id.group_description);
+        tagDetailsTextView = findViewById(R.id.taggedUsersDisplayTextView);
+        tagDetailsTextView.setVisibility(View.GONE);
+
+        tagDetailsTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
         GRID_WIDTH = getResources().getDisplayMetrics().widthPixels;
         int imgWidht = GRID_WIDTH/NUM_GRIDS;
@@ -316,8 +327,14 @@ public class ComposeStatusActivity extends AppCompatActivity {
 
             // mVideoView.setVideoURI(videoUri);
         }else if(requestCode == 666 && resultCode == RESULT_OK){
-            IS_USERS_TAGGED = true;
             taggedUsersList = data.getIntegerArrayListExtra("tagged_users");
+            String tagged_users_detail = data.getStringExtra("tagged_users_detail");
+            if(taggedUsersList.size() > 0) {
+                tagDetailsTextView.setText(tagged_users_detail);
+                tagDetailsTextView.setVisibility(View.VISIBLE);
+                IS_USERS_TAGGED = true;
+
+            }
             //RMsg.logHere("tagged users: "+data.getIntegerArrayListExtra("tagged_users").toString());
         }
 

@@ -261,10 +261,38 @@ public class TagUsersInStatusActivity extends AppCompatActivity implements Invit
 
 
     private void userTagged(){
-        Intent returnIntent = new Intent();
+        final Intent returnIntent = new Intent();
         returnIntent.putExtra("tagged_users",TAG_IDS);
-        setResult(Activity.RESULT_OK,returnIntent);
-        finish();
+        //returnIntent.putExtra("tagged_users",TAG_IDS);
+        if(TAG_IDS.size() > 0) {
+            int first_user_id = TAG_IDS.get(0);
+            RetroLib.geApiService().getUserToTag(PrefStorage.getUser(context).getTOKEN(), first_user_id).enqueue(new Callback<User>() {
+                @Override
+                public void onResponse(Call<User> call, Response<User> response) {
+                    User user = response.body();
+                    if (user.getIS_ERROR()) {
+
+                        Toast.makeText(context, user.getMESSAGE(), Toast.LENGTH_LONG).show();
+                        // buttonView.setChecked(false);
+                    } else if (user.getISFOUND()) {
+                        String tag_description = TAG_IDS.size() > 1 ? " and " + TAG_IDS.size() + " others " : "";
+                        returnIntent.putExtra("tagged_users_detail", "with " + user.getUSER().getFULL_NAME() + tag_description);
+                        setResult(Activity.RESULT_OK, returnIntent);
+                        finish();
+
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<User> call, Throwable t) {
+                    Toast.makeText(context, t.toString(), Toast.LENGTH_LONG).show();
+
+                }
+            });
+        }else {
+            setResult(Activity.RESULT_OK, returnIntent);
+            finish();
+        }
 
     }
 }
