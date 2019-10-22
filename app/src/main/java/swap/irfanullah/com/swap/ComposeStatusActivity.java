@@ -74,6 +74,7 @@ public class ComposeStatusActivity extends AppCompatActivity {
     private static final int NUM_GRIDS = 2;
     private static int GRID_WIDTH;
     private EditText status;
+    private boolean IS_USERS_TAGGED = false;
     //proposed attachment policy, but currently not followed
     //if video is added, no images should be selected
     // because videos size might be larger. So,there should be only 1 video and 0 images
@@ -88,6 +89,7 @@ public class ComposeStatusActivity extends AppCompatActivity {
     //ATTACHMENTS ARE: images and Videos
     private Boolean IS_ATTACHMENT_REQUEST = false;
     private final String _SERVICE_INTENT_STATUS_ID = "post_id";
+    private ArrayList<Integer> taggedUsersList;
 
 
     public static final int WRITE_PERMISSIONS_REQUEST_CODE = 0346;
@@ -106,6 +108,7 @@ public class ComposeStatusActivity extends AppCompatActivity {
 
     private void initializeObjects() {
         context = this;
+        taggedUsersList = new ArrayList<>();
         user = PrefStorage.getUser(context);
         gv = findViewById(R.id.composeStatusGridView);
         status = findViewById(R.id.group_description);
@@ -312,6 +315,10 @@ public class ComposeStatusActivity extends AppCompatActivity {
             }
 
             // mVideoView.setVideoURI(videoUri);
+        }else if(requestCode == 666 && resultCode == RESULT_OK){
+            IS_USERS_TAGGED = true;
+            taggedUsersList = data.getIntegerArrayListExtra("tagged_users");
+            //RMsg.logHere("tagged users: "+data.getIntegerArrayListExtra("tagged_users").toString());
         }
 
         else {

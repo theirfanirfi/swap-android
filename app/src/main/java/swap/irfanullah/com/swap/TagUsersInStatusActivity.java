@@ -1,6 +1,8 @@
 package swap.irfanullah.com.swap;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -8,6 +10,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.SearchView;
@@ -36,6 +39,7 @@ public class TagUsersInStatusActivity extends AppCompatActivity implements Invit
     private ArrayList<Followers> followersList, filteredArrayList;
     private SearchView searchTextField;
     private int GROUP_ID = 0;
+    private ArrayList<Integer> TAG_IDS;
     private Context context;
 
 
@@ -50,6 +54,7 @@ public class TagUsersInStatusActivity extends AppCompatActivity implements Invit
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tag_users_in_status_activity);
+        TAG_IDS = new ArrayList<>();
 //        toolbar = findViewById(R.id.swapWithToolbar);
 //       // toolbar.setTitle("");
 //
@@ -73,8 +78,7 @@ public class TagUsersInStatusActivity extends AppCompatActivity implements Invit
         tagedRV = findViewById(R.id.tagUsersRV);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(context);
 
-
-        tagLayoutManager = new GridLayoutManager(this,2);
+        tagLayoutManager = new GridLayoutManager(this,4);
         tagedRV.setLayoutManager(tagLayoutManager);
         tagUsersList = new ArrayList<>();
         tagUsersAdapter = new TagUsersAdapter(context,this.tagUsersList);
@@ -168,6 +172,8 @@ public class TagUsersInStatusActivity extends AppCompatActivity implements Invit
         if(item.getItemId() == android.R.id.home){
             finish();
             return true;
+        }else if(item.getItemId() == R.id.done_tagging){
+            userTagged();
         }
         return super.onOptionsItemSelected(item);
     }
@@ -191,10 +197,20 @@ public class TagUsersInStatusActivity extends AppCompatActivity implements Invit
                     // buttonView.setChecked(false);
                 } else if (user.getISFOUND()) {
                     // Toast.makeText(context, groupMessages.getRESPONSE_MESSAGE(), Toast.LENGTH_LONG).show();
-                    tagUsersList.add(user.getUSER());
+                    tagUser(user.getUSER(),button);
 
-                    tagUsersAdapter.FilterRV(tagUsersList);
-                    button.setText("Tagged");
+
+                    RMsg.logHere(TAG_IDS.toString());
+//                    if(tagUsersList.size() <= 4){
+//                        tagLayoutManager = new GridLayoutManager(context,5);
+//                        tagedRV.setLayoutManager(tagLayoutManager);
+//
+//                    }else {
+//                        tagLayoutManager = new GridLayoutManager(context,tagedRV.getWidth()%tagUsersList.size());
+//                        tagedRV.setLayoutManager(tagLayoutManager);
+//                    }
+
+
 
                 }
             }
@@ -207,5 +223,48 @@ public class TagUsersInStatusActivity extends AppCompatActivity implements Invit
         });
     }
 
+    private boolean tagUser(User user, Button button){
+        boolean isFound = false;
+        int i = 0;
 
+        for(User u : this.tagUsersList){
+            if(u.getUSER_ID() == user.getUSER_ID()){
+                this.tagUsersList.remove(u);
+                TAG_IDS.remove(i);
+                tagUsersAdapter.FilterRV(tagUsersList);
+                button.setText("Tag");
+                isFound =  true;
+                break;
+            }else{
+                isFound =  false;
+            }
+
+            i++;
+        }
+
+        if(!isFound){
+            TAG_IDS.add(user.getUSER_ID());
+            tagUsersList.add(user);
+            tagUsersAdapter.FilterRV(tagUsersList);
+            button.setText("UnTag");
+        }
+
+        return !isFound;
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.tag_user_act_menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
+    private void userTagged(){
+        Intent returnIntent = new Intent();
+        returnIntent.putExtra("tagged_users",TAG_IDS);
+        setResult(Activity.RESULT_OK,returnIntent);
+        finish();
+
+    }
 }
