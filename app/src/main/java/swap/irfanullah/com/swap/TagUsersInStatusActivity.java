@@ -22,6 +22,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import swap.irfanullah.com.swap.Adapters.InviteToGroupAdapter;
+import swap.irfanullah.com.swap.Adapters.TagAdapter;
 import swap.irfanullah.com.swap.Adapters.TagUsersAdapter;
 import swap.irfanullah.com.swap.Libraries.RetroLib;
 import swap.irfanullah.com.swap.Models.Followers;
@@ -31,11 +32,11 @@ import swap.irfanullah.com.swap.Models.User;
 import swap.irfanullah.com.swap.Storage.PrefStorage;
 
 
-public class TagUsersInStatusActivity extends AppCompatActivity implements InviteToGroupAdapter.InviteClickListener {
+public class TagUsersInStatusActivity extends AppCompatActivity implements TagAdapter.TagClickListener {
 
     private Toolbar toolbar;
     private RecyclerView sWRV;
-    private InviteToGroupAdapter inviteToGroupAdapter;
+    private TagAdapter tagAdapter;
     private ArrayList<Followers> followersList, filteredArrayList;
     private SearchView searchTextField;
     private int GROUP_ID = 0;
@@ -70,8 +71,8 @@ public class TagUsersInStatusActivity extends AppCompatActivity implements Invit
         context = this;
 //        GROUP_ID = getIntent().getExtras().getInt("group_id");
         followersList = new ArrayList<>();
-        inviteToGroupAdapter = new InviteToGroupAdapter(context,followersList);
-        inviteToGroupAdapter.setOnInviteClickListener(this);
+        tagAdapter = new TagAdapter(context,followersList);
+        tagAdapter.setOnTagClickListener(this);
 
 
         sWRV = findViewById(R.id.swapWithRV);
@@ -86,7 +87,7 @@ public class TagUsersInStatusActivity extends AppCompatActivity implements Invit
         tagedRV.setHasFixedSize(true);
 
         sWRV.setLayoutManager(layoutManager);
-        sWRV.setAdapter(inviteToGroupAdapter);
+        sWRV.setAdapter(tagAdapter);
 
         RetroLib.geApiService().getFollowers(PrefStorage.getUser(this).getTOKEN(),0).enqueue(new Callback<Followers>() {
             @Override
@@ -98,7 +99,7 @@ public class TagUsersInStatusActivity extends AppCompatActivity implements Invit
                             if(followers.getFollowersFound()){
                                 ArrayList<Followers> followersArrayList = followers.getFollowers();
                                 followersList = followers.getFollowers();
-                                inviteToGroupAdapter.FilterRV(followersList);
+                                tagAdapter.FilterRV(followersList);
                             }else {
                                 Toast.makeText(context,followers.getMESSAGE(),Toast.LENGTH_LONG).show();
                             }
@@ -163,7 +164,7 @@ public class TagUsersInStatusActivity extends AppCompatActivity implements Invit
             }
         }
 
-        inviteToGroupAdapter.FilterRV(filteredArrayList);
+        tagAdapter.FilterRV(filteredArrayList);
 
     }
 
@@ -186,7 +187,7 @@ public class TagUsersInStatusActivity extends AppCompatActivity implements Invit
 
 
     @Override
-    public void onInvite(int followed_user_id, final Button button) {
+    public void onTagClicked(int followed_user_id, final Button button) {
         RetroLib.geApiService().getUserToTag(PrefStorage.getUser(context).getTOKEN(),followed_user_id).enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {

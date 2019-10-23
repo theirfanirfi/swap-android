@@ -46,7 +46,7 @@ public class TagUsersAdapter extends RecyclerView.Adapter<TagUsersAdapter.Status
 
         User user = this.users.get(i);
        statusViewHolder.username.setText(user.getFULL_NAME());
-       statusViewHolder.user_id.setText(Integer.toString(user.getUSER_ID()));
+      // statusViewHolder.user_id.setText(Integer.toString(user.getUSER_ID()));
     }
 
 
@@ -64,7 +64,7 @@ public class TagUsersAdapter extends RecyclerView.Adapter<TagUsersAdapter.Status
             super(itemView);
             unTagBtn = itemView.findViewById(R.id.removeFromTagBtn);
             username = itemView.findViewById(R.id.username);
-            user_id = itemView.findViewById(R.id.user_id);
+//            user_id = itemView.findViewById(R.id.user_id);
 
 //            name.setOnClickListener(new View.OnClickListener() {
 //                @Override
