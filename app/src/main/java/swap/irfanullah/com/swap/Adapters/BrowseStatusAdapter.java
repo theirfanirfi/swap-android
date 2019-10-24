@@ -80,7 +80,7 @@ public class BrowseStatusAdapter extends RecyclerView.Adapter<BrowseStatusAdapte
 //        statusViewHolder.likesCount.setText(e.getLIKESCOUNT().toString());
         statusViewHolder.likesCount.setText(e.getLIKESCOUNT());
 
-        if(e.isLiked()){
+        if(e.isLiked() == 1){
             statusViewHolder.likeBtn.setImageResource(R.drawable.heartred);
         }else {
             statusViewHolder.likeBtn.setImageResource(R.drawable.likehear);

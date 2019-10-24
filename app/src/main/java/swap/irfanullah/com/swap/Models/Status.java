@@ -68,9 +68,18 @@ public class Status{
     private String COMMENTSCOUONT;
 
     @SerializedName("isLiked")
-    private boolean isLiked;
+    private int isLiked;
 
-    public boolean isLiked() {
+    @SerializedName("is_users_tagged")
+    private int isUsersTagged;
+
+    @SerializedName("tag_count")
+    private int TagCount;
+
+    @SerializedName("first_tag")
+    private String FirstUserTaggedName;
+
+    public int isLiked() {
         return isLiked;
     }
 
@@ -250,5 +259,17 @@ public class Status{
 
     public void setPROFILE_IMAGE(String PROFILE_IMAGE) {
         this.PROFILE_IMAGE = PROFILE_IMAGE;
+    }
+
+    public int getIsUsersTagged() {
+        return isUsersTagged;
+    }
+
+    public int getTagCount() {
+        return TagCount;
+    }
+
+    public String getFirstUserTaggedName() {
+        return FirstUserTaggedName;
     }
 }

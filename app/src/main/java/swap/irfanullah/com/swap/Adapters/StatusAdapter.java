@@ -79,7 +79,7 @@ public class StatusAdapter extends RecyclerView.Adapter<StatusAdapter.StatusView
     statusViewHolder.statusTime.setText(TimeDiff.getTimeDifference(e.getTIME()));
     statusViewHolder.likesCount.setText(e.getLIKESCOUNT().toString());
 
-    if(e.isLiked()){
+    if(e.isLiked() == 1){
         statusViewHolder.likeBtn.setImageResource(R.drawable.heartred);
         statusViewHolder.likesCount.setTextColor(context.getResources().getColor(R.color.favColor));
     }else {
@@ -98,6 +98,17 @@ public class StatusAdapter extends RecyclerView.Adapter<StatusAdapter.StatusView
         GLib.downloadImage(context,user.getPROFILE_IMAGE()).into(statusViewHolder.profile_image);
     }
     //RMsg.logHere(Integer.toString(e.getHAS_ATTACHMENTS()));
+
+
+        if(e.getIsUsersTagged() == 1){
+            String tagCount = e.getTagCount() > 1 ? " and "+Integer.toString(e.getTagCount()-1)+" other" : "";
+            String tagDesc = "with "+e.getFirstUserTaggedName()+ tagCount;
+            statusViewHolder.taggedUsersDescriptionTextView.setText(tagDesc);
+            statusViewHolder.taggedUsersDescriptionTextView.setVisibility(View.VISIBLE);
+        }else {
+            statusViewHolder.taggedUsersDescriptionTextView.setVisibility(View.GONE);
+
+        }
 
     if(e.getHAS_ATTACHMENTS() == 1) {
 
@@ -138,7 +149,7 @@ public class StatusAdapter extends RecyclerView.Adapter<StatusAdapter.StatusView
 
     public static class StatusViewHolder extends RecyclerView.ViewHolder {
         ImageView profile_image, swapWithBtn, likeBtn, commentBtn, shareBtn;
-        TextView username, statusDescription;
+        TextView username, statusDescription, taggedUsersDescriptionTextView;
         ConstraintLayout layout;
         RatingBar ratingBar;
         TextView statusTime, likesCount, sharesCount, commentsCount;
@@ -161,6 +172,7 @@ public class StatusAdapter extends RecyclerView.Adapter<StatusAdapter.StatusView
             profile_image = itemView.findViewById(R.id.profile_image);
             username = itemView.findViewById(R.id.usernameTextView);
             statusDescription = itemView.findViewById(R.id.statusTextView);
+            taggedUsersDescriptionTextView = itemView.findViewById(R.id.taggedUsersDescription);
             mediaView = itemView.findViewById(R.id.gridViewStatus);
             rl = itemView.findViewById(R.id.rl);
 

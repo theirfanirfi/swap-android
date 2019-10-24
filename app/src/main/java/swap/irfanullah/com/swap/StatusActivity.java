@@ -363,7 +363,7 @@ public class StatusActivity extends AppCompatActivity {
                     commentsCount.setText(status.getCOMMENTSCOUONT().toString());
                     sharesCount.setText(status.getSHARESCOUNT().toString());
 
-                    if(status.isLiked()){
+                    if(status.isLiked() == 1){
                         likeBtn.setImageResource(R.drawable.heartred);
                     }else {
                         likeBtn.setImageResource(R.drawable.likehear);
