@@ -36,6 +36,10 @@ public interface ApiService {
     @FormUrlEncoded
     Call<Status> composeStatus(@Field("token") String token,@Field("status") String status);
 
+    @POST(AFTER_BASE_URL+"status/composetag")
+    @FormUrlEncoded
+    Call<Status> composeStatusTag(@Field("token") String token,@Field("status") String status,@Field("tags") String tags);
+
     @GET(AFTER_BASE_URL+"status/getStatuses")
     Call<Status> getStatuses(@Query("token") String token);
 

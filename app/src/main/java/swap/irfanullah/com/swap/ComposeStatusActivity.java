@@ -32,11 +32,15 @@ import android.widget.Toast;
 
 import com.soundcloud.android.crop.Crop;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 
 import retrofit2.Call;
@@ -212,55 +216,122 @@ public class ComposeStatusActivity extends AppCompatActivity {
     // the status_id will be obtained, which will be used to
     // upload status images/videos
     private void statusComposeRequest(String status)  {
-        RMsg.logHere(user.getTOKEN());
-        RetroLib.geApiService().composeStatus(user.getTOKEN(),status).enqueue(new Callback<Status>() {
-            @Override
-            public void onResponse(Call<Status> call, Response<Status> response) {
-                if(response.isSuccessful())
-                {
-                    if(response.body().getAuthenticated()) {
-                        if (response.body().getPosted()) {
-                           // progressBar.setVisibility(View.GONE);
+//        RMsg.logHere(user.getTOKEN());
 
-                            STATUS_ID = response.body().getOBJ_STATUS().getSTATUS_ID();
+        if(taggedUsersList.size() > 0 ){
+            JSONArray jsonArray = null;
+            try {
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+                    jsonArray = new JSONArray(taggedUsersList.toArray());
+                          //  RMsg.logHere(jsonArray.get(3).toString());
 
-                            if(IS_ATTACHMENT_REQUEST) {
-                                //BACKGROUND SERVICE WILL BE STARTED FOR UPLOADING IMAGES
-                                // OF THE STATUS
-                                initiateMediaUploadServiceRequests();
-                            }else {
-                                RMsg.toastHere(context,"Status Posted");
-                                finish();
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            RetroLib.geApiService().composeStatusTag(user.getTOKEN(),status,jsonArray.toString()).enqueue(new Callback<Status>() {
+                @Override
+                public void onResponse(Call<Status> call, Response<Status> response) {
+                    if(response.isSuccessful())
+                    {
+                        //Status st = response.body();
+                        //RMsg.logHere(st.getMESSAGE());
+
+                        if(response.body().getAuthenticated()) {
+                            if (response.body().getPosted()) {
+                                // progressBar.setVisibility(View.GONE);
+
+                                STATUS_ID = response.body().getOBJ_STATUS().getSTATUS_ID();
+
+                                if(IS_ATTACHMENT_REQUEST) {
+                                    //BACKGROUND SERVICE WILL BE STARTED FOR UPLOADING IMAGES
+                                    // OF THE STATUS
+                                    initiateMediaUploadServiceRequests();
+                                }else {
+                                    RMsg.toastHere(context,"Status Posted");
+                                    finish();
+                                }
+
+                                // Toast.makeText(context, response.body().getMESSAGE() + ", now uploading attachments.", Toast.LENGTH_LONG).show();
+                            } else {
+                                //progressBar.setVisibility(View.GONE);
+                                Toast.makeText(context, response.body().getMESSAGE(), Toast.LENGTH_LONG).show();
                             }
-
-                           // Toast.makeText(context, response.body().getMESSAGE() + ", now uploading attachments.", Toast.LENGTH_LONG).show();
-                        } else {
+                        }
+                        else
+                        {
                             //progressBar.setVisibility(View.GONE);
                             Toast.makeText(context, response.body().getMESSAGE(), Toast.LENGTH_LONG).show();
+
                         }
                     }
                     else
                     {
                         //progressBar.setVisibility(View.GONE);
-                        Toast.makeText(context, response.body().getMESSAGE(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(context,response.raw().toString(),Toast.LENGTH_LONG).show();
+                        RMsg.logHere(response.raw().toString());
 
                     }
                 }
-                else
-                {
-                    //progressBar.setVisibility(View.GONE);
-                    Toast.makeText(context,response.raw().toString(),Toast.LENGTH_LONG).show();
-                    RMsg.logHere(response.raw().toString());
+
+                @Override
+                public void onFailure(Call<Status> call, Throwable t) {
+                    Toast.makeText(context,t.toString(),Toast.LENGTH_LONG).show();
 
                 }
-            }
+            });
+        }else {
+            RetroLib.geApiService().composeStatus(user.getTOKEN(),status).enqueue(new Callback<Status>() {
+                @Override
+                public void onResponse(Call<Status> call, Response<Status> response) {
+                    if(response.isSuccessful())
+                    {
+                        if(response.body().getAuthenticated()) {
+                            if (response.body().getPosted()) {
+                                // progressBar.setVisibility(View.GONE);
 
-            @Override
-            public void onFailure(Call<Status> call, Throwable t) {
-                Toast.makeText(context,t.toString(),Toast.LENGTH_LONG).show();
+                                STATUS_ID = response.body().getOBJ_STATUS().getSTATUS_ID();
 
-            }
-        });
+                                if(IS_ATTACHMENT_REQUEST) {
+                                    //BACKGROUND SERVICE WILL BE STARTED FOR UPLOADING IMAGES
+                                    // OF THE STATUS
+                                    initiateMediaUploadServiceRequests();
+                                }else {
+                                    RMsg.toastHere(context,"Status Posted");
+                                    finish();
+                                }
+
+                                // Toast.makeText(context, response.body().getMESSAGE() + ", now uploading attachments.", Toast.LENGTH_LONG).show();
+                            } else {
+                                //progressBar.setVisibility(View.GONE);
+                                Toast.makeText(context, response.body().getMESSAGE(), Toast.LENGTH_LONG).show();
+                            }
+                        }
+                        else
+                        {
+                            //progressBar.setVisibility(View.GONE);
+                            Toast.makeText(context, response.body().getMESSAGE(), Toast.LENGTH_LONG).show();
+
+                        }
+                    }
+                    else
+                    {
+                        //progressBar.setVisibility(View.GONE);
+                        Toast.makeText(context,response.raw().toString(),Toast.LENGTH_LONG).show();
+                        RMsg.logHere(response.raw().toString());
+
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<Status> call, Throwable t) {
+                    Toast.makeText(context,t.toString(),Toast.LENGTH_LONG).show();
+
+                }
+            });
+        }
+
+
     }
 
     @Override
