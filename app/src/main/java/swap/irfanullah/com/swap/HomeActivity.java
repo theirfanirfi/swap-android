@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.net.Uri;
+import android.os.Handler;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -48,11 +49,25 @@ public class HomeActivity extends AppCompatActivity {
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
+    private TextView notificationIconTextView, swap_count;
+
+    private Handler handler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                fetchNotifications();
+                fetchSwapCount();
+                handler.postDelayed(this,5000);
+            }
+        },10000);
+
 
 //        if(PrefStorage.getUserData(this).equals(""))
 //        {
@@ -85,32 +100,9 @@ public class HomeActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_home, menu);
         View menu_hotlist = menu.findItem(R.id.notification_icon).getActionView();
-        final TextView tx = (TextView) menu_hotlist.findViewById(R.id.hotlist_hot);
-
-        RetroLib.geApiService().getNotificationsCount(PrefStorage.getUser(this).getTOKEN()).enqueue(new Callback<Notification>() {
-            @Override
-            public void onResponse(Call<Notification> call, Response<Notification> response) {
-                if(response.isSuccessful()){
-                    RMsg.logHere(response.raw().toString());
-                    Notification notification = response.body();
-                    if(notification.getIS_AUTHENTICATED()){
-                        tx.setText(Integer.toString(notification.getNOTIFICATIONS_COUNT()));
-                    }else {
-                        Toast.makeText(HomeActivity.this,RMsg.AUTH_ERROR_MESSAGE,Toast.LENGTH_LONG).show();
-                    }
-                }else {
-                    Toast.makeText(HomeActivity.this,RMsg.REQ_ERROR_MESSAGE,Toast.LENGTH_LONG).show();
-                    RMsg.logHere(response.raw().toString());
-                }
-            }
-
-            @Override
-            public void onFailure(Call<Notification> call, Throwable t) {
-                Toast.makeText(HomeActivity.this,t.toString(),Toast.LENGTH_LONG).show();
-
-            }
-        });
-        tx.setText("");
+        notificationIconTextView = (TextView) menu_hotlist.findViewById(R.id.hotlist_hot);
+        fetchNotifications();
+        notificationIconTextView.setText("");
 
         menu_hotlist.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -125,31 +117,8 @@ public class HomeActivity extends AppCompatActivity {
         //swap request count
 
         View swap_menu_hotlist = menu.findItem(R.id.swap_requests_icon).getActionView();
-        final TextView swap_count = (TextView) swap_menu_hotlist.findViewById(R.id.swap_hotlist_hot);
-        RetroLib.geApiService().getSwapNotificationsCount(PrefStorage.getUser(this).getTOKEN()).enqueue(new Callback<Notification>() {
-            @Override
-            public void onResponse(Call<Notification> call, Response<Notification> response) {
-                if(response.isSuccessful()){
-                    Notification notification = response.body();
-                    if(notification.getIS_AUTHENTICATED()){
-                        swap_count.setText(Integer.toString(notification.getNOTIFICATIONS_COUNT()));
-                    }else {
-                        Toast.makeText(HomeActivity.this,RMsg.AUTH_ERROR_MESSAGE,Toast.LENGTH_LONG).show();
-
-                    }
-                }else {
-                    Toast.makeText(HomeActivity.this,RMsg.REQ_ERROR_MESSAGE,Toast.LENGTH_LONG).show();
-                }
-            }
-
-            @Override
-            public void onFailure(Call<Notification> call, Throwable t) {
-                Toast.makeText(HomeActivity.this,t.toString(),Toast.LENGTH_LONG).show();
-
-            }
-        });
-
-
+        swap_count = (TextView) swap_menu_hotlist.findViewById(R.id.swap_hotlist_hot);
+        fetchSwapCount();
         swap_menu_hotlist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -265,5 +234,58 @@ public class HomeActivity extends AppCompatActivity {
             // Show 3 total pages.
             return 4;
         }
+    }
+
+    private void fetchNotifications(){
+        RetroLib.geApiService().getNotificationsCount(PrefStorage.getUser(this).getTOKEN()).enqueue(new Callback<Notification>() {
+            @Override
+            public void onResponse(Call<Notification> call, Response<Notification> response) {
+                if(response.isSuccessful()){
+                    RMsg.logHere(response.raw().toString());
+                    Notification notification = response.body();
+                    if(notification.getIS_AUTHENTICATED()){
+                        notificationIconTextView.setText(Integer.toString(notification.getNOTIFICATIONS_COUNT()));
+                    }else {
+                        Toast.makeText(HomeActivity.this,RMsg.AUTH_ERROR_MESSAGE,Toast.LENGTH_LONG).show();
+                    }
+                }else {
+                    Toast.makeText(HomeActivity.this,RMsg.REQ_ERROR_MESSAGE,Toast.LENGTH_LONG).show();
+                    RMsg.logHere(response.raw().toString());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Notification> call, Throwable t) {
+                Toast.makeText(HomeActivity.this,t.toString(),Toast.LENGTH_LONG).show();
+
+            }
+        });
+    }
+
+    private void fetchSwapCount(){
+        RetroLib.geApiService().getSwapNotificationsCount(PrefStorage.getUser(this).getTOKEN()).enqueue(new Callback<Notification>() {
+            @Override
+            public void onResponse(Call<Notification> call, Response<Notification> response) {
+                if(response.isSuccessful()){
+                    Notification notification = response.body();
+                    if(notification.getIS_AUTHENTICATED()){
+                        swap_count.setText(Integer.toString(notification.getNOTIFICATIONS_COUNT()));
+                    }else {
+                        Toast.makeText(HomeActivity.this,RMsg.AUTH_ERROR_MESSAGE,Toast.LENGTH_LONG).show();
+
+                    }
+                }else {
+                    Toast.makeText(HomeActivity.this,RMsg.REQ_ERROR_MESSAGE,Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Notification> call, Throwable t) {
+                Toast.makeText(HomeActivity.this,t.toString(),Toast.LENGTH_LONG).show();
+
+            }
+        });
+
+
     }
 }

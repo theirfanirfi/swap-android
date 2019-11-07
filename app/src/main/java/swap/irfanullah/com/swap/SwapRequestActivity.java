@@ -2,6 +2,7 @@ package swap.irfanullah.com.swap;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -32,6 +33,8 @@ public class SwapRequestActivity extends AppCompatActivity implements SwapReques
     private RecyclerView.LayoutManager layoutManager;
     private ArrayList<Notification> swapRequestsList;
     private ProgressBar progressBar;
+    private Handler handler;
+    private Runnable runnable;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,12 +50,23 @@ public class SwapRequestActivity extends AppCompatActivity implements SwapReques
         swapRequestsList = new ArrayList<>();
         swapRequestAdapter = new SwapRequestAdapter(context,swapRequestsList);
         layoutManager = new LinearLayoutManager(context);
+        handler = new Handler();
+        runnable = new Runnable() {
+            @Override
+            public void run() {
+                swapRequests();
+                handler.postDelayed(this,5000);
+            }
+        };
+
         rv.setAdapter(swapRequestAdapter);
         rv.setLayoutManager(layoutManager);
         rv.setHasFixedSize(true);
         swapRequestAdapter.setRequestListener(this);
         getSupportActionBar().setTitle("Swap Requests");
         swapRequests();
+        refreshSwapRequest();
+
     }
 
     @Override
@@ -103,7 +117,7 @@ public class SwapRequestActivity extends AppCompatActivity implements SwapReques
                             notifyAdaper(swapRequestsList);
 
                         }else {
-                            Toast.makeText(context,RMsg.NOTIFICATIONS_NOT_FOUND_MESSAGE,Toast.LENGTH_LONG).show();
+                          //  Toast.makeText(context,RMsg.NOTIFICATIONS_NOT_FOUND_MESSAGE,Toast.LENGTH_LONG).show();
                         }
                     }else {
                         Toast.makeText(context,RMsg.AUTH_ERROR_MESSAGE,Toast.LENGTH_LONG).show();
@@ -218,5 +232,9 @@ public class SwapRequestActivity extends AppCompatActivity implements SwapReques
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void refreshSwapRequest(){
+        handler.postDelayed(runnable,5000);
     }
 }

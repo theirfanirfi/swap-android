@@ -158,9 +158,9 @@ public class ChatFragment extends Fragment implements SearchView.OnQueryTextList
     public void onGroupCreated(Groups group) {
        // RMsg.toastHere(context,group.getGROUP_NAME());
         getParticipants();
-        Intent groupIntent = new Intent(context, GroupChatActivity.class);
-        groupIntent.putExtra("group_id",Integer.toString(group.getGROUP_ID()));
-        context.startActivity(groupIntent);
+//        Intent groupIntent = new Intent(context, GroupChatActivity.class);
+//        groupIntent.putExtra("group_id",Integer.toString(group.getGROUP_ID()));
+//        context.startActivity(groupIntent);
     }
 
     @Override
