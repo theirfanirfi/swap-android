@@ -425,7 +425,8 @@ public class StatusActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<SingleStatusModel> call, Throwable t) {
-                Toast.makeText(context, t.toString(), Toast.LENGTH_LONG).show();
+                Toast.makeText(context, t.toString() + " "+t.getMessage(), Toast.LENGTH_LONG).show();
+                RMsg.logHere(t.toString() + " "+t.getMessage());
 
             }
         });

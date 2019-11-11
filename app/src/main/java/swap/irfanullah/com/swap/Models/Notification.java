@@ -51,6 +51,31 @@ public class Notification {
     private int SWAP_ID;
     @SerializedName("is_accepted")
     private int isACCEPTED;
+
+    @SerializedName("isLike")
+    private int isLike;
+
+    @SerializedName("count")
+    private int NOTIFICATIONSCOUNT;
+
+    @SerializedName("isComment")
+    private int isComment;
+
+    @SerializedName("isTag")
+    private int isTag;
+
+    @SerializedName("isShare")
+    private int isShare;
+
+    @SerializedName("action_by")
+    private int ACTION_BY;
+
+    @SerializedName("isRatting")
+    private int isRating;
+
+    @SerializedName("isAction")
+    private int isAction;
+
     @SerializedName("profile_image")
     private String PROFIE_IMAGE;
 
@@ -155,5 +180,37 @@ public class Notification {
 
     public int getSWAPED_WITH_ID() {
         return SWAPED_WITH_ID;
+    }
+
+    public int getIsLike() {
+        return isLike;
+    }
+
+    public int getIsComment() {
+        return isComment;
+    }
+
+    public int getIsTag() {
+        return isTag;
+    }
+
+    public int getIsShare() {
+        return isShare;
+    }
+
+    public int getACTION_BY() {
+        return ACTION_BY;
+    }
+
+    public int getIsRating() {
+        return isRating;
+    }
+
+    public int getIsAction() {
+        return isAction;
+    }
+
+    public int getNOTIFICATIONSCOUNT() {
+        return NOTIFICATIONSCOUNT;
     }
 }

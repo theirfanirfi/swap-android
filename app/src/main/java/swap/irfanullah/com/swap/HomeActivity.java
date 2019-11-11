@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Handler;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -43,6 +44,7 @@ import swap.irfanullah.com.swap.Fragments.SwapsFragment;
 import swap.irfanullah.com.swap.Libraries.RetroLib;
 import swap.irfanullah.com.swap.Models.Notification;
 import swap.irfanullah.com.swap.Models.RMsg;
+import swap.irfanullah.com.swap.Services.BackgroundNotificationsService;
 import swap.irfanullah.com.swap.Storage.PrefStorage;
 
 public class HomeActivity extends AppCompatActivity {
@@ -68,6 +70,12 @@ public class HomeActivity extends AppCompatActivity {
             }
         },10000);
 
+        Intent service = new Intent(this, BackgroundNotificationsService.class);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            startForegroundService(service);
+        }else {
+            startService(service);
+        }
 
 //        if(PrefStorage.getUserData(this).equals(""))
 //        {

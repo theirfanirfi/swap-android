@@ -55,20 +55,62 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
             GLib.downloadImage(context,notification.getPROFIE_IMAGE()).into(notificationViewHolder.profile_image);
         }
 
+        if(notification.getIsLike() == 1){
+            notificationViewHolder.action_image.setImageResource(R.drawable.heartred);
 
-        if(notification.getIS_STATUS() == 1){
-
-            SpannableString text = new SpannableString(notification.getFULL_NAME()+" wants to swap a status with you.");
+            SpannableString text = new SpannableString(notification.getFULL_NAME()+" liked your status");
             text.setSpan(new TextAppearanceSpan(context, R.style.TextViewBold), 0, notification.getFULL_NAME().length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
             notificationViewHolder.msg.setText(text,TextView.BufferType.SPANNABLE);
-        }else if(notification.getIS_FOLLOW() == 1){
 
-            SpannableString text = new SpannableString(notification.getFULL_NAME()+" followed you.");
+        }else if(notification.getIsComment() == 1){
+            notificationViewHolder.action_image.setImageResource(R.drawable.comment);
+            SpannableString text = new SpannableString(notification.getFULL_NAME()+" commented on your status");
             text.setSpan(new TextAppearanceSpan(context, R.style.TextViewBold), 0, notification.getFULL_NAME().length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
             notificationViewHolder.msg.setText(text,TextView.BufferType.SPANNABLE);
-        } else {
-            Log.i(RMsg.LOG_MESSAGE,"na kay kar : isStatus: "+Integer.toString(notification.getIS_STATUS())+" isFollow: "+Integer.toString(notification.getIS_FOLLOW()));
+
         }
+        else if(notification.getIsShare() == 1){
+            notificationViewHolder.action_image.setImageResource(R.drawable.share);
+            SpannableString text = new SpannableString(notification.getFULL_NAME()+" shared your status");
+            text.setSpan(new TextAppearanceSpan(context, R.style.TextViewBold), 0, notification.getFULL_NAME().length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            notificationViewHolder.msg.setText(text,TextView.BufferType.SPANNABLE);
+
+        }
+        else if(notification.getIsTag() == 1){
+            notificationViewHolder.action_image.setImageResource(R.drawable.ic_person_pin_tag);
+            SpannableString text = new SpannableString(notification.getFULL_NAME()+" tagged you in his status");
+            text.setSpan(new TextAppearanceSpan(context, R.style.TextViewBold), 0, notification.getFULL_NAME().length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            notificationViewHolder.msg.setText(text,TextView.BufferType.SPANNABLE);
+
+        }
+        else if(notification.getIsRating() == 1){
+            notificationViewHolder.action_image.setImageResource(R.drawable.heartred);
+
+            SpannableString text = new SpannableString(notification.getFULL_NAME()+" rated your status");
+            text.setSpan(new TextAppearanceSpan(context, R.style.TextViewBold), 0, notification.getFULL_NAME().length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            notificationViewHolder.msg.setText(text,TextView.BufferType.SPANNABLE);
+
+        }
+//        else if(notification.getIsComment() == 1){
+//
+//        }
+//        else if(notification.getIsComment() == 1){
+//
+//        }
+
+//        if(notification.getIS_STATUS() == 1){
+//
+//            SpannableString text = new SpannableString(notification.getFULL_NAME()+" wants to swap a status with you.");
+//            text.setSpan(new TextAppearanceSpan(context, R.style.TextViewBold), 0, notification.getFULL_NAME().length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+//            notificationViewHolder.msg.setText(text,TextView.BufferType.SPANNABLE);
+//        }else if(notification.getIS_FOLLOW() == 1){
+//
+//            SpannableString text = new SpannableString(notification.getFULL_NAME()+" followed you.");
+//            text.setSpan(new TextAppearanceSpan(context, R.style.TextViewBold), 0, notification.getFULL_NAME().length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+//            notificationViewHolder.msg.setText(text,TextView.BufferType.SPANNABLE);
+//        } else {
+//            //Log.i(RMsg.LOG_MESSAGE,"na kay kar : isStatus: "+Integer.toString(notification.getIS_STATUS())+" isFollow: "+Integer.toString(notification.getIS_FOLLOW()));
+//        }
     }
 
     @Override
@@ -78,7 +120,7 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
 
     public static class NotificationViewHolder extends RecyclerView.ViewHolder {
         private Context context;
-        ImageView profile_image;
+        ImageView profile_image,action_image;
         TextView msg;
         TextView ntime;
         CardView layout;
@@ -89,6 +131,7 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
             msg = itemView.findViewById(R.id.notification_msg);
             ntime = itemView.findViewById(R.id.statusTimeTextView);
             layout = itemView.findViewById(R.id.notification_layout);
+            action_image = itemView.findViewById(R.id.actionImageView);
 
             profile_image.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -96,7 +139,7 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
                     int position = getAdapterPosition();
                     Notification notification = notificationArrayList.get(position);
                     if(notification.getIS_FOLLOW() == 1) {
-                        Log.i(RMsg.LOG_MESSAGE,Integer.toString(notification.getFOLLOWER_ID()));
+                       // Log.i(RMsg.LOG_MESSAGE,Integer.toString(notification.getFOLLOWER_ID()));
                         if (PrefStorage.isMe(context, notification.getFOLLOWER_ID())) {
                             Intent profileAct = new Intent(context, UserProfile.class);
                             profileAct.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -120,48 +163,52 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
                 public void onClick(View v) {
                     int position = getAdapterPosition();
                     Notification notification = notificationArrayList.get(position);
-                    if(notification.getIS_STATUS() == 1){
-                        CReq.getSwap(context, notification.getSWAP_ID(), new CReq.CReqListener() {
-                            @Override
-                            public void onRecieve(Swap swap) {
-                                Log.i(RMsg.LOG_MESSAGE,swap.getMESSAGE());
-                                Swap swp = swap.getGET_SWAP();
-
-                                if(swap.getAuthenticated()){
-                                    if(swap.getIS_FOUND()){
+//                    if(notification.getIS_STATUS() == 1){
+//                        CReq.getSwap(context, notification.getSWAP_ID(), new CReq.CReqListener() {
+//                            @Override
+//                            public void onRecieve(Swap swap) {
+//                                Log.i(RMsg.LOG_MESSAGE,swap.getMESSAGE());
+//                                Swap swp = swap.getGET_SWAP();
+//
+//                                if(swap.getAuthenticated()){
+//                                    if(swap.getIS_FOUND()){
 
                                         Intent i = new Intent(context,StatusActivity.class);
-                                        i.putExtra("status_id",swp.getSTATUS_ID());
+                                        i.putExtra("status_id",notification.getSTATUS_ID());
                                         i.putExtra("position",0);
-                                        i.putExtra("is_accepted",swp.getIS_ACCEPTED());
-                                        i.putExtra("swap_id",swp.getSWAP_ID());
-                                        Log.i(RMsg.LOG_MESSAGE,"SWAP_ID: "+Integer.toString(swp.getSWAP_ID())+" : "+"Status_ID: "+Integer.toString(swp.getSTATUS_ID())+ " : isacc : "+Integer.toString(swp.getIS_ACCEPTED()));
+                                        i.putExtra("is_accepted",notification.getIS_ACCEPTED());
+                                        i.putExtra("notification_id",notification.getNOTIFICATION_ID());
+                                       RMsg.ilogHere(notification.getNOTIFICATION_ID());
 
-                                        context.startActivity(i);
-                                    }else {
-                                        Toast.makeText(context,RMsg.SWAP_NOT_FOUND_MESSAGE,Toast.LENGTH_LONG).show();
-                                    }
-                                }else {
-                                    Toast.makeText(context,RMsg.AUTH_ERROR_MESSAGE,Toast.LENGTH_LONG).show();
 
-                                }
-                            }
+                    // i.putExtra("swap_id",swp.getSWAP_ID());
+                                       // Log.i(RMsg.LOG_MESSAGE,"SWAP_ID: "+Integer.toString(swp.getSWAP_ID())+" : "+"Status_ID: "+Integer.toString(swp.getSTATUS_ID())+ " : isacc : "+Integer.toString(swp.getIS_ACCEPTED()));
 
-                            @Override
-                            public void onError(String error) {
-                                Toast.makeText(context,RMsg.REQ_ERROR_MESSAGE,Toast.LENGTH_LONG).show();
-                            }
+                                     //   context.startActivity(i);
+//                                    }else {
+//                                        Toast.makeText(context,RMsg.SWAP_NOT_FOUND_MESSAGE,Toast.LENGTH_LONG).show();
+//                                    }
+//                                }else {
+//                                    Toast.makeText(context,RMsg.AUTH_ERROR_MESSAGE,Toast.LENGTH_LONG).show();
+//
+//                                }
+//                            }
+//
+//                            @Override
+//                            public void onError(String error) {
+//                                Toast.makeText(context,RMsg.REQ_ERROR_MESSAGE,Toast.LENGTH_LONG).show();
+//                            }
+//
+//                            @Override
+//                            public void onException(String ex) {
+//                                Toast.makeText(context,ex.toString(),Toast.LENGTH_LONG).show();
+//
+//                            }
+//                        });
 
-                            @Override
-                            public void onException(String ex) {
-                                Toast.makeText(context,ex.toString(),Toast.LENGTH_LONG).show();
-
-                            }
-                        });
-
-                    }else if(notification.getIS_FOLLOW() == 1){
-                        Log.i(RMsg.LOG_MESSAGE,Integer.toString(notification.getFOLLOWER_ID()));
-                    }
+//                    }else if(notification.getIS_FOLLOW() == 1){
+//                        Log.i(RMsg.LOG_MESSAGE,Integer.toString(notification.getFOLLOWER_ID()));
+//                    }
                 }
             });
         }

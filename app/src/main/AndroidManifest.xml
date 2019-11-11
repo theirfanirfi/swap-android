@@ -102,6 +102,10 @@
             android:name=".Services.StatusMediaService"
             android:enabled="true" />
 
+        <service
+            android:name=".Services.BackgroundNotificationsService"
+            android:enabled="true" />
+
         <activity
             android:name=".ImageViewer"
             android:theme="@style/AppTheme.NoActionBar" />

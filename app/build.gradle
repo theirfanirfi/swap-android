@@ -9,6 +9,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -74,6 +75,7 @@ dependencies {
     implementation 'com.jaychang:simpleauth-instagram:2.1.4'
     // if you want to use twitter auth
     implementation 'com.jaychang:simpleauth-twitter:2.1.4'
+    implementation 'com.android.support:multidex:1.0.3'
 
 }
 
