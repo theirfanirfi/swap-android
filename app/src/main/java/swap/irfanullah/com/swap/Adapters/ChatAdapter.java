@@ -12,6 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.rygelouv.audiosensei.player.AudioSenseiPlayerView;
+
 import java.util.ArrayList;
 
 import swap.irfanullah.com.swap.GroupChatActivity.GroupChatAdapter;
@@ -38,8 +40,9 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
     @NonNull
     @Override
     public ChatViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(context).inflate(R.layout.chat_row,viewGroup,false);
-        return new ChatViewHolder(view,messengerArrayList);
+        Messenger messenger = this.messengerArrayList.get(i);
+         View view = LayoutInflater.from(context).inflate(R.layout.chat_row,viewGroup,false);
+            return new ChatViewHolder(view,messenger);
     }
 
     @Override
@@ -51,38 +54,68 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
 
         if(loggedUser.getUSER_ID() == messenger.getSENDER_ID()){
 
-            if(messenger.isForwareded() == 1){
-                msg = "Forwarded: \n"+messenger.getMESSAGE();
-                Spannable spannable = new SpannableString(msg);
-                spannable.setSpan(new ForegroundColorSpan(Color.GRAY),0,10,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-                chatViewHolder.sender.setText(spannable, TextView.BufferType.SPANNABLE);
+            if(messenger.getIS_AUDIO() == 0) {
+                if (messenger.isForwareded() == 1) {
+                    msg = "Forwarded: \n" + messenger.getMESSAGE();
+                    Spannable spannable = new SpannableString(msg);
+                    spannable.setSpan(new ForegroundColorSpan(Color.GRAY), 0, 10, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    chatViewHolder.sender.setText(spannable, TextView.BufferType.SPANNABLE);
 
+                } else {
+                    chatViewHolder.sender.setText(messenger.getMESSAGE());
+                }
+
+                chatViewHolder.sender.setVisibility(View.VISIBLE);
+                chatViewHolder.sender_time.setText(TimeDiff.getTimeDifference(messenger.getCREATED_AT()));
+                chatViewHolder.sender_time.setVisibility(View.VISIBLE);
+                chatViewHolder.reciever.setVisibility(View.GONE);
+                chatViewHolder.reciever_time.setVisibility(View.GONE);
+
+                chatViewHolder.senderAudioPlayer.setVisibility(View.GONE);
+                chatViewHolder.recieverAudioPlayer.setVisibility(View.GONE);
             }else {
-                chatViewHolder.sender.setText(messenger.getMESSAGE());
-            }
+                chatViewHolder.senderAudioPlayer.setAudioTarget(messenger.getAUDIO());
+                chatViewHolder.recieverAudioPlayer.setVisibility(View.GONE);
 
-            chatViewHolder.sender.setVisibility(View.VISIBLE);
-            chatViewHolder.sender_time.setText(TimeDiff.getTimeDifference(messenger.getCREATED_AT()));
-            chatViewHolder.sender_time.setVisibility(View.VISIBLE);
-            chatViewHolder.reciever.setVisibility(View.GONE);
-            chatViewHolder.reciever_time.setVisibility(View.GONE);
+
+                chatViewHolder.sender.setVisibility(View.GONE);
+                chatViewHolder.sender_time.setText(TimeDiff.getTimeDifference(messenger.getCREATED_AT()));
+                chatViewHolder.sender_time.setVisibility(View.GONE);
+                chatViewHolder.reciever.setVisibility(View.GONE);
+                chatViewHolder.reciever_time.setVisibility(View.GONE);
+            }
         }else {
 
-            if(messenger.isForwareded() == 1){
-                msg = "Forwarded: \n"+messenger.getMESSAGE();
-                Spannable spannable = new SpannableString(msg);
-                spannable.setSpan(new ForegroundColorSpan(Color.GRAY),0,10,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-                chatViewHolder.reciever.setText(spannable, TextView.BufferType.SPANNABLE);
+            if (messenger.getIS_AUDIO() == 1) {
+                chatViewHolder.recieverAudioPlayer.setAudioTarget(messenger.getAUDIO());
+                chatViewHolder.senderAudioPlayer.setVisibility(View.GONE);
 
-            }else {
-                chatViewHolder.reciever.setText(messenger.getMESSAGE());
+                chatViewHolder.reciever.setVisibility(View.GONE);
+                chatViewHolder.reciever_time.setText(TimeDiff.getTimeDifference(messenger.getCREATED_AT()));
+                chatViewHolder.reciever_time.setVisibility(View.GONE);
+                chatViewHolder.sender.setVisibility(View.GONE);
+                chatViewHolder.sender_time.setVisibility(View.GONE);
+
+            } else {
+                if (messenger.isForwareded() == 1) {
+                    msg = "Forwarded: \n" + messenger.getMESSAGE();
+                    Spannable spannable = new SpannableString(msg);
+                    spannable.setSpan(new ForegroundColorSpan(Color.GRAY), 0, 10, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    chatViewHolder.reciever.setText(spannable, TextView.BufferType.SPANNABLE);
+
+                } else {
+                    chatViewHolder.reciever.setText(messenger.getMESSAGE());
+                }
+
+                chatViewHolder.reciever.setVisibility(View.VISIBLE);
+                chatViewHolder.reciever_time.setText(TimeDiff.getTimeDifference(messenger.getCREATED_AT()));
+                chatViewHolder.reciever_time.setVisibility(View.VISIBLE);
+                chatViewHolder.sender.setVisibility(View.GONE);
+                chatViewHolder.sender_time.setVisibility(View.GONE);
+
+                chatViewHolder.senderAudioPlayer.setVisibility(View.GONE);
+                chatViewHolder.recieverAudioPlayer.setVisibility(View.GONE);
             }
-
-            chatViewHolder.reciever.setVisibility(View.VISIBLE);
-            chatViewHolder.reciever_time.setText(TimeDiff.getTimeDifference(messenger.getCREATED_AT()));
-            chatViewHolder.reciever_time.setVisibility(View.VISIBLE);
-            chatViewHolder.sender.setVisibility(View.GONE);
-            chatViewHolder.sender_time.setVisibility(View.GONE);
         }
     }
 
@@ -93,22 +126,27 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
 
     public static class ChatViewHolder extends RecyclerView.ViewHolder {
         private TextView sender,reciever,sender_time, reciever_time;
-        public ChatViewHolder(@NonNull View itemView, final ArrayList<Messenger> messengerArrayList) {
+        private AudioSenseiPlayerView senderAudioPlayer, recieverAudioPlayer;
+        public ChatViewHolder(@NonNull View itemView, final Messenger msg) {
             super(itemView);
-            sender = itemView.findViewById(R.id.sender);
-            reciever = itemView.findViewById(R.id.reciever);
-            sender_time = itemView.findViewById(R.id.senderTime);
-            reciever_time = itemView.findViewById(R.id.recieverTime);
 
-            reciever.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View v) {
+                senderAudioPlayer = itemView.findViewById(R.id.sender_audio_player);
+                recieverAudioPlayer = itemView.findViewById(R.id.reciever_audio_player);
+
+                sender = itemView.findViewById(R.id.sender);
+                reciever = itemView.findViewById(R.id.reciever);
+                sender_time = itemView.findViewById(R.id.senderTime);
+                reciever_time = itemView.findViewById(R.id.recieverTime);
+
+                reciever.setOnLongClickListener(new View.OnLongClickListener() {
+                    @Override
+                    public boolean onLongClick(View v) {
 //                    messageClickListener.onMessageClicked(messengerArrayList.get(getAdapterPosition()));
-                    messageClickListener.onMessageClicked(messengerArrayList.get(getAdapterPosition()));
-                    return true;
-                }
-            });
-        }
+                        messageClickListener.onMessageClicked(msg);
+                        return true;
+                    }
+                });
+            }
     }
 
     public void notifyAdapter(ArrayList<Messenger> messengerArrayList){

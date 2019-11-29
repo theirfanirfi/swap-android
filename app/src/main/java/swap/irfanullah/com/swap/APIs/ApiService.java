@@ -116,6 +116,9 @@ public interface ApiService {
     @GET(AFTER_BASE_URL+"notifications/getSwapRequestNotifications")
     Call<Notification> getSwapRequestNotifications(@Query("token") String token);
 
+    @GET(AFTER_BASE_URL+"notifications/getSwapRequestNotificationsb")
+    Call<Notification> getSwapRequestNotificationsBackground(@Query("token") String token);
+
     @GET(AFTER_BASE_URL+"swaps/getSwap")
     Call<Swap> getSwap(@Query("token") String token,@Query("swap_id") int swap_id);
 
@@ -215,4 +218,10 @@ public interface ApiService {
 
     @GET(AFTER_BASE_URL+"tag/getusertotag")
     Call<User> getUserToTag(@Query("token") String token, @Query("td") int user_id);
+
+
+    @Multipart
+    @POST(AFTER_BASE_URL+"msg/aud")
+    Call<Messenger> sendAudioMessage(@Part("token") RequestBody token, @Part MultipartBody.Part attachment,@Part("id") RequestBody id);
+
 }

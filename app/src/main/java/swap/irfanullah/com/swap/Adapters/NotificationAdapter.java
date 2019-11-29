@@ -178,13 +178,13 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
                                         i.putExtra("position",0);
                                         i.putExtra("is_accepted",notification.getIS_ACCEPTED());
                                         i.putExtra("notification_id",notification.getNOTIFICATION_ID());
-                                       RMsg.ilogHere(notification.getNOTIFICATION_ID());
+                                     //  RMsg.ilogHere(notification.getNOTIFICATION_ID());
 
 
                     // i.putExtra("swap_id",swp.getSWAP_ID());
                                        // Log.i(RMsg.LOG_MESSAGE,"SWAP_ID: "+Integer.toString(swp.getSWAP_ID())+" : "+"Status_ID: "+Integer.toString(swp.getSTATUS_ID())+ " : isacc : "+Integer.toString(swp.getIS_ACCEPTED()));
 
-                                     //   context.startActivity(i);
+                                        context.startActivity(i);
 //                                    }else {
 //                                        Toast.makeText(context,RMsg.SWAP_NOT_FOUND_MESSAGE,Toast.LENGTH_LONG).show();
 //                                    }

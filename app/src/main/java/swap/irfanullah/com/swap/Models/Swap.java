@@ -49,6 +49,9 @@ public class Swap {
     @SerializedName("isDeclined")
     private Boolean isDeclined;
 
+    @SerializedName("count")
+    private int SWAPREQUESTSCOUNT;
+
     public Boolean getDeclined() {
         return isDeclined;
     }
@@ -155,5 +158,9 @@ public class Swap {
 
     public void setUPDATED_AT(String UPDATED_AT) {
         this.UPDATED_AT = UPDATED_AT;
+    }
+
+    public int getSWAPREQUESTSCOUNT() {
+        return SWAPREQUESTSCOUNT;
     }
 }

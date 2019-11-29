@@ -72,7 +72,7 @@ public class HomeActivity extends AppCompatActivity {
 
         Intent service = new Intent(this, BackgroundNotificationsService.class);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            startForegroundService(service);
+           // startForegroundService(service);
         }else {
             startService(service);
         }

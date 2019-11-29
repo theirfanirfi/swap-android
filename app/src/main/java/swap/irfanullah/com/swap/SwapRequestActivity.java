@@ -66,7 +66,7 @@ public class SwapRequestActivity extends AppCompatActivity implements SwapReques
         getSupportActionBar().setTitle("Swap Requests");
         swapRequests();
         refreshSwapRequest();
-
+        getBackgroundServiceExtraAndMakeRequest();
     }
 
     @Override
@@ -236,5 +236,18 @@ public class SwapRequestActivity extends AppCompatActivity implements SwapReques
 
     private void refreshSwapRequest(){
         handler.postDelayed(runnable,5000);
+    }
+
+
+    private void getBackgroundServiceExtraAndMakeRequest(){
+        if(getIntent().hasExtra("is_background_notification")){
+//            Toast.makeText(this,"if",Toast.LENGTH_LONG).show();
+//
+//            String is_clicked = getIntent().getExtras().getString("is_background_notification");
+//            Toast.makeText(this,is_clicked,Toast.LENGTH_LONG).show();
+        }else {
+//            Toast.makeText(this,"no",Toast.LENGTH_LONG).show();
+
+        }
     }
 }

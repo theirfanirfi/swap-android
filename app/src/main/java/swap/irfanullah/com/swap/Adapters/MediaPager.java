@@ -154,7 +154,7 @@ public class MediaPager extends PagerAdapter {
             MediaSource mediaSource = new ExtractorMediaSource(video_uri,dataSourceFactory,extractorsFactory,null,null);
             playerView.setPlayer(player);
             player.prepare(mediaSource);
-            player.setPlayWhenReady(true);
+            player.setPlayWhenReady(false);
 
             container.addView(view);
 
