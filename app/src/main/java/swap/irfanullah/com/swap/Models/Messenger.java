@@ -51,6 +51,9 @@ public class Messenger {
     @SerializedName("audio_attachment")
     private String AUDIO;
 
+    @SerializedName("msg")
+    private Messenger MSG;
+
     public int getLAST_MESSAGE_COUNT() {
         return LAST_MESSAGE_COUNT;
     }
@@ -133,5 +136,9 @@ public class Messenger {
 
     public String getAUDIO() {
         return AUDIO;
+    }
+
+    public Messenger getMSG() {
+        return MSG;
     }
 }

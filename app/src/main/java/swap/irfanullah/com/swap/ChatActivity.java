@@ -471,6 +471,10 @@ public class ChatActivity extends AppCompatActivity  implements ChatAdapter.Mess
                         RMsg.toastHere(context,med.getMESSAGE());
                     }else {
                         if(med.getIS_AUTHENTICATED()){
+                            if(med.getIS_SENT()){
+                                messengerArrayList.add(med.getMSG());
+                                chatAdapter.notifyAdapter(messengerArrayList);
+                            }
                             RMsg.toastHere(context,med.getMESSAGE());
 
                         }else {
