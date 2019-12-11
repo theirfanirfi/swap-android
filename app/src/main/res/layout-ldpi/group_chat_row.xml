@@ -100,6 +100,21 @@
         android:layout_marginStart="3dp"
         android:layout_marginTop="1dp"
         android:text="2h" />
+    <com.rygelouv.audiosensei.player.AudioSenseiPlayerView
+        android:id="@+id/reciever_audio_player"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reciever_profile_image"
+        android:layout_marginTop="3dp"
+        android:layout_toEndOf="@id/reciever_profile_image" />
 
+    <com.rygelouv.audiosensei.player.AudioSenseiPlayerView
+        android:id="@+id/sender_audio_player"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/sender_profile_image"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_toStartOf="@+id/sender_profile_image" />
 
 </RelativeLayout>

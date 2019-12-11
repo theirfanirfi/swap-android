@@ -224,4 +224,8 @@ public interface ApiService {
     @POST(AFTER_BASE_URL+"msg/aud")
     Call<Messenger> sendAudioMessage(@Part("token") RequestBody token, @Part MultipartBody.Part attachment,@Part("id") RequestBody id);
 
+
+    @Multipart
+    @POST(AFTER_BASE_URL+"msg/gaud")
+    Call<GroupMessages> sendAudioMessageToGroup(@Part("token") RequestBody token, @Part MultipartBody.Part attachment,@Part("id") RequestBody id);
 }

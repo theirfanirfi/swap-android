@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.rygelouv.audiosensei.player.AudioSenseiPlayerView;
+
 import java.util.ArrayList;
 
 import swap.irfanullah.com.swap.Libraries.TimeDiff;
@@ -48,7 +50,7 @@ public class GroupChatAdapter extends RecyclerView.Adapter<GroupChatAdapter.Chat
             //chatViewHolder.sender.setText(messenger.getMESSAGE());
            // chatViewHolder.sender_username.setText(messenger.getUSERNAME());
 
-
+            if(messenger.getIS_AUDIO() == 0) {
             if(messenger.isForwareded() == 1){
                 String msg = "Forwarded: \n"+messenger.getMESSAGE();
                 Spannable spannable = new SpannableString(msg);
@@ -67,28 +69,59 @@ public class GroupChatAdapter extends RecyclerView.Adapter<GroupChatAdapter.Chat
             chatViewHolder.reciever_profile_image.setVisibility(View.GONE);
             chatViewHolder.reciever_username.setVisibility(View.GONE);
 
+                chatViewHolder.senderAudioPlayer.setVisibility(View.GONE);
+                chatViewHolder.recieverAudioPlayer.setVisibility(View.GONE);
+            }else {
+                chatViewHolder.senderAudioPlayer.setAudioTarget(messenger.getAUDIO());
+                chatViewHolder.recieverAudioPlayer.setVisibility(View.GONE);
+                chatViewHolder.reciever_username.setVisibility(View.GONE);
+                chatViewHolder.reciever_profile_image.setVisibility(View.GONE);
+
+
+                chatViewHolder.sender.setVisibility(View.GONE);
+                //chatViewHolder.sender_time.setText(TimeDiff.getTimeDifference(messenger.getCREATED_AT()));
+                chatViewHolder.sender_time.setVisibility(View.GONE);
+                chatViewHolder.reciever.setVisibility(View.GONE);
+                chatViewHolder.reciever_time.setVisibility(View.GONE);
+            }
+
         }else {
 //            chatViewHolder.reciever.setText(messenger.getMESSAGE());
 
-            if(messenger.isForwareded() == 1){
-                String msg = "Forwarded: \n"+messenger.getMESSAGE();
-                Spannable spannable = new SpannableString(msg);
-                spannable.setSpan(new ForegroundColorSpan(Color.GRAY),0,10,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-                chatViewHolder.reciever.setText(spannable, TextView.BufferType.SPANNABLE);
+            if (messenger.getIS_AUDIO() == 1) {
+                chatViewHolder.recieverAudioPlayer.setAudioTarget(messenger.getAUDIO());
+                chatViewHolder.senderAudioPlayer.setVisibility(View.GONE);
 
-            }else {
-                chatViewHolder.reciever.setText(messenger.getMESSAGE());
+                chatViewHolder.reciever.setVisibility(View.GONE);
+                chatViewHolder.reciever_time.setText(TimeDiff.getTimeDifference(messenger.getCREATED_AT()));
+                chatViewHolder.reciever_time.setVisibility(View.GONE);
+                chatViewHolder.sender.setVisibility(View.GONE);
+                chatViewHolder.sender_time.setVisibility(View.GONE);
+
+            } else {
+                if (messenger.isForwareded() == 1) {
+                    String msg = "Forwarded: \n" + messenger.getMESSAGE();
+                    Spannable spannable = new SpannableString(msg);
+                    spannable.setSpan(new ForegroundColorSpan(Color.GRAY), 0, 10, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    chatViewHolder.reciever.setText(spannable, TextView.BufferType.SPANNABLE);
+
+                } else {
+                    chatViewHolder.reciever.setText(messenger.getMESSAGE());
+                }
+
+                chatViewHolder.reciever_username.setText(messenger.getUSERNAME());
+                chatViewHolder.reciever.setVisibility(View.VISIBLE);
+                chatViewHolder.reciever_time.setText(TimeDiff.getTimeDifference(messenger.getCREATED_AT()));
+                chatViewHolder.reciever_time.setVisibility(View.VISIBLE);
+                chatViewHolder.sender.setVisibility(View.GONE);
+                chatViewHolder.sender_time.setVisibility(View.GONE);
+                chatViewHolder.sender_profile_image.setVisibility(View.GONE);
+
+                //chatViewHolder.sender_username.setVisibility(View.GONE);
+
+                chatViewHolder.senderAudioPlayer.setVisibility(View.GONE);
+                chatViewHolder.recieverAudioPlayer.setVisibility(View.GONE);
             }
-
-            chatViewHolder.reciever_username.setText(messenger.getUSERNAME());
-            chatViewHolder.reciever.setVisibility(View.VISIBLE);
-            chatViewHolder.reciever_time.setText(TimeDiff.getTimeDifference(messenger.getCREATED_AT()));
-            chatViewHolder.reciever_time.setVisibility(View.VISIBLE);
-            chatViewHolder.sender.setVisibility(View.GONE);
-            chatViewHolder.sender_time.setVisibility(View.GONE);
-            chatViewHolder.sender_profile_image.setVisibility(View.GONE);
-
-            //chatViewHolder.sender_username.setVisibility(View.GONE);
         }
     }
 
@@ -101,8 +134,12 @@ public class GroupChatAdapter extends RecyclerView.Adapter<GroupChatAdapter.Chat
         private TextView sender,reciever,sender_time, reciever_time,
                 sender_username,reciever_username;
         private ImageView sender_profile_image,reciever_profile_image;
+
+        private AudioSenseiPlayerView senderAudioPlayer, recieverAudioPlayer;
+
         public ChatViewHolder(@NonNull View itemView, final ArrayList<GroupMessages> messengerArrayList) {
             super(itemView);
+
             sender = itemView.findViewById(R.id.sender);
             reciever = itemView.findViewById(R.id.reciever);
             sender_time = itemView.findViewById(R.id.senderTime);
@@ -110,7 +147,14 @@ public class GroupChatAdapter extends RecyclerView.Adapter<GroupChatAdapter.Chat
             sender_profile_image = itemView.findViewById(R.id.sender_profile_image);
             reciever_profile_image = itemView.findViewById(R.id.reciever_profile_image);
             //sender_username = itemView.findViewById(R.id.sender_username);
+
+
             reciever_username = itemView.findViewById(R.id.reciever_username);
+
+
+            senderAudioPlayer = itemView.findViewById(R.id.sender_audio_player);
+            recieverAudioPlayer = itemView.findViewById(R.id.reciever_audio_player);
+
             reciever.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
