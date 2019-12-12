@@ -73,7 +73,7 @@ public class SwapsAdapter extends RecyclerView.Adapter<SwapsAdapter.StatusViewHo
 
         statusViewHolder.likesCount.setText(swap.getLIKESCOUNT().toString());
 
-        if(swap.isLiked()){
+        if(swap.isLiked() == 1){
             statusViewHolder.likeBtn.setImageResource(R.drawable.heartred);
         }else {
             statusViewHolder.likeBtn.setImageResource(R.drawable.likehear);

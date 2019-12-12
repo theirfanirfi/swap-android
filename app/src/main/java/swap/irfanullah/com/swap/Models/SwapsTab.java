@@ -57,7 +57,7 @@ public class SwapsTab {
     private String COMMENTSCOUONT;
 
     @SerializedName("isLiked")
-    private boolean isLiked;
+    private int isLiked;
 
     public String getLIKESCOUNT() {
         return LIKESCOUNT;
@@ -71,7 +71,7 @@ public class SwapsTab {
         return COMMENTSCOUONT;
     }
 
-    public boolean isLiked() {
+    public int isLiked() {
         return isLiked;
     }
 
