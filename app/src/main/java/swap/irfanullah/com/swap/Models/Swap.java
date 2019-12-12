@@ -52,6 +52,20 @@ public class Swap {
     @SerializedName("count")
     private int SWAPREQUESTSCOUNT;
 
+    @SerializedName("avg_ratting")
+    private float AverageRatingSwapReviews;
+
+    @SerializedName("reviews_count")
+    private int ReviewsCount;
+
+    public float getAverageRatingSwapReviews() {
+        return AverageRatingSwapReviews;
+    }
+
+    public int getReviewsCount() {
+        return ReviewsCount;
+    }
+
     public Boolean getDeclined() {
         return isDeclined;
     }

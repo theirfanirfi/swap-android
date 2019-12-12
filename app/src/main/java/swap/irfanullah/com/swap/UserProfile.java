@@ -19,6 +19,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,6 +47,7 @@ import swap.irfanullah.com.swap.Models.ProfileModel;
 import swap.irfanullah.com.swap.Models.RMsg;
 import swap.irfanullah.com.swap.Models.Statistics;
 import swap.irfanullah.com.swap.Models.Status;
+import swap.irfanullah.com.swap.Models.Swap;
 import swap.irfanullah.com.swap.Models.User;
 import swap.irfanullah.com.swap.Storage.PrefStorage;
 
@@ -55,10 +57,11 @@ public class UserProfile extends AppCompatActivity {
     private ImageView profile_image;
     private TabLayout tabLayout;
     private Context context;
-    private TextView profileDescription, statuses, swaps, followers,username;
+    private TextView profileDescription, statuses, swaps, followers,username,avg_rating,total_reviews;
     private User user;
     private Button followBtn;
-
+    private RatingBar ratingBar;
+//    private
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,6 +71,7 @@ public class UserProfile extends AppCompatActivity {
         changeProfilePic();
 //        changeProfileDescription();
         startFollowersActivity();
+        getReviews();
     }
 
     private void loadStats() {
@@ -166,6 +170,12 @@ public class UserProfile extends AppCompatActivity {
         user = PrefStorage.getUser(context);
         profileDescription = findViewById(R.id.userProfileDescription);
         viewPager = findViewById(R.id.profileViewPage);
+
+        ratingBar = findViewById(R.id.ratingBar);
+        avg_rating = findViewById(R.id.average_swap_rating);
+        total_reviews = findViewById(R.id.number_of_swap_reviews);
+
+
         profilePagerAdapter = new ProfilePagerAdapter(getSupportFragmentManager(), user.getUSER_ID());
         viewPager.setAdapter(profilePagerAdapter);
 
@@ -313,6 +323,37 @@ public class UserProfile extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         finish();
+    }
+
+
+    private void getReviews(){
+        RetroLib.geApiService().getSwapReviewsForProfile(user.getUSER_ID(),user.getTOKEN()).enqueue(new Callback<Statistics>() {
+            @Override
+            public void onResponse(Call<Statistics> call, Response<Statistics> response) {
+                if(response.isSuccessful()){
+                    Statistics statistics = response.body();
+                    Swap st = statistics.getSWAPSREVIEWS();
+                    if(statistics.getIS_ERROR()){
+                        RMsg.logHere(statistics.getMESSAGE());
+
+                    }else if(statistics.getIS_FOUND()) {
+                        ratingBar.setRating(st.getAverageRatingSwapReviews());
+                        avg_rating.setText(Float.toString(st.getAverageRatingSwapReviews()));
+                        total_reviews.setText("Reviews: "+st.getReviewsCount());
+                    }else {
+                        RMsg.logHere(statistics.getMESSAGE());
+                    }
+                }else {
+                    RMsg.logHere(response.raw().toString());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Statistics> call, Throwable t) {
+                RMsg.logHere(t.toString());
+
+            }
+        });
     }
 
 

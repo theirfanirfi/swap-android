@@ -24,6 +24,15 @@ public class Statistics {
     @SerializedName("isfollow")
     private int isFollow;
 
+    @SerializedName("avg_ratting")
+    private float AVG_RATING;
+
+    @SerializedName("reviews_count")
+    private int ReviewsCount;
+
+    @SerializedName("swaps_reviews")
+    private Swap SWAPSREVIEWS;
+
     public int getIsFollow() {
         return isFollow;
     }
@@ -62,5 +71,17 @@ public class Statistics {
 
     public int getFOLLOWERS_COUNT() {
         return FOLLOWERS_COUNT;
+    }
+
+    public float getAVG_RATING() {
+        return AVG_RATING;
+    }
+
+    public int getReviewsCount() {
+        return ReviewsCount;
+    }
+
+    public Swap getSWAPSREVIEWS() {
+        return SWAPSREVIEWS;
     }
 }

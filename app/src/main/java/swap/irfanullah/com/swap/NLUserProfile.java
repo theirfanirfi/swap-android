@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,6 +39,7 @@ import swap.irfanullah.com.swap.Models.Followers;
 import swap.irfanullah.com.swap.Models.ProfileModel;
 import swap.irfanullah.com.swap.Models.RMsg;
 import swap.irfanullah.com.swap.Models.Statistics;
+import swap.irfanullah.com.swap.Models.Swap;
 import swap.irfanullah.com.swap.Models.User;
 import swap.irfanullah.com.swap.Storage.PrefStorage;
 
@@ -47,7 +49,7 @@ public class NLUserProfile extends AppCompatActivity {
     private ImageView profile_image;
     private TabLayout tabLayout;
     private Context context;
-    private TextView profileDescription, statuses,swaps,followers;
+    private TextView profileDescription, statuses,swaps,followers,avg_rating,total_reviews;
     private String PROFILE_IMAGE = null, DESCRIPTION;
     private int USER_ID = 0, IS_FOLLOW = 0;
     private Boolean isFollowed = false;
@@ -56,6 +58,7 @@ public class NLUserProfile extends AppCompatActivity {
     private final String LOGGEDIN_USER_INTENT_KEY = "loggedin_user_id";
     private final String TO_CHAT_WITH_USER_INTENT_KEY = "to_chat_with_user_id";
     private final String CHAT_ID_INTENT_KEY = "chat_id";
+    private RatingBar ratingBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,6 +66,7 @@ public class NLUserProfile extends AppCompatActivity {
         initializeObjects();
         loadStats();
         startFollowersActivity();
+        getReviews();
     }
 
     @Override
@@ -138,6 +142,12 @@ public class NLUserProfile extends AppCompatActivity {
         viewPager = findViewById(R.id.profileViewPage);
         profilePagerAdapter = new ProfilePagerAdapter(getSupportFragmentManager(),USER_ID);
         viewPager.setAdapter(profilePagerAdapter);
+
+
+
+        ratingBar = findViewById(R.id.ratingBar);
+        avg_rating = findViewById(R.id.average_swap_rating);
+        total_reviews = findViewById(R.id.number_of_swap_reviews);
 
         tabLayout = findViewById(R.id.profileTabLayout);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
@@ -277,5 +287,35 @@ public class NLUserProfile extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         finish();
+    }
+
+    private void getReviews(){
+        RetroLib.geApiService().getSwapReviewsForProfile(USER_ID,PrefStorage.getUser(context).getTOKEN()).enqueue(new Callback<Statistics>() {
+            @Override
+            public void onResponse(Call<Statistics> call, Response<Statistics> response) {
+                if(response.isSuccessful()){
+                    Statistics statistics = response.body();
+                    Swap st = statistics.getSWAPSREVIEWS();
+                    if(statistics.getIS_ERROR()){
+                        RMsg.logHere(statistics.getMESSAGE());
+
+                    }else if(statistics.getIS_FOUND()) {
+                        ratingBar.setRating(st.getAverageRatingSwapReviews());
+                        avg_rating.setText(Float.toString(st.getAverageRatingSwapReviews()));
+                        total_reviews.setText("Reviews: "+st.getReviewsCount());
+                    }else {
+                        RMsg.logHere(statistics.getMESSAGE());
+                    }
+                }else {
+                    RMsg.logHere(response.raw().toString());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Statistics> call, Throwable t) {
+                RMsg.logHere(t.toString());
+
+            }
+        });
     }
 }

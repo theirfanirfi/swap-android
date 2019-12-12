@@ -99,10 +99,14 @@ public interface ApiService {
     @GET(AFTER_BASE_URL+"profile/getProfileUserStats")
     Call<Statistics> getUserStats(@Query("id") int id,@Query("token") String token );
 
+    @GET(AFTER_BASE_URL+"profile/swapreviews")
+    Call<Statistics> getSwapReviewsForProfile(@Query("id") int id,@Query("token") String token );
+
     @GET(AFTER_BASE_URL+"profile/updateProfileDetails")
     Call<User> updateProfileDetails(@Query("token") String token,@Query("name") String name,@Query("username") String username,@Query("email") String email);
     @GET(AFTER_BASE_URL+"profile/changePassword")
     Call<User> changePassword(@Query("token") String token,@Query("newpass") String newpass,@Query("confirmpass") String confirmpass,@Query("oldpass") String oldpass);
+
 
     @GET(AFTER_BASE_URL+"notifications/getNotificationsCount")
     Call<Notification> getNotificationsCount(@Query("token") String token);
