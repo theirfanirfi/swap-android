@@ -167,8 +167,8 @@ public class SwapsFragment extends Fragment implements SwipeRefreshLayout.OnRefr
                     }
 
                 } else {
-                    Toast.makeText(getContext(), RMsg.REQ_ERROR_MESSAGE, Toast.LENGTH_LONG).show();
-
+                  //  Toast.makeText(getContext(), RMsg.REQ_ERROR_MESSAGE, Toast.LENGTH_LONG).show();
+                    progressBar.setVisibility(View.GONE);
                 }
             }
 
