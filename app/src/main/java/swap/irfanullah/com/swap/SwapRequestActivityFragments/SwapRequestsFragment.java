@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -27,7 +28,7 @@ import swap.irfanullah.com.swap.R;
 import swap.irfanullah.com.swap.StatusActivity;
 import swap.irfanullah.com.swap.Storage.PrefStorage;
 
-public class SwapRequestsFragment extends Fragment implements SwapRequestAdapter.RequestListener {
+public class SwapRequestsFragment extends Fragment implements SwapRequestAdapter.RequestListener, SwipeRefreshLayout.OnRefreshListener{
     private RecyclerView rv;
     private SwapRequestAdapter swapRequestAdapter;
     private Context context;
@@ -36,10 +37,13 @@ public class SwapRequestsFragment extends Fragment implements SwapRequestAdapter
     private ProgressBar progressBar;
     private Handler handler;
     private Runnable runnable;
+    private SwipeRefreshLayout swipeRefreshLayout;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.frag_swap_requests, container, false);
         initObjects(rootView);
+
+
         return rootView;
     }
 
@@ -47,7 +51,7 @@ public class SwapRequestsFragment extends Fragment implements SwapRequestAdapter
     private void initObjects(View view){
         context = getContext();
 
-
+        swipeRefreshLayout = view.findViewById(R.id.swipeRefreshLayout);
         rv = view.findViewById(R.id.swapReqRV);
         progressBar = view.findViewById(R.id.requestProgressBar);
         swapRequestsList = new ArrayList<>();
@@ -137,15 +141,28 @@ public class SwapRequestsFragment extends Fragment implements SwapRequestAdapter
                             swapRequestsList = notification.getNotifications();
                             notifyAdaper(swapRequestsList);
 
+                            if(swipeRefreshLayout.isRefreshing()){
+                                swipeRefreshLayout.setRefreshing(false);
+                            }
+
                         }else {
                             //  Toast.makeText(context,RMsg.NOTIFICATIONS_NOT_FOUND_MESSAGE,Toast.LENGTH_LONG).show();
+                            if(swipeRefreshLayout.isRefreshing()){
+                                swipeRefreshLayout.setRefreshing(false);
+                            }
                         }
                     }else {
                         Toast.makeText(context, RMsg.AUTH_ERROR_MESSAGE,Toast.LENGTH_LONG).show();
+                        if(swipeRefreshLayout.isRefreshing()){
+                            swipeRefreshLayout.setRefreshing(false);
+                        }
 
                     }
                 }else {
                     Toast.makeText(context,RMsg.REQ_ERROR_MESSAGE,Toast.LENGTH_LONG).show();
+                    if(swipeRefreshLayout.isRefreshing()){
+                        swipeRefreshLayout.setRefreshing(false);
+                    }
                 }
 
                 progressBar.setVisibility(View.GONE);
@@ -155,6 +172,9 @@ public class SwapRequestsFragment extends Fragment implements SwapRequestAdapter
             @Override
             public void onFailure(Call<Notification> call, Throwable t) {
                 Toast.makeText(context,t.toString(),Toast.LENGTH_LONG).show();
+                if(swipeRefreshLayout.isRefreshing()){
+                    swipeRefreshLayout.setRefreshing(false);
+                }
 
             }
         });
@@ -236,4 +256,9 @@ public class SwapRequestsFragment extends Fragment implements SwapRequestAdapter
     }
 
 
+    @Override
+    public void onRefresh() {
+        swapRequests();
+
+    }
 }
