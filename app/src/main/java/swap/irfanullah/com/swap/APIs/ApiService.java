@@ -73,6 +73,10 @@ public interface ApiService {
     @GET(AFTER_BASE_URL+"swaps/getSwapsrev")
     Call<SwapsTab> getSwapsForReview(@Query("token") String token);
 
+    @GET(AFTER_BASE_URL+"swaps/rvswap")
+    Call<SwapsTab> reviewSwap(@Query("token") String token,@Query("id") String swap_id,@Query("rv") String review,
+                              @Query("rt") String rating);
+
     @GET(AFTER_BASE_URL+"swaps/user")
     Call<SwapsTab> getUserSwaps(@Query("id") int id);
 

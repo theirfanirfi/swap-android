@@ -34,6 +34,10 @@ public class SwapsTab {
     private Boolean IS_ERROR;
     @SerializedName("isFound")
     private Boolean IS_FOUND;
+
+    @SerializedName("isReviewed")
+    private Boolean IS_REVIEWED;
+
     @SerializedName("isMe")
     private Boolean IS_ME;
     @SerializedName("swaps")
@@ -55,6 +59,9 @@ public class SwapsTab {
 
     @SerializedName("comments_count")
     private String COMMENTSCOUONT;
+
+    @SerializedName("message")
+    private String Message;
 
     @SerializedName("isLiked")
     private int isLiked;
@@ -154,5 +161,17 @@ public class SwapsTab {
 
     public ArrayList<SwapsTab> getSwapsTabArrayList() {
         return swapsTabArrayList;
+    }
+
+    public Boolean getIS_REVIEWED() {
+        return IS_REVIEWED;
+    }
+
+    public int getIsLiked() {
+        return isLiked;
+    }
+
+    public String getMessage() {
+        return Message;
     }
 }

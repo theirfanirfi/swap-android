@@ -31,6 +31,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import swap.irfanullah.com.swap.Adapters.MediaPager;
+import swap.irfanullah.com.swap.CustomComponents.ReviewDialog;
 import swap.irfanullah.com.swap.Libraries.GLib;
 import swap.irfanullah.com.swap.Libraries.RetroLib;
 import swap.irfanullah.com.swap.Libraries.TimeDiff;
@@ -53,6 +54,7 @@ public class SwapsReviewNotificationsAdapter extends RecyclerView.Adapter<SwapsR
     private final static String REPRESENTING_LOGGED_USER_IN_TAB = "You";
     private int STATUS_ID = 0;
     MediaPager pager;
+    static ReviewListener reviewListener;
 
     public SwapsReviewNotificationsAdapter(Context context, ArrayList<SwapsTab> swapsTabArrayList) {
         this.context = context;
@@ -155,6 +157,14 @@ public class SwapsReviewNotificationsAdapter extends RecyclerView.Adapter<SwapsR
             //rate the status
 
 
+            reviewBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //ReviewDialog reviewDialog = new ReviewDialog();
+                   /// reviewDialog.show(getF,"review");
+                    reviewListener.onReviewClicked(swapsTabs.get(getAdapterPosition()));
+                }
+            });
             layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -286,6 +296,14 @@ public class SwapsReviewNotificationsAdapter extends RecyclerView.Adapter<SwapsR
 //            RMsg.logHere("multiple: "+Integer.toString(pager.getCount()));
 
         }
+    }
+
+    public interface ReviewListener {
+        void onReviewClicked(SwapsTab swap);
+    }
+
+    public void setOnReviewClickListenr(ReviewListener rl){
+        reviewListener = rl;
     }
 
 }

@@ -22,6 +22,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import swap.irfanullah.com.swap.Adapters.SwapsAdapter;
+import swap.irfanullah.com.swap.CustomComponents.ReviewDialog;
 import swap.irfanullah.com.swap.Libraries.RetroLib;
 import swap.irfanullah.com.swap.Models.RMsg;
 import swap.irfanullah.com.swap.Models.Status;
@@ -30,7 +31,7 @@ import swap.irfanullah.com.swap.Models.SwapsTab;
 import swap.irfanullah.com.swap.R;
 import swap.irfanullah.com.swap.Storage.PrefStorage;
 
-public class SwapReviewFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
+public class SwapReviewFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener, SwapsReviewNotificationsAdapter.ReviewListener {
 
     private RecyclerView sRV;
     private SwapsReviewNotificationsAdapter swapsAdapter;
@@ -39,6 +40,8 @@ public class SwapReviewFragment extends Fragment implements SwipeRefreshLayout.O
     SwapsTab swapsTab;
     ArrayList<SwapsTab> swapsTabArrayList;
     private final static String LOGS = "SWAP_TAB_LOGS";
+    SwipeRefreshLayout swipeRefreshLayout;
+    ReviewDialog reviewDialog;
 
     public SwapReviewFragment() {
     }
@@ -49,10 +52,13 @@ public class SwapReviewFragment extends Fragment implements SwipeRefreshLayout.O
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.frag_swap_requests, container, false);
         sRV = rootView.findViewById(R.id.swapReqRV);
-        progressBar = rootView.findViewById(R.id.requestProgressBar);
+        swipeRefreshLayout = rootView.findViewById(R.id.swipeRefreshLayout);
 
+        progressBar = rootView.findViewById(R.id.requestProgressBar);
+        reviewDialog = new ReviewDialog();
         makeRequest();
         swapsAdapter = new SwapsReviewNotificationsAdapter(getActivity(), swapsTabArrayList);
+        swapsAdapter.setOnReviewClickListenr(this);
         sRV.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         sRV.setLayoutManager(layoutManager);
@@ -76,29 +82,47 @@ public class SwapReviewFragment extends Fragment implements SwipeRefreshLayout.O
 
                                 swapsTabArrayList = swapsTab.getSwapsTabArrayList();
                                 notifySwapsAd(swapsTabArrayList);
-
+                                if(swipeRefreshLayout.isRefreshing()){
+                                    swipeRefreshLayout.setRefreshing(false);
+                                }
 
                             } else {
                                 // Toast.makeText(getContext(), "You don't have any swaped status.", Toast.LENGTH_LONG).show();
+                                if(swipeRefreshLayout.isRefreshing()){
+                                    swipeRefreshLayout.setRefreshing(false);
+                                }
                             }
                         } else {
-                            Toast.makeText(getContext(), RMsg.AUTH_ERROR_MESSAGE, Toast.LENGTH_LONG).show();
+                           // Toast.makeText(getContext(), RMsg.AUTH_ERROR_MESSAGE, Toast.LENGTH_LONG).show();
+                            if(swipeRefreshLayout.isRefreshing()){
+                                swipeRefreshLayout.setRefreshing(false);
+                            }
                         }
 
                     } else {
                         Log.i(LOGS, "NULL");
+                        if(swipeRefreshLayout.isRefreshing()){
+                            swipeRefreshLayout.setRefreshing(false);
+                        }
 
                     }
 
                 } else {
                     //  Toast.makeText(getContext(), RMsg.REQ_ERROR_MESSAGE, Toast.LENGTH_LONG).show();
                     progressBar.setVisibility(View.GONE);
+                    if(swipeRefreshLayout.isRefreshing()){
+                        swipeRefreshLayout.setRefreshing(false);
+                    }
                 }
             }
 
             @Override
             public void onFailure(Call<SwapsTab> call, Throwable t) {
-                Toast.makeText(getContext(), t.toString(), Toast.LENGTH_LONG).show();
+               // Toast.makeText(getContext(), t.toString(), Toast.LENGTH_LONG).show();
+                if(swipeRefreshLayout.isRefreshing()){
+                    swipeRefreshLayout.setRefreshing(false);
+                  //  swipeRefreshLayout.set
+                }
             }
         });
 
@@ -122,5 +146,14 @@ public class SwapReviewFragment extends Fragment implements SwipeRefreshLayout.O
             makeRequest();
         }
 
+    }
+
+    @Override
+    public void onReviewClicked(SwapsTab swap) {
+        reviewDialog = new ReviewDialog();
+        Bundle bundle = new Bundle();
+        bundle.putString("swap_id",Integer.toString(swap.getSWAP_ID()));
+        reviewDialog.setArguments(bundle);
+        reviewDialog.show(getFragmentManager(),"rev_d");
     }
 }
