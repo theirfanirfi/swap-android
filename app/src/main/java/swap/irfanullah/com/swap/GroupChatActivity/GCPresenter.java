@@ -52,17 +52,17 @@ public class GCPresenter implements GCLogic.Presenter {
                             view.onChatLoaded(groupMessages.getMESSENGER());
                         }
                     }else {
-                        RMsg.toastHere(context,"You are not loggedin.");
+                        //RMsg.toastHere(context,"You are not loggedin.");
 
                     }
                 }else {
-                    RMsg.toastHere(context,"Messages could not be loaded. Try again.");
+                   // RMsg.toastHere(context,"Messages could not be loaded. Try again.");
                 }
             }
 
             @Override
             public void onFailure(Call<GroupMessages> call, Throwable t) {
-                RMsg.toastHere(context,t.getMessage());
+               // RMsg.toastHere(context,t.getMessage());
 
             }
         });

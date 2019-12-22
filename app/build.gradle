@@ -81,6 +81,8 @@ dependencies {
     implementation 'com.devlomi.record-view:record-view:2.0.1'
     implementation 'com.github.rygelouv:android-audio-sensei:0.1.2'
 
+    implementation 'com.github.stfalcon:chatkit:0.3.3'
+
 }
 
 android.defaultConfig.manifestPlaceholders = [

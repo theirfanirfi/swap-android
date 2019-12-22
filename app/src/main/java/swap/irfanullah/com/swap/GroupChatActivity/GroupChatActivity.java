@@ -122,7 +122,7 @@ public class GroupChatActivity extends AppCompatActivity implements GCLogic.View
             }
         });
 
-        //refereshMessages();
+        refereshMessages();
 
 
         recorder();

@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import swap.irfanullah.com.swap.Libraries.TimeDiff;
 import swap.irfanullah.com.swap.Models.GroupMessages;
 import swap.irfanullah.com.swap.Models.Messenger;
+import swap.irfanullah.com.swap.Models.RMsg;
 import swap.irfanullah.com.swap.Models.User;
 import swap.irfanullah.com.swap.R;
 import swap.irfanullah.com.swap.Storage.PrefStorage;
@@ -27,13 +28,13 @@ import swap.irfanullah.com.swap.Storage.PrefStorage;
 public class GroupChatAdapter extends RecyclerView.Adapter<GroupChatAdapter.ChatViewHolder> {
     private Context context;
     private ArrayList<GroupMessages> messengerArrayList;
-    private User loggedUser;
+    private User loggedUser = null;
     public static MessageClickListener messageClickListener;
 
     public GroupChatAdapter(Context context, ArrayList<GroupMessages> messengerArrayList) {
         this.context = context;
         this.messengerArrayList = messengerArrayList;
-        loggedUser = PrefStorage.getUser(context);
+
     }
 
     @NonNull
@@ -46,6 +47,13 @@ public class GroupChatAdapter extends RecyclerView.Adapter<GroupChatAdapter.Chat
     @Override
     public void onBindViewHolder(@NonNull ChatViewHolder chatViewHolder, int i) {
         GroupMessages messenger = messengerArrayList.get(i);
+
+            loggedUser = PrefStorage.getUser(context);
+        RMsg.ilogHere(loggedUser.getUSER_ID());
+        RMsg.ilogHere(messenger.getSENDER_ID());
+
+
+
         if(loggedUser.getUSER_ID() == messenger.getSENDER_ID()){
             //chatViewHolder.sender.setText(messenger.getMESSAGE());
            // chatViewHolder.sender_username.setText(messenger.getUSERNAME());

@@ -88,7 +88,7 @@ public class StatusesFragment extends Fragment {
                         }
                     }
                     else {
-                        Toast.makeText(getContext(),status.getMESSAGE(),Toast.LENGTH_LONG).show();
+                      //  Toast.makeText(getContext(),status.getMESSAGE(),Toast.LENGTH_LONG).show();
                     }
                 }
                 else {
@@ -98,7 +98,7 @@ public class StatusesFragment extends Fragment {
 
             @Override
             public void onFailure(Call<Status> call, Throwable t) {
-                Toast.makeText(getContext(),"ERROR: "+t.toString(),Toast.LENGTH_LONG).show();
+                //Toast.makeText(getContext(),"ERROR: "+t.toString(),Toast.LENGTH_LONG).show();
                 Log.i("STATUES: ","NOT SUCCESSFULL "+t.toString());
 
             }

@@ -68,23 +68,23 @@
 
 
 
-    <com.rygelouv.audiosensei.player.AudioSenseiPlayerView
-        android:id="@+id/sender_audio_player"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        />
+<!--    <com.rygelouv.audiosensei.player.AudioSenseiPlayerView-->
+<!--        android:id="@+id/sender_audio_player"-->
+<!--        android:layout_width="220dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        />-->
 
-    <com.rygelouv.audiosensei.player.AudioSenseiPlayerView
-        android:id="@+id/reciever_audio_player"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        />
+<!--    <com.rygelouv.audiosensei.player.AudioSenseiPlayerView-->
+<!--        android:id="@+id/reciever_audio_player"-->
+<!--        android:layout_width="220dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        />-->
 
     <!--    <TextView-->
 <!--        android:id="@+id/recieverforwardedView"-->

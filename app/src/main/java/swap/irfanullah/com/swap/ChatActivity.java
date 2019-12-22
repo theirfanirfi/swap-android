@@ -32,6 +32,9 @@ import com.devlomi.record_view.OnRecordClickListener;
 import com.devlomi.record_view.OnRecordListener;
 import com.devlomi.record_view.RecordButton;
 import com.devlomi.record_view.RecordView;
+import com.rygelouv.audiosensei.player.AudioSenseiListObserver;
+import com.rygelouv.audiosensei.recorder.AudioRecordInfo;
+import com.rygelouv.audiosensei.recorder.AudioSensei;
 
 import java.io.File;
 import java.io.IOException;
@@ -45,6 +48,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import swap.irfanullah.com.swap.Adapters.ChatAdapter;
+import swap.irfanullah.com.swap.Adapters.ChatAdapterWithMultipleViews;
 import swap.irfanullah.com.swap.Libraries.RetroLib;
 import swap.irfanullah.com.swap.Models.Attachments;
 import swap.irfanullah.com.swap.Models.Messenger;
@@ -55,10 +59,11 @@ import swap.irfanullah.com.swap.Storage.PrefStorage;
 import static android.Manifest.permission.RECORD_AUDIO;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 
-public class ChatActivity extends AppCompatActivity  implements ChatAdapter.MessageClickListener {
+public class ChatActivity extends AppCompatActivity  implements ChatAdapterWithMultipleViews.MessageClickListener {
 
     private RecyclerView rv;
-    private ChatAdapter chatAdapter;
+   // private ChatAdapter chatAdapter;
+    private ChatAdapterWithMultipleViews chatAdapter2;
     private Context context;
     private final String LOGGEDIN_USER_INTENT_KEY = "loggedin_user_id";
     private final String TO_CHAT_WITH_USER_INTENT_KEY = "to_chat_with_user_id";
@@ -91,12 +96,21 @@ public class ChatActivity extends AppCompatActivity  implements ChatAdapter.Mess
         getExtras();
         loadMessages();
         sendMessage();
-        refereshMessages();
+       // refereshMessages();
         recorder();
+        random = new Random();
+
+        AudioSavePathInDevice = Environment.getExternalStorageDirectory().getAbsolutePath() + "/audioRecording.3gp";
+
+
+        mediaRecorder = new MediaRecorder();
+        mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+        mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+        mediaRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
+        mediaRecorder.setOutputFile(AudioSavePathInDevice);
 
 
 //        random = new Random();
-//        AudioSavePathInDevice = Environment.getExternalStorageDirectory().getAbsolutePath() + "/AudioRecording.3gp";
 //        mediaRecorder=new MediaRecorder();
 //        mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
 //        mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_2_TS);
@@ -126,7 +140,7 @@ public class ChatActivity extends AppCompatActivity  implements ChatAdapter.Mess
                         if(response.isSuccessful()){
                             Messenger messenger = response.body();
                             if(messenger.getIS_ERROR()){
-                                RMsg.toastHere(context,messenger.getRESPONSE_MESSAGE());
+                                //RMsg.toastHere(context,messenger.getRESPONSE_MESSAGE());
                             }else {
                                 if(messenger.getIS_AUTHENTICATED()){
                                     if(messenger.getIS_SENT()){
@@ -135,14 +149,14 @@ public class ChatActivity extends AppCompatActivity  implements ChatAdapter.Mess
                                         START = 0;
                                         loadMessages();
                                     }else {
-                                        RMsg.toastHere(context,messenger.getRESPONSE_MESSAGE());
+                                       // RMsg.toastHere(context,messenger.getRESPONSE_MESSAGE());
                                     }
                                 }else {
-                                    RMsg.toastHere(context,RMsg.AUTH_ERROR_MESSAGE);
+                                   // RMsg.toastHere(context,RMsg.AUTH_ERROR_MESSAGE);
                                 }
                             }
                         }else {
-                            RMsg.toastHere(context,RMsg.REQ_ERROR_MESSAGE);
+                           // RMsg.toastHere(context,RMsg.REQ_ERROR_MESSAGE);
                             RMsg.logHere(RMsg.REQ_ERROR_MESSAGE);
                             RMsg.logHere(response.raw().toString());
                         }
@@ -150,6 +164,7 @@ public class ChatActivity extends AppCompatActivity  implements ChatAdapter.Mess
 
                     @Override
                     public void onFailure(Call<Messenger> call, Throwable t) {
+                        RMsg.logHere(t.getMessage());
 
                     }
                 });
@@ -171,6 +186,7 @@ public class ChatActivity extends AppCompatActivity  implements ChatAdapter.Mess
 
     private void initializeObjects() {
         context = this;
+
         user = PrefStorage.getUser(context);
         messageField = findViewById(R.id.messageField);
         sendBtn = findViewById(R.id.sendBtn);
@@ -182,23 +198,28 @@ public class ChatActivity extends AppCompatActivity  implements ChatAdapter.Mess
         recordButton.setRecordView(recordView);
 
 
-        chatAdapter = new ChatAdapter(context, messengerArrayList);
-        chatAdapter.setOnMessageClickListener(this);
+        //chatAdapter = new ChatAdapter(context, messengerArrayList);
+
+        chatAdapter2 = new ChatAdapterWithMultipleViews(messengerArrayList,context);
+        chatAdapter2.setHasStableIds(true);
+//        chatAdapter.setOnMessageClickListener(this);
+        chatAdapter2.setOnMessageClickListener(this);
+        AudioSenseiListObserver.getInstance().registerLifecycle(getLifecycle());
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(context);
         rv.setLayoutManager(layoutManager);
         rv.setHasFixedSize(true);
         rv.smoothScrollToPosition(messengerArrayList.size() > 0 ? messengerArrayList.size() - 1 : messengerArrayList.size());
-        rv.setAdapter(chatAdapter);
+        rv.setAdapter(chatAdapter2);
     }
 
-    private void recyclerViewSetup(ArrayList<Messenger> messengerArrayList) {
-        chatAdapter = new ChatAdapter(context, messengerArrayList);
-        //rv.smoothScrollToPosition(messengerArrayList.size() - 1);
-        rv.setAdapter(chatAdapter);
-    }
+//    private void recyclerViewSetup(ArrayList<Messenger> messengerArrayList) {
+//        chatAdapter = new ChatAdapter(context, messengerArrayList);
+//        //rv.smoothScrollToPosition(messengerArrayList.size() - 1);
+//        rv.setAdapter(chatAdapter);
+//    }
 
     private void notifyAdapter(ArrayList<Messenger> messengerArrayList){
-        chatAdapter.notifyAdapter(messengerArrayList);
+        chatAdapter2.notifyAdapter(messengerArrayList);
     }
     private void loadMessages(){
         RMsg.logHere("called");
@@ -228,11 +249,11 @@ public class ChatActivity extends AppCompatActivity  implements ChatAdapter.Mess
 
                                 }
                             }else {
-                                RMsg.logHere(RMsg.AUTH_ERROR_MESSAGE);
+                              //  RMsg.logHere(RMsg.AUTH_ERROR_MESSAGE);
                             }
                         }
                     }else {
-                        RMsg.logHere(RMsg.REQ_ERROR_MESSAGE);
+                       // RMsg.logHere(RMsg.REQ_ERROR_MESSAGE);
                         RMsg.logHere(response.raw().toString());
                     }
             }
@@ -262,7 +283,7 @@ public class ChatActivity extends AppCompatActivity  implements ChatAdapter.Mess
 
     @Override
     public void onMessageClicked(final Messenger msg) {
-
+       // RMsg.toastHere(context,msg.getMESSAGE()+" : "+Integer.toString(msg.getMESSAGE_ID()));
         //RMsg.toastHere(context,msg.getMESSAGE()+" : "+Integer.toString(msg.getMESSAGE_ID()));
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         String[] choices = {"Forward","Cancel"};
@@ -271,7 +292,7 @@ public class ChatActivity extends AppCompatActivity  implements ChatAdapter.Mess
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 if(which == 0){
-                    // RMsg.toastHere(context,Integer.toString(groupMessage.getMESSAGE_ID()));
+                    // RMsg.toastHere(context,Integer.toString(msg.getMESSAGE_ID()));
                     Intent forwardToAct = new Intent(context, ForwardMessageActivity.class);
                     forwardToAct.putExtra("message_id",msg.getMESSAGE_ID());
                     startActivity(forwardToAct);
@@ -290,21 +311,39 @@ public class ChatActivity extends AppCompatActivity  implements ChatAdapter.Mess
         recordView.setOnRecordListener(new OnRecordListener() {
             @Override
             public void onStart() {
-                //Start Recording..
-                //Log.d("RecordView", "onStart");
-
-
                 if(checkPermission()) {
 
-                    AudioSavePathInDevice = Environment.getExternalStorageDirectory().getAbsolutePath() + "/swapaudiochat.3gp";
+  //                  AudioSavePathInDevice = Environment.getExternalStorageDirectory().getAbsolutePath();
+//
+////                        Toast.makeText(ChatActivity.this, "Recording PATH: "+AudioSavePathInDevice,
+////                                Toast.LENGTH_LONG).show();
+//                        MediaRecorderReady();
 
-//                        Toast.makeText(ChatActivity.this, "Recording PATH: "+AudioSavePathInDevice,
-//                                Toast.LENGTH_LONG).show();
-                        MediaRecorderReady();
 
+
+//
                         try {
-                            mediaRecorder.prepare();
-                            mediaRecorder.start();
+
+                            if(mediaRecorder == null){
+                                AudioSavePathInDevice = Environment.getExternalStorageDirectory().getAbsolutePath() + "/audioRecording.3gp";
+
+
+                                mediaRecorder = new MediaRecorder();
+                                mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+                                mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+                                mediaRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
+                                mediaRecorder.setOutputFile(AudioSavePathInDevice);
+                            }else {
+
+                                AudioSavePathInDevice = Environment.getExternalStorageDirectory().getAbsolutePath() + "/audioRecording.3gp";
+
+
+
+                                mediaRecorder.prepare();
+                                mediaRecorder.start();
+                            }
+
+                           RMsg.logHere("EXCEPTION: started");
                         } catch (IllegalStateException e) {
                             // TODO Auto-generated catch block
                             e.printStackTrace();
@@ -313,6 +352,11 @@ public class ChatActivity extends AppCompatActivity  implements ChatAdapter.Mess
                             e.printStackTrace();
                         }
 
+//                    AudioSensei.Recorder()
+//                            .with(ChatActivity.this)
+//                            .name("swapaudimessage")
+//                            .to(AudioRecordInfo.AudioPath.APP_PUBLIC_MUSIC)
+//                            .start();
 
 
 //
@@ -327,6 +371,8 @@ public class ChatActivity extends AppCompatActivity  implements ChatAdapter.Mess
             public void onCancel() {
                 //On Swipe To Cancel
                 Log.d("RecordView", "onCancel");
+//                AudioSensei.getInstance().stopRecording(); // Call this when you are done recording
+//                AudioSensei.getInstance().cancelRecording();
 
             }
 
@@ -334,14 +380,30 @@ public class ChatActivity extends AppCompatActivity  implements ChatAdapter.Mess
             public void onFinish(long recordTime) {
                 //Stop Recording..
              //   String time = getHumanTimeText(recordTime);
+//
+                try {
+                    mediaRecorder.stop();
 
-                mediaRecorder.stop();
-                mediaRecorder.release();
+//                mediaRecorder.release();
+//
+                    mediaRecorder.reset();
+                }catch (Exception e){
+                    RMsg.logHere("Exception: "+e.toString());
+                }
+
 //
 //                Toast.makeText(ChatActivity.this, "Recording Completed",
 //                        Toast.LENGTH_LONG).show();
+
+//                AudioSensei.getInstance().stopRecording(); // Call this when you are done recording
+//                AudioSensei.getInstance().cancelRecording();
+
                 File file = new File(AudioSavePathInDevice);
-                uploadAudioRequest(file);
+                if(file.exists()) {
+                    uploadAudioRequest(file);
+                }else {
+                    RMsg.toastHere(context,"Audio message could not be sent.");
+                }
 //                mediaPlayer = new MediaPlayer();
 //                try {
 //                    mediaPlayer.setDataSource(AudioSavePathInDevice);
@@ -377,11 +439,15 @@ public class ChatActivity extends AppCompatActivity  implements ChatAdapter.Mess
         });
 
 
-
+        recordView.setSoundEnabled(false);
         recordView.setOnBasketAnimationEndListener(new OnBasketAnimationEnd() {
             @Override
             public void onAnimationEnd() {
                // Log.d("RecordView", "Basket Animation Finished");
+//                mediaRecorder.stop();
+//                mediaRecorder.reset();
+//                mediaRecorder.release();
+//                mediaRecorder = null;
             }
         });
 
@@ -390,11 +456,13 @@ public class ChatActivity extends AppCompatActivity  implements ChatAdapter.Mess
 
 
     public void MediaRecorderReady(){
-        mediaRecorder=new MediaRecorder();
-        mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-        mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
-        mediaRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
-        mediaRecorder.setOutputFile(AudioSavePathInDevice);
+        if(mediaRecorder == null) {
+            mediaRecorder = new MediaRecorder();
+            mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+            mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+            mediaRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
+            mediaRecorder.setOutputFile(AudioSavePathInDevice);
+        }
     }
 
     public String CreateRandomAudioFileName(int string){
@@ -472,13 +540,20 @@ public class ChatActivity extends AppCompatActivity  implements ChatAdapter.Mess
                     }else {
                         if(med.getIS_AUTHENTICATED()){
                             if(med.getIS_SENT()){
+                                RMsg.ilogHere(messengerArrayList.size());
+
                                 messengerArrayList.add(med.getMSG());
-                                chatAdapter.notifyAdapter(messengerArrayList);
+
+                                // RMsg.toastHere(context,med.getMSG().getAUDIO());
+                                int chatSize = chatAdapter2.notifyAdapter2(med.getMSG());
+                                rv.smoothScrollToPosition(chatSize > 0 ? chatSize - 1 : chatSize);
+                                RMsg.ilogHere(chatSize);
+                                // loadMessages();
                             }
-                            RMsg.toastHere(context,med.getMESSAGE());
+                           // RMsg.toastHere(context,med.getMESSAGE());
 
                         }else {
-                            RMsg.toastHere(context,med.getMESSAGE());
+                           // RMsg.toastHere(context,med.getMESSAGE());
 
                         }
                     }
@@ -513,4 +588,13 @@ public class ChatActivity extends AppCompatActivity  implements ChatAdapter.Mess
             return cursor.getString(idx);
         }
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        RMsg.logHere("on Destory");
+      //  RMsg.toastHere(context,"destroyed.");
+    }
+
+
 }

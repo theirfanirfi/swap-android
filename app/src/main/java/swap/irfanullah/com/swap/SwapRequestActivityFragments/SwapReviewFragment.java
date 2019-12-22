@@ -1,6 +1,7 @@
 package swap.irfanullah.com.swap.SwapRequestActivityFragments;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -31,7 +32,7 @@ import swap.irfanullah.com.swap.Models.SwapsTab;
 import swap.irfanullah.com.swap.R;
 import swap.irfanullah.com.swap.Storage.PrefStorage;
 
-public class SwapReviewFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener, SwapsReviewNotificationsAdapter.ReviewListener {
+public class SwapReviewFragment extends Fragment implements SwapsReviewNotificationsAdapter.ReviewListener, SwipeRefreshLayout.OnRefreshListener {
 
     private RecyclerView sRV;
     private SwapsReviewNotificationsAdapter swapsAdapter;
@@ -42,6 +43,7 @@ public class SwapReviewFragment extends Fragment implements SwipeRefreshLayout.O
     private final static String LOGS = "SWAP_TAB_LOGS";
     SwipeRefreshLayout swipeRefreshLayout;
     ReviewDialog reviewDialog;
+    Context context;
 
     public SwapReviewFragment() {
     }
@@ -51,6 +53,7 @@ public class SwapReviewFragment extends Fragment implements SwipeRefreshLayout.O
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.frag_swap_requests, container, false);
+        context = getContext();
         sRV = rootView.findViewById(R.id.swapReqRV);
         swipeRefreshLayout = rootView.findViewById(R.id.swipeRefreshLayout);
 
@@ -69,19 +72,19 @@ public class SwapReviewFragment extends Fragment implements SwipeRefreshLayout.O
 
     private void makeRequest() {
         swapsTabArrayList = new ArrayList<>();
-        RetroLib.geApiService().getSwapsForReview(PrefStorage.getUser(getContext()).getTOKEN()).enqueue(new Callback<SwapsTab>() {
+        RetroLib.geApiService().getSwapsForReview(PrefStorage.getUser(context).getTOKEN()).enqueue(new Callback<SwapsTab>() {
             @Override
             public void onResponse(Call<SwapsTab> call, Response<SwapsTab> response) {
                 if (response.isSuccessful()) {
                     progressBar.setVisibility(View.GONE);
                     swapsTab = response.body();
-                    if (swapsTab != null) {
                         if (swapsTab.getIS_AUTHENTICATED()) {
 
                             if (swapsTab.getIS_FOUND()) {
 
                                 swapsTabArrayList = swapsTab.getSwapsTabArrayList();
-                                notifySwapsAd(swapsTabArrayList);
+                               // notifySwapsAd(swapsTabArrayList);
+                                swapsAdapter.notifySwapsAdapter(swapsTabArrayList);
                                 if(swipeRefreshLayout.isRefreshing()){
                                     swipeRefreshLayout.setRefreshing(false);
                                 }
@@ -98,14 +101,6 @@ public class SwapReviewFragment extends Fragment implements SwipeRefreshLayout.O
                                 swipeRefreshLayout.setRefreshing(false);
                             }
                         }
-
-                    } else {
-                        Log.i(LOGS, "NULL");
-                        if(swipeRefreshLayout.isRefreshing()){
-                            swipeRefreshLayout.setRefreshing(false);
-                        }
-
-                    }
 
                 } else {
                     //  Toast.makeText(getContext(), RMsg.REQ_ERROR_MESSAGE, Toast.LENGTH_LONG).show();

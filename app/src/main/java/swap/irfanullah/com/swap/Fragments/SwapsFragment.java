@@ -117,7 +117,7 @@ public class SwapsFragment extends Fragment implements SwipeRefreshLayout.OnRefr
                             @Override
                             public void onFailure(Call<Swap> call, Throwable t) {
                                 swapsAdapter.notifyItemChanged(viewHolder.getAdapterPosition());
-                                Toast.makeText(getContext(), t.toString(), Toast.LENGTH_LONG).show();
+                               // Toast.makeText(getContext(), t.toString(), Toast.LENGTH_LONG).show();
 
                             }
                         });
@@ -158,7 +158,7 @@ public class SwapsFragment extends Fragment implements SwipeRefreshLayout.OnRefr
                                // Toast.makeText(getContext(), "You don't have any swaped status.", Toast.LENGTH_LONG).show();
                             }
                         } else {
-                            Toast.makeText(getContext(), RMsg.AUTH_ERROR_MESSAGE, Toast.LENGTH_LONG).show();
+                          //  Toast.makeText(getContext(), RMsg.AUTH_ERROR_MESSAGE, Toast.LENGTH_LONG).show();
                         }
 
                     } else {
@@ -174,7 +174,7 @@ public class SwapsFragment extends Fragment implements SwipeRefreshLayout.OnRefr
 
             @Override
             public void onFailure(Call<SwapsTab> call, Throwable t) {
-                Toast.makeText(getContext(), t.toString(), Toast.LENGTH_LONG).show();
+              //  Toast.makeText(getContext(), t.toString(), Toast.LENGTH_LONG).show();
             }
         });
 

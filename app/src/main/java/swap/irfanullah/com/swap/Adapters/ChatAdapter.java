@@ -12,14 +12,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.rygelouv.audiosensei.player.AudioSenseiListObserver;
 import com.rygelouv.audiosensei.player.AudioSenseiPlayerView;
 
 import java.util.ArrayList;
 
 import swap.irfanullah.com.swap.GroupChatActivity.GroupChatAdapter;
+import swap.irfanullah.com.swap.Libraries.RetroLib;
 import swap.irfanullah.com.swap.Libraries.TimeDiff;
 import swap.irfanullah.com.swap.Models.GroupMessages;
 import swap.irfanullah.com.swap.Models.Messenger;
+import swap.irfanullah.com.swap.Models.RMsg;
 import swap.irfanullah.com.swap.Models.User;
 import swap.irfanullah.com.swap.R;
 import swap.irfanullah.com.swap.Storage.PrefStorage;
@@ -28,6 +31,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
     private Context context;
     private ArrayList<Messenger> messengerArrayList;
     private User loggedUser;
+    int j =0;
     public static MessageClickListener messageClickListener;
 
 
@@ -40,7 +44,9 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
     @NonNull
     @Override
     public ChatViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        j++;
         Messenger messenger = this.messengerArrayList.get(i);
+        RMsg.logHere("ChatAdapterOnCreatedView Value: "+Integer.toString(i)+" : "+Integer.toString(j));
          View view = LayoutInflater.from(context).inflate(R.layout.chat_row,viewGroup,false);
             return new ChatViewHolder(view,messenger);
     }
@@ -57,9 +63,9 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
             if(messenger.getIS_AUDIO() == 0) {
                 if (messenger.isForwareded() == 1) {
                     msg = "Forwarded: \n" + messenger.getMESSAGE();
-                    Spannable spannable = new SpannableString(msg);
-                    spannable.setSpan(new ForegroundColorSpan(Color.GRAY), 0, 10, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-                    chatViewHolder.sender.setText(spannable, TextView.BufferType.SPANNABLE);
+                    //Spannable spannable = new SpannableString(msg);
+                   // spannable.setSpan(new ForegroundColorSpan(Color.GRAY), 0, 10, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    chatViewHolder.sender.setText(msg);
 
                 } else {
                     chatViewHolder.sender.setText(messenger.getMESSAGE());
@@ -74,7 +80,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
                 chatViewHolder.senderAudioPlayer.setVisibility(View.GONE);
                 chatViewHolder.recieverAudioPlayer.setVisibility(View.GONE);
             }else {
-                chatViewHolder.senderAudioPlayer.setAudioTarget(messenger.getAUDIO());
+                chatViewHolder.senderAudioPlayer.setAudioTarget("http://"+ RetroLib.IP +"/swap/public/statuses/audiomessages/"+messenger.getAUDIO());
                 chatViewHolder.recieverAudioPlayer.setVisibility(View.GONE);
 
 
@@ -87,7 +93,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
         }else {
 
             if (messenger.getIS_AUDIO() == 1) {
-                chatViewHolder.recieverAudioPlayer.setAudioTarget(messenger.getAUDIO());
+                chatViewHolder.recieverAudioPlayer.setAudioTarget("http://"+ RetroLib.IP +"/swap/public/statuses/audiomessages/"+messenger.getAUDIO());
                 chatViewHolder.senderAudioPlayer.setVisibility(View.GONE);
 
                 chatViewHolder.reciever.setVisibility(View.GONE);
@@ -99,9 +105,9 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
             } else {
                 if (messenger.isForwareded() == 1) {
                     msg = "Forwarded: \n" + messenger.getMESSAGE();
-                    Spannable spannable = new SpannableString(msg);
-                    spannable.setSpan(new ForegroundColorSpan(Color.GRAY), 0, 10, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-                    chatViewHolder.reciever.setText(spannable, TextView.BufferType.SPANNABLE);
+                    //Spannable spannable = new SpannableString(msg);
+                    //spannable.setSpan(new ForegroundColorSpan(Color.GRAY), 0, 10, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    chatViewHolder.reciever.setText(msg);
 
                 } else {
                     chatViewHolder.reciever.setText(messenger.getMESSAGE());
@@ -160,5 +166,15 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
 
     public void setOnMessageClickListener (MessageClickListener messageListener){
         messageClickListener = messageListener;
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        Messenger msg = this.messengerArrayList.get(position);
+        if(msg.getIS_AUDIO() == 1){
+            return 1;
+        }else {
+            return 0;
+        }
     }
 }

@@ -259,6 +259,5 @@ public class SwapRequestsFragment extends Fragment implements SwapRequestAdapter
     @Override
     public void onRefresh() {
         swapRequests();
-
     }
 }
